@@ -347,8 +347,8 @@
             "button": "Berbicara Bahasa Inggris"
         },
         "monitoring": {
+            "enrichment": "Kegiatan dan program pengayaan",
             "title": "Pemantauan Komprehensif Kinerja Akademik dan Perilaku",
-            "subtitle": "Kami melacak kemajuan setiap siswa melalui penilaian terperinci dan sistem dukungan yang dipersonalisasi.",
             "features": {
                 "reports": {
                     "title": "Laporan",

@@ -376,8 +376,8 @@
             }
         },
         "monitoring": {
-            "title": "Comprehensive Monitoring Of Academic And Behavioral Performance",
-            "subtitle": "We track every student's progress through detailed assessment and personalized support systems.",
+            "enrichment": "Enrichment activities and programs",
+            "title": "Comprehensive monitoring of academic and behavioral performance",
             "features": {
                 "reports": {
                     "title": "Reports",

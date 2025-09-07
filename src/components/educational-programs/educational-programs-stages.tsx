@@ -25,42 +25,6 @@ function EducationalProgramsStages() {
                 {/* large screens cards */}
                 <div className="hidden md:flex *:flex-1 gap-8">
                     <div className="flex flex-col gap-4 p-[72px] bg-white rounded-[40px] lg:rounded-[48px]">
-                        <h2 className="font-medium text-3xl max-w-sm">{t("kindergarten.title")}</h2>
-
-                        <div className="flex flex-col items-end gap-2">
-                            <div
-                                className="px-6 py-3 justify-center items-center gap-2 bg-secondary-solid rounded-full font-medium min-w-max w-fit"
-                                style={{ boxShadow: "0 7px 16px 0 rgba(255, 222, 34, 0.30), 0 -4px 10.9px 0 rgba(255, 255, 255, 0.80) inset" }}
-                            >
-                                Speak English!
-                            </div>
-
-                            <div
-                                className="px-6 py-3 justify-center items-center gap-2 bg-danger-solid text-white rounded-full font-medium w-fit mx-auto"
-                                style={{ boxShadow: "0 7px 16px 0 rgba(240, 93, 37, 0.30), 0 2px 7.4px 0 rgba(255, 255, 255, 0.25) inset" }}
-                            >
-                                Membentuk Pemimpin!
-                            </div>
-
-                            <div
-                                className="px-6 py-3 justify-center items-center gap-2 bg-primary-solid text-white rounded-full font-medium w-fit me-12"
-                                style={{ boxShadow: "0 7px 16px 0 rgba(0, 100, 226, 0.30), 0 2px 7.4px 0 rgba(255, 255, 255, 0.25) inset" }}
-                            >
-                                عربيه!
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col">
-                            {kindergartenActivitiesKeys.map((key) => (
-                                <div key={key} className="flex items-center gap-4 mb-4 last:mb-0">
-                                    <EducationProgramsBlackCircleIcon />
-                                    <span className="text-xl">{t(`kindergarten.activities.${key}`)}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-4 p-[72px] bg-white rounded-[40px] lg:rounded-[48px]">
                         <h2 className="font-bold text-3xl">{t("elementary.title")}</h2>
 
                         <div className="mt-16 h-[160px] relative">
@@ -113,10 +77,79 @@ function EducationalProgramsStages() {
                             ))}
                         </div>
                     </div>
+
+                    <div className="flex flex-col gap-4 p-[72px] bg-white rounded-[40px] lg:rounded-[48px]">
+                        <h2 className="font-medium text-3xl max-w-sm">{t("kindergarten.title")}</h2>
+
+                        <div className="flex flex-col items-end gap-2">
+                            <div
+                                className="px-6 py-3 justify-center items-center gap-2 bg-secondary-solid rounded-full font-medium min-w-max w-fit"
+                                style={{ boxShadow: "0 7px 16px 0 rgba(255, 222, 34, 0.30), 0 -4px 10.9px 0 rgba(255, 255, 255, 0.80) inset" }}
+                            >
+                                Speak English!
+                            </div>
+
+                            <div
+                                className="px-6 py-3 justify-center items-center gap-2 bg-danger-solid text-white rounded-full font-medium w-fit mx-auto"
+                                style={{ boxShadow: "0 7px 16px 0 rgba(240, 93, 37, 0.30), 0 2px 7.4px 0 rgba(255, 255, 255, 0.25) inset" }}
+                            >
+                                Membentuk Pemimpin!
+                            </div>
+
+                            <div
+                                className="px-6 py-3 justify-center items-center gap-2 bg-primary-solid text-white rounded-full font-medium w-fit me-12"
+                                style={{ boxShadow: "0 7px 16px 0 rgba(0, 100, 226, 0.30), 0 2px 7.4px 0 rgba(255, 255, 255, 0.25) inset" }}
+                            >
+                                عربيه!
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                            {kindergartenActivitiesKeys.map((key) => (
+                                <div key={key} className="flex items-center gap-4 mb-4 last:mb-0">
+                                    <EducationProgramsBlackCircleIcon />
+                                    <span className="text-xl">{t(`kindergarten.activities.${key}`)}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
                 {/* small screens cards */}
-                <div className="flex md:hidden/ *:flex-1 gap-8 flex-col">
+                <div className="flex md:hidden *:flex-1 gap-8 flex-col">
+                    <div className="flex flex-col items-center gap-4 px-4 py-8 bg-white rounded-[40px] lg:rounded-[48px] relative">
+                        <h2 className="my-6 font-medium text-3xl max-w-sm">{t("elementary.title")}</h2>
+
+                        {/* Left side images */}
+                        <div className="absolute start-4 top-56 flex flex-col gap-8 pointer-events-none">
+                            <Image
+                                className=""
+                                src="/images/educational-programs/stages/art-and-arabic-calligraphy.png"
+                                alt=""
+                                width={75}
+                                height={75}
+                            />
+
+                            <Image className="" src="/images/educational-programs/stages/theater-and-drama.png" alt="" width={75} height={75} />
+                        </div>
+
+                        {/* Right side images */}
+                        <div className="absolute end-4 top-56 flex flex-col gap-8 pointer-events-none">
+                            <Image className="" src="/images/educational-programs/stages/self-defense.png" alt="" width={75} height={75} />
+
+                            <Image className="" src="/images/educational-programs/stages/swimming.png" alt="" width={75} height={75} />
+                        </div>
+
+                        <div className="flex flex-col mb-8 mx-8">
+                            {elementaryActivitiesKeys.map((key) => (
+                                <div key={key} className="flex flex-col items-center gap-2 mb-4 last:mb-0">
+                                    <EducationProgramsBlackCircleIcon />
+                                    <span className="text-lg">{t(`elementary.activities.${key}`)}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="flex flex-col items-center gap-4 px-4 py-8 bg-white rounded-[40px] lg:rounded-[48px] relative overflow-hidden">
                         <h2 className="my-6 font-medium text-3xl max-w-sm text-center">{t("kindergarten.title")}</h2>
 
@@ -146,39 +179,6 @@ function EducationalProgramsStages() {
                                 <div key={key} className="flex flex-col items-center gap-2 mb-4 last:mb-0">
                                     <EducationProgramsBlackCircleIcon />
                                     <span className="text-lg">{t(`kindergarten.activities.${key}`)}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center gap-4 px-4 py-8 bg-white rounded-[40px] lg:rounded-[48px] relative">
-                        <h2 className="my-6 font-medium text-3xl max-w-sm">{t("elementary.title")}</h2>
-
-                        {/* Left side images */}
-                        <div className="absolute start-4 top-56 flex flex-col gap-8 pointer-events-none">
-                            <Image
-                                className=""
-                                src="/images/educational-programs/stages/art-and-arabic-calligraphy.png"
-                                alt=""
-                                width={75}
-                                height={75}
-                            />
-
-                            <Image className="" src="/images/educational-programs/stages/theater-and-drama.png" alt="" width={75} height={75} />
-                        </div>
-
-                        {/* Right side images */}
-                        <div className="absolute end-4 top-56 flex flex-col gap-8 pointer-events-none">
-                            <Image className="" src="/images/educational-programs/stages/self-defense.png" alt="" width={75} height={75} />
-
-                            <Image className="" src="/images/educational-programs/stages/swimming.png" alt="" width={75} height={75} />
-                        </div>
-
-                        <div className="flex flex-col mb-8 mx-8">
-                            {elementaryActivitiesKeys.map((key) => (
-                                <div key={key} className="flex flex-col items-center gap-2 mb-4 last:mb-0">
-                                    <EducationProgramsBlackCircleIcon />
-                                    <span className="text-lg">{t(`elementary.activities.${key}`)}</span>
                                 </div>
                             ))}
                         </div>
