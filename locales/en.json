@@ -1,6 +1,12 @@
 {
     "lang": "en",
 
+    "meta": {
+        "title": "Arabic Global school",
+        "description": "",
+        "keywords": "school, arabic, international, jakarta, global, education, values, curricula, activities, contact"
+    },
+
     "navbar": {
         "navigation": {
             "about": "About us",
@@ -11,6 +17,7 @@
         },
         "registration": "Registration"
     },
+
     "home": {
         "hero": {
             "paragraph": "child become the best version of themselves.",
@@ -149,6 +156,7 @@
             "answer": "How does the school care for teaching Islamic values? Our school provides a comprehensive Islamic education program that integrates values into daily learning and activities."
         }
     },
+
     "footer": {
         "slogan": "A World of Smiles & Knowledge",
         "desc": "Begin a colorful journey of growth and values.",
@@ -198,6 +206,7 @@
         },
         "copyright": "All rights reserved © to Duzu Creative Digital Marketing Company."
     },
+
     "services": {
         "hero": {
             "title": "A Complete Learning Environment For Your Child's Growth And Comfort.",
@@ -284,6 +293,7 @@
             }
         }
     },
+
     "educational_programs": {
         "hero": {
             "enrichment": "Enrichment activities and programs",
@@ -324,8 +334,10 @@
             "registration": "Register Now!"
         },
         "stages": {
+            "enrichment": "Enrichment activities and programs",
             "title": "From Kindergarten To Elementary School",
             "subtitle": "Art and physical activities",
+
             "kindergarten": {
                 "title": "Linguistic, cultural, and Quranic activities",
                 "activities": {
@@ -335,6 +347,7 @@
                     "physical_education": "Physical education"
                 }
             },
+
             "elementary": {
                 "title": "Art and physical activities",
                 "activities": {
@@ -348,39 +361,19 @@
         "activities": {
             "title": "Linguistic, Cultural, And Quranic Activities",
             "programs": {
-                "quranic": {
-                    "title": "Quranic Education",
-                    "desc": "Comprehensive Quran memorization and understanding program"
+                "trips": {
+                    "title": "Field Educational Trips",
+                    "desc": "We connect learning to reality through rich field visits organized twice a year to educational places that stimulate curiosity and exploration."
                 },
-                "cultural": {
-                    "title": "Cultural Activities",
-                    "desc": "Celebrating diversity through cultural exchange and learning"
+                "collaborative_activities": {
+                    "title": "STEAM projects and collaborative activities",
+                    "desc": "We develop thinking and teamwork through interactive and enjoyable STEAM projects."
                 },
-                "linguistic": {
-                    "title": "Language Development",
-                    "desc": "Multi-language proficiency in Arabic, English, and Indonesian"
+                "family_participation": {
+                    "title": "Open days and family participation",
+                    "desc": "We involve the family in presentations and events to enhance communication and educational support."
                 }
-            },
-            "button": "Learn more"
-        },
-        "language_system": {
-            "title": "Language System Of School",
-            "subtitle": "Trilingual education system preparing students for global opportunities",
-            "languages": {
-                "arabic": {
-                    "title": "Arabic Language",
-                    "desc": "Native language development and literature appreciation"
-                },
-                "english": {
-                    "title": "English Language",
-                    "desc": "International communication and global curriculum access"
-                },
-                "indonesian": {
-                    "title": "Indonesian Language",
-                    "desc": "Local language proficiency and cultural integration"
-                }
-            },
-            "button": "Speak English"
+            }
         },
         "monitoring": {
             "title": "Comprehensive Monitoring Of Academic And Behavioral Performance",
@@ -399,11 +392,6 @@
                     "desc": "Modern evaluation methods for comprehensive assessment"
                 }
             }
-        },
-        "contact": {
-            "title": "Contact us easily",
-            "desc": "Do you have questions about our educational programs? We're here to help you choose the best path for your child's education.",
-            "button": "Contact us"
         }
     },
     "contact": {

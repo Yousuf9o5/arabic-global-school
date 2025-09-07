@@ -9,11 +9,13 @@ import HomeNews from "@/components/home/home-news";
 import HomeStep from "@/components/home/home-step";
 import PrefetchData from "@/components/prefetch-data";
 import { Locale } from "@/i18n/routing";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export default function Home({ params }: { params: Promise<{ locale: Locale }> }) {
+export default function Home() {
     return (
         <main className="min-h-lvh bg-[url('/svg/background-grid.svg')] bg-center w-full overflow-hidden">
-            <PrefetchData params={params}>
+            <PrefetchData>
                 <HomeHero />
 
                 <HomeStep />

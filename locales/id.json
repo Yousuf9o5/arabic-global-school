@@ -1,6 +1,12 @@
 {
     "lang": "id",
 
+    "meta": {
+        "title": "Sekolah Arab Internasional",
+        "description": "",
+        "keywords": "sekolah, arab, internasional, jakarta, global, pendidikan, nilai, kurikulum, kegiatan, kontak"
+    },
+
     "navbar": {
         "navigation": {
             "about": "Tentang kami",
@@ -282,6 +288,7 @@
             "registration": "Daftar Sekarang!"
         },
         "stages": {
+            "enrichment": "Kegiatan dan program pengayaan",
             "title": "Dari Taman Kanak-kanak ke Sekolah Dasar",
             "subtitle": "Kegiatan seni dan fisik",
             "kindergarten": {
@@ -304,22 +311,21 @@
             }
         },
         "activities": {
-            "title": "Kegiatan Linguistik, Budaya, dan Alquran",
+            "title": "Kegiatan Linguistik, Budaya, dan Al-Qur'an",
             "programs": {
-                "quranic": {
-                    "title": "Pendidikan Alquran",
-                    "desc": "Program menghafal dan memahami Alquran secara komprehensif"
-                },
-                "cultural": {
-                    "title": "Kegiatan Budaya",
-                    "desc": "Merayakan keberagaman melalui pertukaran budaya dan pembelajaran"
-                },
-                "linguistic": {
-                    "title": "Pengembangan Bahasa",
-                    "desc": "Kemahiran multibahasa dalam bahasa Arab, Inggris, dan Indonesia"
-                }
+            "trips": {
+                "title": "Kunjungan Edukasi Lapangan",
+                "desc": "Kami menghubungkan pembelajaran dengan kenyataan melalui kunjungan lapangan yang kaya, diadakan dua kali setahun ke tempat-tempat edukatif yang merangsang rasa ingin tahu dan eksplorasi."
             },
-            "button": "Pelajari lebih lanjut"
+            "collaborative_activities": {
+                "title": "Proyek STEAM dan Kegiatan Kolaboratif",
+                "desc": "Kami mengembangkan pemikiran dan kerja tim melalui proyek STEAM yang interaktif dan menyenangkan."
+            },
+            "family_participation": {
+                "title": "Hari Terbuka dan Partisipasi Keluarga",
+                "desc": "Kami melibatkan keluarga dalam presentasi dan acara untuk meningkatkan komunikasi dan dukungan pendidikan."
+            }
+            }
         },
         "language_system": {
             "title": "Sistem Bahasa Sekolah",
