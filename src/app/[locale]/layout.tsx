@@ -1,12 +1,12 @@
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
-import { NextIntlClientProvider, useMessages } from "next-intl";
-import Providers from "../providers";
-import TabletFooter from "@/components/tablet-footer";
 import MobileFooter from "@/components/mobile-footer";
-import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import Navbar from "@/components/navbar";
+import TabletFooter from "@/components/tablet-footer";
 import { Locale } from "@/i18n/routing";
+import { Metadata } from "next";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import Providers from "../providers";
 
 // Add generateMetadata function
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     };
 }
 
-function Layout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: Locale }> }) {
+function Layout({ children }: { children: React.ReactNode }) {
     const messages = useMessages();
 
     return (
