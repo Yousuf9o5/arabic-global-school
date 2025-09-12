@@ -3,7 +3,7 @@ import Section from "../ui/section";
 import { useTranslations } from "next-intl";
 import { ExitIcon, UserIcon, WebCamIcon } from "@/assets/icons";
 
-export default function ServicesSafety() {
+export default function ActivitiesSafety() {
     const t = useTranslations("services.safety");
 
     const keys = ["supervision", "entry_exit", "cameras"];

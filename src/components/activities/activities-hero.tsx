@@ -3,7 +3,7 @@ import Image from "next/image";
 import CustomLink from "../ui/Link";
 import Section from "../ui/section";
 
-export default function ServicesHero() {
+export default function ActivitiesHero() {
     const t = useTranslations("services.hero");
 
     return (

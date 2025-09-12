@@ -3,7 +3,7 @@ import Section from "../ui/section";
 import { useTranslations } from "next-intl";
 import VideoPlayer from "../ui/video-player";
 
-export default function ServicesMeal() {
+export default function ActivitiesMeal() {
     const t = useTranslations("services.meal");
 
     const pointsKeys = ["bring_plate", "no_outside_food", "organize_week"];

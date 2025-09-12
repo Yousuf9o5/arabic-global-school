@@ -3,7 +3,7 @@ import Section from "../ui/section";
 import Image from "next/image";
 import { Pin3DIcon } from "@/assets/icons";
 
-export default function ServicesTransportation() {
+export default function ActivitiesTransportation() {
     const t = useTranslations("services.transportation");
 
     const keys = ["clean_buses", "punctuality", "supervisor"];

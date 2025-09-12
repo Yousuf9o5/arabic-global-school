@@ -1,4 +1,4 @@
-import ContactSection from "@/components/shared/contact-section";
+import ActivitiesSection from "@/components/shared/contact-section";
 import HomeActivities from "@/components/home/home-activities";
 import HomeArtistic from "@/components/home/home-artistic";
 import HomeCurricula from "@/components/home/home-curricula";
@@ -32,7 +32,7 @@ export default function Home() {
 
                 <HomeFAQ />
 
-                <ContactSection />
+                <ActivitiesSection />
             </PrefetchData>
         </main>
     );

@@ -3,7 +3,7 @@ import Section from "../ui/section";
 import CustomLink from "../ui/Link";
 import Image from "next/image";
 
-export default function ServicesFacilities() {
+export default function ActivitiesFacilities() {
     const t = useTranslations("services.facilities");
 
     const cardsKeys = ["classrooms", "playgrounds", "laboratories", "play_areas", "restrooms", "library"];
