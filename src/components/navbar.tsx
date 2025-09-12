@@ -39,10 +39,14 @@ function Navbar() {
                     </Link>
 
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center gap-1 hover:text-primary transition-colors outline-none">
-                            {t("navigation.curricula")}
-                            <ChevronRightIcon className="w-4 h-4 rotate-90" />
-                        </DropdownMenuTrigger>
+                        <div className="flex items-center gap-1 hover:text-primary transition-colors outline-none">
+                            <Link href="/educational-programs" className="hover:text-primary transition-colors">
+                                {t("navigation.curricula")}
+                            </Link>
+                            <DropdownMenuTrigger>
+                                <ChevronRightIcon className="w-4 h-4 rotate-90" />
+                            </DropdownMenuTrigger>
+                        </div>
 
                         <DropdownMenuContent className="w-44 border-gray-100 shadow-lg rounded-lg p-2" align="start">
                             {curriculaItems.map((item) => (
