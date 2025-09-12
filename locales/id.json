@@ -313,18 +313,18 @@
         "activities": {
             "title": "Kegiatan Linguistik, Budaya, dan Al-Qur'an",
             "programs": {
-            "trips": {
-                "title": "Kunjungan Edukasi Lapangan",
-                "desc": "Kami menghubungkan pembelajaran dengan kenyataan melalui kunjungan lapangan yang kaya, diadakan dua kali setahun ke tempat-tempat edukatif yang merangsang rasa ingin tahu dan eksplorasi."
-            },
-            "collaborative_activities": {
-                "title": "Proyek STEAM dan Kegiatan Kolaboratif",
-                "desc": "Kami mengembangkan pemikiran dan kerja tim melalui proyek STEAM yang interaktif dan menyenangkan."
-            },
-            "family_participation": {
-                "title": "Hari Terbuka dan Partisipasi Keluarga",
-                "desc": "Kami melibatkan keluarga dalam presentasi dan acara untuk meningkatkan komunikasi dan dukungan pendidikan."
-            }
+                "trips": {
+                    "title": "Kunjungan Edukasi Lapangan",
+                    "desc": "Kami menghubungkan pembelajaran dengan kenyataan melalui kunjungan lapangan yang kaya, diadakan dua kali setahun ke tempat-tempat edukatif yang merangsang rasa ingin tahu dan eksplorasi."
+                },
+                "collaborative_activities": {
+                    "title": "Proyek STEAM dan Kegiatan Kolaboratif",
+                    "desc": "Kami mengembangkan pemikiran dan kerja tim melalui proyek STEAM yang interaktif dan menyenangkan."
+                },
+                "family_participation": {
+                    "title": "Hari Terbuka dan Partisipasi Keluarga",
+                    "desc": "Kami melibatkan keluarga dalam presentasi dan acara untuk meningkatkan komunikasi dan dukungan pendidikan."
+                }
             }
         },
         "language_system": {
@@ -377,8 +377,12 @@
     },
     "about_us": {
         "hero": {
-            "title": "Tentang Sekolah Arab Internasional",
-            "subtitle": "Membina keunggulan melalui pendidikan berbasis nilai dan perspektif global"
+            "title": "Di Sini {stories} Dimulai dan Nilai Tumbuh",
+            "desc": {
+                "part1": "Sekolah terakreditasi yang menggabungkan kurikulum pendidikan modern terbaru, nilai-nilai Islam, dan bahasa Arab, dalam lingkungan yang aman di jantung Jakarta.",
+                "part2": "Kami menawarkan program anak usia dini, sekolah dasar, dan menengah, menerapkan kurikulum internasional (ICO) yang mendukung pemikiran kritis, nilai-nilai, dan keterampilan masa depan."
+            },
+            "button": "Hubungi kami"
         },
         "vision": {
             "title": "Visi Kami",

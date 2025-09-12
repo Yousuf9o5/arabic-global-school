@@ -401,8 +401,12 @@
     },
     "about_us": {
         "hero": {
-            "title": "About Arab International School",
-            "subtitle": "Nurturing excellence through values-based education and global perspectives"
+            "title": "Where {stories} Begin and Values Grow",
+            "desc": {
+                "part1": "An accredited school that combines the latest modern educational curricula, Islamic values, and the Arabic language, in a safe environment in the heart of Jakarta.",
+                "part2": "We offer early childhood, elementary, and middle school programs, applying an international curriculum (ICO) that supports critical thinking, values, and future skills."
+            },
+            "button": "Contact us"
         },
         "vision": {
             "title": "Our Vision",

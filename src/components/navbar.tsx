@@ -31,7 +31,7 @@ function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-8 px-10">
-                    <Link href="/about" className="hover:text-primary transition-colors">
+                    <Link href="/about-us" className="hover:text-primary transition-colors">
                         {t("navigation.about")}
                     </Link>
                     <Link href="/activities" className="hover:text-primary transition-colors">
