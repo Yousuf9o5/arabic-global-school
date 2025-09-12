@@ -43,7 +43,7 @@ export default function ContactHero() {
 
             <div className="h-[70%] w-1/4 absolute bottom-8 -start-[10%] bg-[#FD906266] rotate-200 blur-3xl pointer-events-none"></div>
 
-            <div className="px-4 relative z-10">
+            <div className="px-4 relative z-10 mb-12">
                 <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[62px] md:leading-[100%] tracking-[-0.06em] text-center align-middle max-w-5xl mx-auto">
                     {t("title")}
                 </h1>
@@ -63,7 +63,7 @@ export default function ContactHero() {
 
                 <div className="flex flex-col gap-4">
                     {contactInfo.map((info) => (
-                        <article className="flex items-center">
+                        <article className="flex items-center" key={info.key + "contact-info"}>
                             <div className="bg-white/60 rounded-xl md:rounded-3xl border border-white size-[80px] md:size-[130px] grid place-items-center">
                                 <Image height={70} width={70} src={info.svg} alt={info.key} className="size-[50px] md:size-[70px]" />
                             </div>

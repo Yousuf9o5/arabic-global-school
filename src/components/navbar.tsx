@@ -28,10 +28,10 @@ function Navbar() {
     return (
         <nav className="flex items-stretch justify-between p-4 w-full max-w-8xl mx-auto overflow-hidden bg-transparent">
             <aside className="border-border-primary border p-2 pe-4 hidden lg:flex items-center gap-4 rounded-full ">
-                <div className="flex items-center gap-2">
+                <Link href={'/'} className="flex items-center gap-2">
                     <AppImage className="size-10" optimized width={200} height={200} src={"/images/logo-school.png"} />
                     <AppImage className="h-8" src={"/images/global-arabic-school.png"} />
-                </div>
+                </Link>
 
                 <div className="flex items-center gap-8 px-10">
                     <Link

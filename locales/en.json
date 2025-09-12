@@ -503,39 +503,9 @@
                 }
             }
         },
-        "faq": {
-            "title": "Your Questions Answered With Care",
-            "questions": {
-                "q1": {
-                    "question": "How does the school care for teaching Islamic values?",
-                    "answer": "We emphasize Islamic values throughout our educational process. Our curriculum includes the international ICO program for Islamic and general studies, along with Quran memorization classes for all ages. We also incorporate ethics and Islamic manners into daily lessons, guided by teachers who exemplify these values through practical examples."
-                },
-                "q2": {
-                    "question": "What is the number of students in each class or three languages environment?",
-                    "answer": "Class sizes vary by level to ensure quality education and individual attention for each student."
-                },
-                "q3": {
-                    "question": "Are there extracurricular activities in school?",
-                    "answer": "Yes, we offer various extracurricular activities including sports, arts, cultural programs, and Quranic studies to support holistic student development."
-                },
-                "q4": {
-                    "question": "How can I enroll my child? What are the required steps?",
-                    "answer": "Enrollment is easy! Contact us through phone, WhatsApp, or email to schedule a school visit and learn about our admission requirements."
-                },
-                "q5": {
-                    "question": "Does the child need to be proficient in one of the three languages environment?",
-                    "answer": "No prior language proficiency is required. Our trilingual program is designed to help students develop skills in Arabic, English, and Indonesian progressively."
-                }
-            }
-        },
         "location": {
             "title": "Our Location, Their Second Home",
             "subtitle": "In a calm and secure location, we offer your children a learning space that's close to you — and close to their hearts."
-        },
-        "cta": {
-            "title": "Contact us easily",
-            "subtitle": "Do you have a question or inquiry? We are happy to hear from you and will respond as soon as possible.",
-            "button": "Contact us"
         }
     },
     "register": {

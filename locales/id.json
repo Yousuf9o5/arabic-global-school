@@ -479,39 +479,9 @@
                 }
             }
         },
-        "faq": {
-            "title": "Pertanyaan Anda Dijawab dengan Perhatian",
-            "questions": {
-                "q1": {
-                    "question": "Bagaimana sekolah memperhatikan pengajaran nilai-nilai Islam?",
-                    "answer": "Kami menekankan nilai-nilai Islam di seluruh proses pendidikan kami. Kurikulum kami mencakup program ICO internasional untuk studi Islam dan umum, bersama dengan kelas menghafal Quran untuk semua usia. Kami juga menggabungkan etika dan adab Islam ke dalam pelajaran harian, dipandu oleh guru yang mencontohkan nilai-nilai ini melalui contoh praktis."
-                },
-                "q2": {
-                    "question": "Berapa jumlah siswa di setiap kelas atau lingkungan tiga bahasa?",
-                    "answer": "Ukuran kelas bervariasi berdasarkan tingkat untuk memastikan pendidikan berkualitas dan perhatian individual untuk setiap siswa."
-                },
-                "q3": {
-                    "question": "Apakah ada kegiatan ekstrakurikuler di sekolah?",
-                    "answer": "Ya, kami menawarkan berbagai kegiatan ekstrakurikuler termasuk olahraga, seni, program budaya, dan studi Quran untuk mendukung pengembangan siswa secara holistik."
-                },
-                "q4": {
-                    "question": "Bagaimana cara mendaftarkan anak saya? Apa langkah-langkah yang diperlukan?",
-                    "answer": "Pendaftaran mudah! Hubungi kami melalui telepon, WhatsApp, atau email untuk menjadwalkan kunjungan sekolah dan mempelajari persyaratan penerimaan kami."
-                },
-                "q5": {
-                    "question": "Apakah anak perlu mahir dalam salah satu dari tiga lingkungan bahasa?",
-                    "answer": "Tidak diperlukan kemahiran bahasa sebelumnya. Program trilingual kami dirancang untuk membantu siswa mengembangkan keterampilan dalam bahasa Arab, Inggris, dan Indonesia secara bertahap."
-                }
-            }
-        },
         "location": {
             "title": "Lokasi Kami, Rumah Kedua Mereka",
             "subtitle": "Di lokasi yang tenang dan aman, kami menawarkan anak-anak Anda ruang belajar yang dekat dengan Anda — dan dekat di hati mereka."
-        },
-        "cta": {
-            "title": "Hubungi kami dengan mudah",
-            "subtitle": "Apakah Anda punya pertanyaan atau pertanyaan? Kami senang mendengar dari Anda dan akan merespons sesegera mungkin.",
-            "button": "Hubungi kami"
         }
     },
     "footer": {
