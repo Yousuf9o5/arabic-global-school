@@ -669,3 +669,26 @@ export const CertificateIcon = (props: SVGAttributes<SVGSVGElement>) => {
         </svg>
     );
 };
+
+export const BlueCircleIcon = (props: SVGAttributes<SVGSVGElement>) => {
+    return (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <circle cx="12" cy="12.5" r="12" fill="#B5D7FF" />
+            <g filter="url(#filter0_i_1212_15445)">
+                <circle cx="12" cy="12.5" r="7.5" fill="#0064E2" />
+            </g>
+            <defs>
+                <filter id="filter0_i_1212_15445" x="4.5" y="5" width="15" height="16" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="1" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1212_15445" />
+                </filter>
+            </defs>
+        </svg>
+    );
+};

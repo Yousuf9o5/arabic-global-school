@@ -1,4 +1,4 @@
-import ActivitiesSection from "@/components/shared/contact-section";
+import ContactSection from "@/components/shared/contact-section";
 import ActivitiesFacilities from "@/components/activities/activities-facilities";
 import ActivitiesHero from "@/components/activities/activities-hero";
 import ActivitiesMeal from "@/components/activities/activities-meal";
@@ -18,7 +18,7 @@ export default function ServicesPage() {
 
             <ActivitiesMeal />
 
-            <ActivitiesSection />
+            <ContactSection />
         </main>
     );
 }

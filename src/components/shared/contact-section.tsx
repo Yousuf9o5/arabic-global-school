@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import Section from "../ui/section";
 import CustomLink from "../ui/Link";
 
-export default function ActivitiesSection() {
+export default function ContactSection() {
     const t = useTranslations("contact");
 
     return (

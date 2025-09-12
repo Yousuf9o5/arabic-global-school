@@ -5,7 +5,7 @@ import HomeHero from "@/components/home/home-hero";
 import HomeNews from "@/components/home/home-news";
 import HomeStep from "@/components/home/home-step";
 import PrefetchData from "@/components/prefetch-data";
-import ActivitiesSection from "@/components/shared/contact-section";
+import ContactSection from "@/components/shared/contact-section";
 import HomeFAQ from "@/components/shared/faq-section";
 import LanguageSection from "@/components/shared/language-section";
 
@@ -29,7 +29,7 @@ export default function Home() {
 
                 <HomeFAQ />
 
-                <ActivitiesSection />
+                <ContactSection />
             </PrefetchData>
         </main>
     );

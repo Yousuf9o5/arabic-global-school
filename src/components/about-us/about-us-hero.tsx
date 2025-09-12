@@ -38,7 +38,7 @@ export default function AboutUsHero() {
                         </p>
                     </div>
 
-                    <div className="mt-12 flex items-center justify-center lg:justify-start gap-4 py-4">
+                    <div className="lg:mt-12 flex items-center justify-center lg:justify-start gap-4 py-8">
                         <CustomLink href="" shadow={"default"} className="w-[175px]">
                             {t("button")}
                         </CustomLink>

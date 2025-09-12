@@ -385,12 +385,14 @@
             "button": "Hubungi kami"
         },
         "vision": {
-            "title": "Visi Kami",
-            "desc": "Menjadi model terdepan dalam pendidikan Islam Arab internasional yang menyediakan pengalaman pendidikan berkualitas tinggi yang memelihara pikiran anak, memperbaiki perilaku mereka, dan meningkatkan kepercayaan diri mereka."
+            "top-title": "Visi Kami",
+            "title": "Menginspirasi Pemimpin Masa Depan melalui Pendidikan Islam Berbasis Nilai",
+            "desc": "Menjadi model terdepan dalam <strong class='text-content-natural-primary>pendidikan Islam Arab internasional</strong>, menyediakan pengalaman pendidikan berkualitas tinggi yang <strong class='text-content-natural-primary>memelihara</strong> pikiran anak, memperbaiki perilaku mereka, dan meningkatkan kepercayaan diri mereka. <br/> Kami percaya setiap siswa memiliki <strong class='text-content-natural-primary>potensi unik</strong> di dalam dirinya, dan kami berkomitmen untuk merangkul <strong class='text-content-natural-primary>perbedaan individu</strong> ini guna membentuk generasi kreatif dan percaya diri yang siap menghadapi tantangan dunia dengan kesadaran dan nilai-nilai yang kuat."
         },
         "mission": {
-            "title": "Misi Kami",
-            "desc": "Kami menyediakan lingkungan pendidikan yang hangat dan merangsang menggunakan metode pengajaran inovatif dalam bahasa Arab - Inggris - Indonesia dalam kerangka nilai-nilai Islam yang mempromosikan rasa hormat dan keterbukaan terhadap keberagaman."
+            "top-title": "Misi Kami",
+            "title": "Memberdayakan Pemuda dalam Lingkungan Multibahasa Berbasis Nilai",
+            "desc": "Kami menyediakan lingkungan pendidikan yang <strong class='text-content-natural-primary'>hangat</strong> dan <strong class='text-content-natural-primary'>merangsang</strong> yang mengintegrasikan tiga bahasa <strong class='text-content-natural-primary'>(Arab – Inggris – Indonesia)</strong> dalam kerangka nilai-nilai Islam yang mempromosikan rasa hormat dan keterbukaan terhadap keberagaman. <br> Kami berfokus pada pengembangan <strong class='text-content-natural-primary'>kemampuan akademik</strong> dan <strong class='text-content-natural-primary'>pribadi</strong> anak, memungkinkan mereka untuk mengekspresikan diri, berkomunikasi, bertanggung jawab, dan berkontribusi positif bagi komunitas serta dunia di sekitar mereka."
         },
         "values": {
             "title": "Nilai-Nilai Inti Kami",

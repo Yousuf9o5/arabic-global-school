@@ -409,12 +409,14 @@
             "button": "Contact us"
         },
         "vision": {
-            "title": "Our Vision",
-            "desc": "To be a leading model in international Arab Islamic education providing a high-quality educational experience that nurtures the child's mind, refines their behavior and enhances their self-confidence."
+            "top-title": "Our Vision",
+            "title": "Inspiring Future Leaders through Values-Based Islamic Education",
+            "desc": "To be a leading model in international <strong class='text-content-natural-primary'>Arab Islamic education</strong>, providing a high-quality educational experience that <strong class='text-content-natural-primary'>nurtures</strong> the child's mind, refines their behavior, and enhances their self-confidence. <br/> We believe that every student carries <strong class='text-content-natural-primary'>unique potentials</strong> within them, and we are committed to embracing these <strong class='text-content-natural-primary'>individual differences</strong> to cultivate a creative, confident generation ready to face the challenges of the world with awareness and strong values."
         },
         "mission": {
-            "title": "Our Mission",
-            "desc": "We provide a warm and stimulating educational environment using innovative teaching methods in Arabic - English - Indonesian within an Islamic values framework that promotes respect and openness to diversity."
+            "top-title": "Our Mission",
+            "title": "Empowering Youth in a Multilingual, Values-Based Setting",
+            "desc": "We provide a <strong class='text-content-natural-primary'>warm</strong> and <strong class='text-content-natural-primary'>stimulating</strong> educational environment that integrates three languages <strong class='text-content-natural-primary'>(Arabic – English – Indonesian)</strong> within an Islamic values framework that promotes respect and openness to diversity. <br> We focus on developing the child's <strong class='text-content-natural-primary'>academic</strong> and <strong class='text-content-natural-primary'>personal skills</strong>, enabling them to express themselves, communicate, take responsibility, and contribute positively to their community and the world around them."
         },
         "values": {
             "title": "Our Core Values",

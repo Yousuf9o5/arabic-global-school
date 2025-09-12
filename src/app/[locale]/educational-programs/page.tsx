@@ -4,7 +4,7 @@ import EducationalProgramsMonitoring from "@/components/educational-programs/edu
 import EducationalProgramsSafeStart from "@/components/educational-programs/educational-programs-safe-start";
 import EducationalProgramsStages from "@/components/educational-programs/educational-programs-stages";
 import EducationalProgramsValues from "@/components/educational-programs/educational-programs-values";
-import ActivitiesSection from "@/components/shared/contact-section";
+import ContactSection from "@/components/shared/contact-section";
 import LanguageSection from "@/components/shared/language-section";
 
 export default function EducationalProgramsPage() {
@@ -24,7 +24,7 @@ export default function EducationalProgramsPage() {
 
             <EducationalProgramsMonitoring />
 
-            <ActivitiesSection />
+            <ContactSection />
         </main>
     );
 }
