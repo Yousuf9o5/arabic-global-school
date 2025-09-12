@@ -551,7 +551,7 @@ export const EducationalProgramsCircleIcon = (props: SVGAttributes<SVGSVGElement
 
 export const EducationProgramsBlackCircleIcon = (props: SVGAttributes<SVGSVGElement>) => {
     return (
-        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
             <circle cx="12.5" cy="12.6331" r="12" fill="#A3AAB9" />
             <g filter="url(#filter0_i_1346_11266)">
                 <circle cx="12.5" cy="12.6331" r="6" fill="#020409" />

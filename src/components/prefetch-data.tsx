@@ -1,11 +1,9 @@
-import { Locale } from "@/i18n/routing";
 import { APIKeys } from "@/services/api-keys";
 import { ApiService } from "@/services/api.service";
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 
 interface Props {
     children: React.ReactNode;
-    params: Promise<{ locale: Locale }>;
 }
 
 async function PrefetchData({ children }: Props) {

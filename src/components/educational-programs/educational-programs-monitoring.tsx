@@ -1,8 +1,7 @@
-import { useTranslations } from "next-intl";
-import Section from "../ui/section";
-import Image from "next/image";
 import { CertificateIcon, DocumentIcon, EducationalProgramsCircleIcon, PeopleGroupIcon } from "@/assets/icons";
-import AppImage from "../app-image";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Section from "../ui/section";
 
 export default function EducationalProgramsMonitoring() {
     const t = useTranslations("educational_programs.monitoring");

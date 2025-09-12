@@ -2,15 +2,13 @@ import ActivitiesSection from "@/components/shared/contact-section";
 import HomeActivities from "@/components/home/home-activities";
 import HomeArtistic from "@/components/home/home-artistic";
 import HomeCurricula from "@/components/home/home-curricula";
-import HomeFAQ from "@/components/shared/faq-section";
 import HomeHero from "@/components/home/home-hero";
-import LanguageSection from "@/components/shared/language-section";
 import HomeNews from "@/components/home/home-news";
 import HomeStep from "@/components/home/home-step";
 import PrefetchData from "@/components/prefetch-data";
-import { Locale } from "@/i18n/routing";
-import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import ContactSection from "@/components/shared/contact-section";
+import HomeFAQ from "@/components/shared/faq-section";
+import LanguageSection from "@/components/shared/language-section";
 
 export default function Home() {
     return (

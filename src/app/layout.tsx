@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import useTextDirection from "@/hooks/use-text-direction";
+import "./globals.css";
 
 type RootLayoutProps = Readonly<{
     children: React.ReactNode;
