@@ -460,23 +460,23 @@
     "contact_us": {
         "hero": {
             "title": "Karena Kami Percaya Setiap Perjalanan Dimulai dengan Percakapan",
-            "subtitle": "Punya pertanyaan atau ingin bertanya? Tim kami siap menjawab dengan perhatian — jangan ragu untuk menghubungi kami"
-        },
-        "contact_info": {
-            "phone": {
-                "title": "Nomor telepon - WhatsApp",
-                "subtitle": "Untuk kontak cepat kapan saja 6 pagi hingga 24 malam Senin-Jumat",
-                "number": "+620 905 088"
-            },
-            "email": {
-                "title": "Email",
-                "subtitle": "Untuk PM Senin-Jumat",
-                "address": "info@arabglobalschool.com"
-            },
-            "hours": {
-                "title": "Jam kerja",
-                "subtitle": "Senin hingga Jumat untuk jam sekolah",
-                "time": "Dari 8:00 pagi hingga 3:00 sore"
+            "subtitle": "Punya pertanyaan atau ingin bertanya? Tim kami siap menjawab dengan perhatian — jangan ragu untuk menghubungi kami",
+            "contact_info": {
+                "phone": {
+                    "title": "Nomor telepon - WhatsApp",
+                    "subtitle": "Untuk kontak cepat kapan saja 6 pagi hingga 24 malam Senin-Jumat",
+                    "number": "+620 905 088"
+                },
+                "email": {
+                    "title": "Email",
+                    "subtitle": "Untuk PM Senin-Jumat",
+                    "address": "info@arabglobalschool.com"
+                },
+                "hours": {
+                    "title": "Jam kerja",
+                    "subtitle": "Senin hingga Jumat untuk jam sekolah",
+                    "time": "Dari 8:00 pagi hingga 3:00 sore"
+                }
             }
         },
         "faq": {

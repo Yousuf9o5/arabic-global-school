@@ -484,23 +484,23 @@
     "contact_us": {
         "hero": {
             "title": "Because We Believe Every Journey Begins with a Conversation",
-            "subtitle": "Have a question or inquiry? Our team is ready to answer with care — don't hesitate to reach out to us"
-        },
-        "contact_info": {
-            "phone": {
-                "title": "Phone number - WhatsApp",
-                "subtitle": "For quick contact anytime 6 AM to 24 PM Monday-Friday",
-                "number": "+620 905 088"
-            },
-            "email": {
-                "title": "Email",
-                "subtitle": "For PM Monday-Friday",
-                "address": "info@arabglobalschool.com"
-            },
-            "hours": {
-                "title": "Working hours",
-                "subtitle": "Monday to Friday for school hours",
-                "time": "From 8:00 AM to 3:00 PM"
+            "subtitle": "Have a question or inquiry? Our team is ready to answer with care — don't hesitate to reach out to us",
+            "contact_info": {
+                "phone": {
+                    "title": "Phone number - WhatsApp",
+                    "subtitle": "For quick contact anytime 6 AM to 24 PM Monday-Friday",
+                    "number": "+620 905 088"
+                },
+                "email": {
+                    "title": "Email",
+                    "subtitle": "For PM Monday-Friday",
+                    "address": "info@arabglobalschool.com"
+                },
+                "hours": {
+                    "title": "Working hours",
+                    "subtitle": "Monday to Friday for school hours",
+                    "time": "From 8:00 AM to 3:00 PM"
+                }
             }
         },
         "faq": {

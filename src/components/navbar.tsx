@@ -9,9 +9,12 @@ import { useNavbarToggler } from "@/hooks/use-navbar-toggler";
 import { BurgerMenu, ChevronRightIcon } from "@/assets/icons";
 import BergerMenu from "./berger-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
     const { toggle, isOpen, close } = useNavbarToggler();
+    const pathname = usePathname();
+
     const t = useTranslations("navbar");
     const tHome = useTranslations("home");
 
@@ -31,16 +34,28 @@ function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-8 px-10">
-                    <Link href="/about-us" className="hover:text-primary transition-colors">
+                    <Link
+                        data-active={pathname.endsWith("about-us")}
+                        href="/about-us"
+                        className="hover:text-primary transition-colors font-medium data-[active=true]:font-bold"
+                    >
                         {t("navigation.about")}
                     </Link>
-                    <Link href="/activities" className="hover:text-primary transition-colors">
+                    <Link
+                        data-active={pathname.endsWith("activities")}
+                        href="/activities"
+                        className="hover:text-primary transition-colors font-medium data-[active=true]:font-bold"
+                    >
                         {t("navigation.activities")}
                     </Link>
 
                     <DropdownMenu>
-                        <div className="flex items-center gap-1 hover:text-primary transition-colors outline-none">
-                            <Link href="/educational-programs" className="hover:text-primary transition-colors">
+                        <div className="flex items-center gap-1 hover:text-primary transition-colors font-medium data-[active=true]:font-bold outline-none">
+                            <Link
+                                data-active={pathname.endsWith("educational-programs")}
+                                href="/educational-programs"
+                                className="hover:text-primary transition-colors font-medium data-[active=true]:font-bold"
+                            >
                                 {t("navigation.curricula")}
                             </Link>
                             <DropdownMenuTrigger>
@@ -52,6 +67,7 @@ function Navbar() {
                             {curriculaItems.map((item) => (
                                 <DropdownMenuItem key={item.title} asChild>
                                     <Link
+                                        data-active={pathname.endsWith(item.href)}
                                         href={item.href}
                                         className="w-full px-3 py-2 text-sm text-natural-tertiary hover:bg-[#F2F6FC] hover:!text-natural-tertiary rounded-md transition-colors cursor-pointer"
                                     >
@@ -62,10 +78,18 @@ function Navbar() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <Link href="/news" className="hover:text-primary transition-colors">
+                    <Link
+                        data-active={pathname.endsWith("news")}
+                        href="/news"
+                        className="hover:text-primary transition-colors font-medium data-[active=true]:font-bold"
+                    >
                         {t("navigation.news")}
                     </Link>
-                    <Link href="/contact" className="hover:text-primary transition-colors">
+                    <Link
+                        data-active={pathname.endsWith("contact")}
+                        href="/contact"
+                        className="hover:text-primary transition-colors font-medium data-[active=true]:font-bold"
+                    >
                         {t("navigation.contact")}
                     </Link>
                 </div>
