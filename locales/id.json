@@ -394,89 +394,28 @@
             "title": "Memberdayakan Pemuda dalam Lingkungan Multibahasa Berbasis Nilai",
             "desc": "Kami menyediakan lingkungan pendidikan yang <strong class='text-content-natural-primary'>hangat</strong> dan <strong class='text-content-natural-primary'>merangsang</strong> yang mengintegrasikan tiga bahasa <strong class='text-content-natural-primary'>(Arab – Inggris – Indonesia)</strong> dalam kerangka nilai-nilai Islam yang mempromosikan rasa hormat dan keterbukaan terhadap keberagaman. <br> Kami berfokus pada pengembangan <strong class='text-content-natural-primary'>kemampuan akademik</strong> dan <strong class='text-content-natural-primary'>pribadi</strong> anak, memungkinkan mereka untuk mengekspresikan diri, berkomunikasi, bertanggung jawab, dan berkontribusi positif bagi komunitas serta dunia di sekitar mereka."
         },
+        "message": {
+            "title": "Kata Sambutan Direktur",
+            "subtitle": "Kepala Sekolah",
+            "msg_content": "<strong class='text-2xl md:text-3xl lg:text-4xl'>“</strong>Orang Tua yang Terhormat,<br> Kami dengan senang hati menyambut Anda di Sekolah Internasional Arab – Jakarta, tempat kita bersama-sama membangun masa depan anak-anak Anda. <br> Pada tahap awal kehidupan anak ini, kami berkomitmen memberikan pendidikan yang menghubungkan nilai-nilai dengan pengetahuan, menggabungkan bahasa dengan keterampilan, dan membuat anak merasa dicintai serta aman. Sekolah kami bukan sekadar tempat belajar; ini adalah rumah kedua bagi anak-anak Anda. <br> Kami percaya setiap anak membawa benih keunggulan dalam dirinya, dan peran kami adalah menyiapkan lingkungan yang tepat <br> agar mereka tumbuh dengan percaya diri, mandiri, dan bahagia. <br> Selamat datang di komunitas sekolah yang hangat, terbuka, dan selalu berkembang.<strong class='text-2xl md:text-3xl lg:text-4xl'>“</strong>"
+        },
         "values": {
-            "title": "Nilai-Nilai Inti Kami",
-            "subtitle": "Fondasi yang kami bangun untuk segalanya",
+            "title": "Nilai-nilai Kami... Fondasi Segala Sesuatu yang Kami Bangun.",
             "excellence": {
                 "title": "Keunggulan",
-                "desc": "Kami mendorong setiap siswa untuk berusaha mencapai keunggulan akademik, menjadikannya jalan menuju pertumbuhan pribadi dan kesuksesan."
+                "desc": "Kami mendorong setiap kekuatan siswa dan menjadikannya jalan menuju keunggulan akademik dan pertumbuhan pribadi yang menyeluruh."
             },
             "integrity": {
                 "title": "Integritas",
-                "desc": "Kami mempromosikan nilai-nilai etis dan kejujuran dalam setiap aspek pembelajaran dan interaksi pribadi dengan semua orang."
+                "desc": "Kami menanamkan nilai-nilai moral dan kejujuran dalam setiap aspek pembelajaran, membentuk dasar karakter yang mulia dan seimbang."
             },
             "respect": {
                 "title": "Rasa Hormat",
-                "desc": "Kami menanamkan rasa hormat dan menghargai orang lain, dan mempromosikan lingkungan inklusif yang menghargai semua orang."
+                "desc": "Kami menanamkan rasa hormat terhadap diri sendiri dan orang lain, serta menyediakan lingkungan belajar yang inklusif yang menghargai perbedaan individu dan merangkul semua orang."
             },
             "collaboration": {
                 "title": "Kolaborasi",
-                "desc": "Kami menumbuhkan semangat kerjasama di antara siswa, guru, dan orang tua menuju tujuan bersama dalam pembelajaran dan pertumbuhan."
-            }
-        },
-        "history": {
-            "title": "Cerita Kami",
-            "subtitle": "Membangun pemimpin masa depan sejak didirikan",
-            "desc": "Sekolah Arab Internasional didirikan dengan visi untuk menyediakan pendidikan kelas dunia yang menggabungkan nilai-nilai Islam dengan standar internasional. Selama bertahun-tahun, kami telah berkembang menjadi institusi pendidikan komprehensif yang melayani siswa dari taman kanak-kanak hingga sekolah menengah.",
-            "founding": {
-                "title": "Pendirian Kami",
-                "desc": "Didirikan dengan misi menjembatani pendidikan Islam dengan keunggulan akademik global"
-            },
-            "growth": {
-                "title": "Pertumbuhan Berkelanjutan",
-                "desc": "Memperluas program dan fasilitas kami untuk melayani komunitas pelajar yang berkembang"
-            },
-            "future": {
-                "title": "Melihat ke Depan",
-                "desc": "Berkomitmen pada inovasi dan keunggulan dalam mempersiapkan siswa untuk tantangan masa depan"
-            }
-        },
-        "team": {
-            "title": "Kenali Tim Kepemimpinan Kami",
-            "subtitle": "Profesional berdedikasi yang berkomitmen pada keunggulan pendidikan",
-            "principal": {
-                "title": "Kepala Sekolah",
-                "desc": "Memimpin visi pendidikan kami dengan pengalaman bertahun-tahun dalam pendidikan internasional"
-            },
-            "academic_director": {
-                "title": "Direktur Akademik",
-                "desc": "Mengawasi pengembangan kurikulum dan standar akademik di semua tingkatan"
-            },
-            "student_affairs": {
-                "title": "Direktur Urusan Siswa",
-                "desc": "Memastikan kesejahteraan siswa dan menciptakan lingkungan belajar yang mendukung"
-            }
-        },
-        "achievements": {
-            "title": "Pencapaian Kami",
-            "subtitle": "Pengakuan atas komitmen kami terhadap keunggulan pendidikan",
-            "accreditation": {
-                "title": "Akreditasi Internasional",
-                "desc": "Diakui oleh badan-badan pendidikan terkemuka untuk standar tinggi kami"
-            },
-            "awards": {
-                "title": "Penghargaan Pendidikan",
-                "desc": "Dihormati karena inovasi dalam pendidikan multibahasa dan berbasis nilai"
-            },
-            "graduates": {
-                "title": "Lulusan Sukses",
-                "desc": "Alumni kami terus berprestasi di universitas dan karier di seluruh dunia"
-            }
-        },
-        "community": {
-            "title": "Komunitas Sekolah Kami",
-            "subtitle": "Membangun hubungan yang kuat antara siswa, keluarga, dan pendidik",
-            "parents": {
-                "title": "Kemitraan Orang Tua",
-                "desc": "Bekerja sama erat dengan keluarga untuk mendukung perjalanan pendidikan setiap anak"
-            },
-            "students": {
-                "title": "Badan Siswa",
-                "desc": "Komunitas pelajar yang beragam dari berbagai latar belakang budaya"
-            },
-            "staff": {
-                "title": "Staf Berdedikasi",
-                "desc": "Pendidik yang berkualitas dan bersemangat yang berkomitmen pada kesuksesan siswa"
+                "desc": "Kami mendorong semangat kerja sama antara siswa, guru, dan seluruh komunitas sekolah untuk mencapai tujuan bersama dengan harmoni dan kepercayaan."
             }
         }
     },

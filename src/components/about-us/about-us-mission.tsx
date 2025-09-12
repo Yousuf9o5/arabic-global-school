@@ -52,7 +52,7 @@ export default function AboutUsMission() {
                     <h1 className="text-[32px] md:text-6xl lg:text-5xl font-bold leading-[100%] mb-12">{t("title")}</h1>
 
                     <p
-                        className="mt-4 text-content-natural-primary/50 text-lg md:text-[24px] font-normal not-italic leading-[100%] tracking-[0]"
+                        className="mt-4 text-content-natural-primary/70 text-lg md:text-[24px] font-normal not-italic leading-[100%] tracking-[0]"
                         dangerouslySetInnerHTML={{ __html: t.raw("desc") }}
                     ></p>
                 </div>

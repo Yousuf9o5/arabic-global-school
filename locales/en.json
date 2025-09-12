@@ -418,89 +418,28 @@
             "title": "Empowering Youth in a Multilingual, Values-Based Setting",
             "desc": "We provide a <strong class='text-content-natural-primary'>warm</strong> and <strong class='text-content-natural-primary'>stimulating</strong> educational environment that integrates three languages <strong class='text-content-natural-primary'>(Arabic – English – Indonesian)</strong> within an Islamic values framework that promotes respect and openness to diversity. <br> We focus on developing the child's <strong class='text-content-natural-primary'>academic</strong> and <strong class='text-content-natural-primary'>personal skills</strong>, enabling them to express themselves, communicate, take responsibility, and contribute positively to their community and the world around them."
         },
+        "message": {
+            "title": "The director's word",
+            "subtitle": "School Principal",
+            "msg_content": "<strong class='text-2xl md:text-3xl lg:text-4xl'>“</strong>Dear Parents,<br> We are pleased to welcome you to the International Arabic School - Jakarta, where we build together the future of your children. <br> At this foundational stage of a child's life, we are committed to providing an education that connects values with knowledge, combines language with skill, and makes the child feel loved and safe. Our school is not just a place for learning; it is a second home for your children. <br> We believe that every child carries within them the seed of excellence, and our role is to prepare the right <br> environment for them to grow with confidence, independence, and joy. <br> Welcome to a warm, open, and renewing school community.<strong class='text-2xl md:text-3xl lg:text-4xl'>“</strong>"
+        },
         "values": {
-            "title": "Our Core Values",
-            "subtitle": "The foundation upon which we build everything",
+            "title": "Our values... the foundation upon which we build everything.",
             "excellence": {
                 "title": "Excellence",
-                "desc": "We encourage every student to strive for academic, making it a pathway to personal growth and success."
+                "desc": "We encourage every strength in the student, making it a pathway to academic excellence and holistic personal growth."
             },
             "integrity": {
                 "title": "Integrity",
-                "desc": "We promote ethical values and honesty in every aspect of learning and personal interaction with everyone."
+                "desc": "We promote ethical values and honesty in every aspect of learning, to form a foundation for a noble and balanced character."
             },
             "respect": {
                 "title": "Respect",
-                "desc": "We instill with respect and respect for others, and promote an inclusive environment that values everyone."
+                "desc": "We instill self-respect and respect for others, and provide an inclusive educational environment that values individual differences and embraces everyone."
             },
             "collaboration": {
                 "title": "Collaboration",
-                "desc": "We cultivate the spirit of cooperation among students, teachers and parents towards common goals in learning and growth."
-            }
-        },
-        "history": {
-            "title": "Our Story",
-            "subtitle": "Building tomorrow's leaders since our founding",
-            "desc": "Arab International School was established with a vision to provide world-class education that combines Islamic values with international standards. Over the years, we have grown into a comprehensive educational institution serving students from kindergarten through secondary school.",
-            "founding": {
-                "title": "Our Founding",
-                "desc": "Established with the mission to bridge Islamic education with global academic excellence"
-            },
-            "growth": {
-                "title": "Continuous Growth",
-                "desc": "Expanding our programs and facilities to serve our growing community of learners"
-            },
-            "future": {
-                "title": "Looking Forward",
-                "desc": "Committed to innovation and excellence in preparing students for future challenges"
-            }
-        },
-        "team": {
-            "title": "Meet Our Leadership Team",
-            "subtitle": "Dedicated professionals committed to educational excellence",
-            "principal": {
-                "title": "Principal",
-                "desc": "Leading our educational vision with years of experience in international education"
-            },
-            "academic_director": {
-                "title": "Academic Director",
-                "desc": "Overseeing curriculum development and academic standards across all levels"
-            },
-            "student_affairs": {
-                "title": "Student Affairs Director",
-                "desc": "Ensuring student well-being and creating a supportive learning environment"
-            }
-        },
-        "achievements": {
-            "title": "Our Achievements",
-            "subtitle": "Recognition of our commitment to educational excellence",
-            "accreditation": {
-                "title": "International Accreditation",
-                "desc": "Recognized by leading educational bodies for our high standards"
-            },
-            "awards": {
-                "title": "Educational Awards",
-                "desc": "Honored for innovation in multilingual and values-based education"
-            },
-            "graduates": {
-                "title": "Successful Graduates",
-                "desc": "Our alumni continue to excel in universities and careers worldwide"
-            }
-        },
-        "community": {
-            "title": "Our School Community",
-            "subtitle": "Building strong relationships between students, families, and educators",
-            "parents": {
-                "title": "Parent Partnership",
-                "desc": "Working closely with families to support each child's educational journey"
-            },
-            "students": {
-                "title": "Student Body",
-                "desc": "A diverse community of learners from various cultural backgrounds"
-            },
-            "staff": {
-                "title": "Dedicated Staff",
-                "desc": "Qualified and passionate educators committed to student success"
+                "desc": "We enhance the spirit of collaboration among students, teachers, and all members of the school community to achieve our common goals in harmony and trust."
             }
         }
     },
