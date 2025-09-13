@@ -34,7 +34,7 @@ export default function HomeNews() {
     });
 
     return (
-        <Section size="screen" className="bg-background-secondary **:hide-scroll">
+        <Section size="screen" className="bg-[#F7F7E4] **:hide-scroll">
             <Section.Inner className="space-y-12">
                 {/* Section Header */}
                 <div className="text-center max-w-4xl mx-auto">
