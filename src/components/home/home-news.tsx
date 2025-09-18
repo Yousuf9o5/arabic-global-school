@@ -35,7 +35,7 @@ export default function HomeNews() {
 
     return (
         <Section size="screen" className="bg-[#F7F7E4] **:hide-scroll">
-            <Section.Inner className="space-y-12">
+            <Section.Inner className="space-y-12 px-0 md:px-4">
                 {/* Section Header */}
                 <div className="text-center max-w-4xl mx-auto">
                     <h1 className="section-header mb-4">{t("title")}</h1>
@@ -65,7 +65,7 @@ export default function HomeNews() {
                             breakpoints={{
                                 640: {
                                     slidesPerView: 1,
-                                    spaceBetween: 30,
+                                    spaceBetween: 0,
                                 },
                                 1024: {
                                     slidesPerView: 3,
@@ -82,14 +82,14 @@ export default function HomeNews() {
                                         : news.description?.[locale as Locale] || news.description?.en || "";
 
                                 return (
-                                    <SwiperSlide key={news.id + title + i} className="pb-16 h-full">
+                                    <SwiperSlide key={news.id + title + i} className="pb-16 h-full px-4 md:px-0">
                                         <NewsCard
                                             id={news.id}
                                             title={title}
                                             description={description}
                                             image={news.image}
                                             created_at={news.created_at}
-                                            className={`mb-8 ms-4 lg:mx-4 ${activeIndex + 1 == i ? "bg-secondary-solid" : ""}`}
+                                            className={`md:mb-8 md:ms-4 lg:mx-4 ${activeIndex + 1 == i ? "bg-secondary-solid" : ""}`}
                                         />
                                     </SwiperSlide>
                                 );
