@@ -63,7 +63,7 @@ function Navbar() {
                             </DropdownMenuTrigger>
                         </div>
 
-                        <DropdownMenuContent className="w-44 border-gray-100 shadow-lg rounded-lg p-2" align="start">
+                        <DropdownMenuContent className="w-44 border-gray-100 shadow-lg rounded-lg p-2" align="center">
                             {curriculaItems.map((item) => (
                                 <DropdownMenuItem key={item.title} asChild>
                                     <Link

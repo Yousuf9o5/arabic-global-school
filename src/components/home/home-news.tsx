@@ -89,7 +89,7 @@ export default function HomeNews() {
                                             description={description}
                                             image={news.image}
                                             created_at={news.created_at}
-                                            className={`md:mb-8 md:ms-4 lg:mx-4 ${activeIndex + 1 == i ? "bg-secondary-solid" : ""}`}
+                                            className="md:mb-8 md:ms-4 lg:mx-4 hover:bg-secondary-solid transition-colors"
                                         />
                                     </SwiperSlide>
                                 );
