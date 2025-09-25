@@ -1,9 +1,9 @@
 "use client";
 
 import { FacebookIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from "@/assets/icons";
+import { Link } from "@/i18n/routing";
 import { AnimatePresence, motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
