@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import AppImage from "./app-image";
 import { useTranslations } from "next-intl";
 import LangSwitcher from "./lang-switcher";
@@ -10,6 +9,7 @@ import { BurgerMenu, ChevronRightIcon } from "@/assets/icons";
 import BergerMenu from "./berger-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { usePathname } from "next/navigation";
+import { Link } from "@/i18n/routing";
 
 function Navbar() {
     const { toggle, isOpen, close } = useNavbarToggler();
