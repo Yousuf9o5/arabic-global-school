@@ -66,6 +66,7 @@
     --color-secondary-solid-light: var(--secondary-solid-light);
     --color-content-secondary: var(--content-secondary);
     --color-natural-primary: var(--natural-primary);
+    --color-border-secondary: var(--border-secondary);
 }
 
 :root {
@@ -125,6 +126,7 @@
     --secondary-solid-light: oklch(96.166% 0.13521 105.531);
     --content-secondary: oklch(98.147% 0.07515 106.114);
     --natural-primary: oklch(89.952% 0.0279 265.469);
+    --border-secondary: oklch(84.007% 0.17203 85.345);
 }
 
 @layer base {
