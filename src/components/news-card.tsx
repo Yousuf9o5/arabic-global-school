@@ -40,7 +40,7 @@ export default function NewsCard({
     return (
         <article
             className={twMerge(
-                "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative transition-transform duration-300 h-[560px] group",
+                "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative duration-300 h-[560px] group transition-all",
                 className
             )}
         >
