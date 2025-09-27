@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import axios from "axios";
 
 const TIMEOUT_MS = 20000; // 20 seconds timeout
 const ALLOWED_DOMAINS = ["main-website-api.arabicglobalschool.com"];
 
+/**
+ * Image proxy route handler.
+ * Proxies images from allowed domains with timeout and caching.
+ */
 export async function GET(request: NextRequest) {
     try {
         const { searchParams } = new URL(request.url);
@@ -18,30 +23,19 @@ export async function GET(request: NextRequest) {
             return new NextResponse("Domain not allowed", { status: 403 });
         }
 
-        // Create AbortController for timeout
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
         try {
-            // Fetch the image with timeout
-            const response = await fetch(imageUrl, {
-                signal: controller.signal,
+            // Fetch the image using axios with timeout
+            const response = await axios.get<ArrayBuffer>(imageUrl, {
+                responseType: "arraybuffer",
+                timeout: TIMEOUT_MS,
                 headers: {
                     "User-Agent": "Next.js Image Proxy",
                 },
             });
 
-            clearTimeout(timeoutId);
+            const contentType = response.headers["content-type"] || "image/jpeg";
+            const imageBuffer = response.data;
 
-            if (!response.ok) {
-                return new NextResponse("Failed to fetch image", { status: response.status });
-            }
-
-            // Get the image data
-            const imageBuffer = await response.arrayBuffer();
-            const contentType = response.headers.get("content-type") || "image/jpeg";
-
-            // Return the image with proper headers
             return new NextResponse(imageBuffer, {
                 headers: {
                     "Content-Type": contentType,
@@ -49,16 +43,14 @@ export async function GET(request: NextRequest) {
                     "Content-Length": imageBuffer.byteLength.toString(),
                 },
             });
-        } catch (fetchError) {
-            clearTimeout(timeoutId);
-
-            if (fetchError instanceof Error && fetchError.name === "AbortError") {
+        } catch (fetchError: any) {
+            if (axios.isAxiosError(fetchError) && fetchError.code === "ECONNABORTED") {
                 console.error("Image fetch timeout:", imageUrl);
                 return new NextResponse("Image fetch timeout", { status: 504 });
             }
-
+            const status = fetchError.response?.status ?? 500;
             console.error("Image fetch error:", fetchError);
-            return new NextResponse("Failed to fetch image", { status: 500 });
+            return new NextResponse("Failed to fetch image", { status });
         }
     } catch (error) {
         console.error("Image proxy error:", error);

@@ -254,27 +254,27 @@ export const PlayIcon = (props: SVGAttributes<SVGSVGElement>) => {
 export const HappyCalenderIcon = (props: SVGAttributes<SVGSVGElement>) => {
     return (
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-            <path d="M16.7734 3.59912L16.8859 6.82042" stroke="#0064E2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M8.95508 3.87207L9.06757 7.09337" stroke="#0064E2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16.7734 3.59912L16.8859 6.82042" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8.95508 3.87207L9.06757 7.09337" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M17.3985 5.06428L8.44011 5.378C5.80866 5.4699 4.21722 6.99262 4.31128 9.68606L4.59443 17.7945C4.68997 20.5305 6.38494 21.9724 9.01639 21.8805L17.9671 21.5671C20.6063 21.4749 22.1897 19.9447 22.0956 17.2503L21.8101 9.0741C21.7238 6.38039 20.0377 4.97212 17.3985 5.06428Z"
-                stroke="#0064E2"
+                stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
             <path
                 d="M11.4648 17.3052C11.9208 17.8414 12.6086 18.1715 13.3666 18.145C14.1247 18.1185 14.7877 17.7413 15.2052 17.1746"
-                stroke="#0064E2"
+                stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
-            <path d="M16.1895 13.7632L16.2117 14.3992" stroke="#0064E2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M10.2461 13.9707L10.2683 14.6067" stroke="#0064E2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M5.00977 10.6792L21.1959 10.114" stroke="#0064E2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16.1895 13.7632L16.2117 14.3992" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10.2461 13.9707L10.2683 14.6067" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5.00977 10.6792L21.1959 10.114" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     );
 };
@@ -689,6 +689,25 @@ export const BlueCircleIcon = (props: SVGAttributes<SVGSVGElement>) => {
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1212_15445" />
                 </filter>
             </defs>
+        </svg>
+    );
+};
+
+export const SearchIcon = (props: SVGAttributes<SVGSVGElement>) => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.5255 3.46429C7.21119 3.46429 3.7146 6.96089 3.7146 11.2752C3.7146 15.5896 7.21119 19.0862 11.5255 19.0862C15.839 19.0862 19.3365 15.5896 19.3365 11.2752C19.3365 6.96094 15.839 3.46429 11.5255 3.46429ZM2.2146 11.2752C2.2146 6.13246 6.38276 1.96429 11.5255 1.96429C16.6673 1.96429 20.8365 6.13241 20.8365 11.2752C20.8365 16.4181 16.6673 20.5862 11.5255 20.5862C6.38276 20.5862 2.2146 16.418 2.2146 11.2752Z"
+                fill="#6A81B0"
+            />
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M20.149 19.2376C19.7838 19.2376 19.4875 19.5346 19.4875 19.8981C19.4875 20.2636 19.7838 20.5595 20.149 20.5595C20.5135 20.5595 20.8095 20.2642 20.8095 19.8981C20.8095 19.5339 20.5135 19.2376 20.149 19.2376ZM17.9875 19.8981C17.9875 18.7055 18.956 17.7376 20.149 17.7376C21.3426 17.7376 22.3095 18.7061 22.3095 19.8981C22.3095 21.092 21.3426 22.0595 20.149 22.0595C18.956 22.0595 17.9875 21.0927 17.9875 19.8981Z"
+                fill="#6A81B0"
+            />
         </svg>
     );
 };
