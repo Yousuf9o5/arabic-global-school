@@ -1,6 +1,19 @@
 {
     "lang": "en",
 
+    "loading":{
+        "message": "Loading",
+        "please_wait": "Please wait a moment",
+        "fetching_data": "Fetching data...",
+        "submitting": "Submitting...",
+        "processing": "Processing...",
+        "success": "Loaded successfully!",
+        "error": "An error occurred while loading. Please try again.",
+        "retry": "Retry",
+        "empty": "No data available to display at the moment",
+        "loading_description": "We are preparing everything for you. This may take a few seconds."
+    },
+
     "meta": {
         "title": "Arabic Global school",
         "description": "",

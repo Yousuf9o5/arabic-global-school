@@ -1,6 +1,19 @@
 {
     "lang": "id",
 
+    "loading": {
+        "message": "Memuat",
+        "please_wait": "Harap tunggu sebentar",
+        "fetching_data": "Mengambil data...",
+        "submitting": "Mengirim...",
+        "processing": "Memproses...",
+        "success": "Berhasil dimuat!",
+        "error": "Terjadi kesalahan saat memuat. Silakan coba lagi.",
+        "retry": "Coba lagi",
+        "empty": "Tidak ada data yang tersedia untuk ditampilkan saat ini",
+        "loading_description": "Kami sedang mempersiapkan semuanya untuk Anda. Ini mungkin memerlukan beberapa detik."
+    },
+
     "meta": {
         "title": "Sekolah Arab Internasional",
         "description": "",
