@@ -8,6 +8,7 @@
 
 @theme inline {
     /* --default-font-family: var(--font-sf-pro-display); */
+    --default-font-family: var(--app-font);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-sf-pro-display);
@@ -103,8 +104,6 @@
 
     /* custom properties */
 
-    --font-sf-pro-display: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
     --xs-mobile: 360px;
     --space-8xl: 1440px;
     --screen-fhd: 1920px;
@@ -124,6 +123,16 @@
     --secondary-solid-light: oklch(96.166% 0.13521 105.531);
     --content-secondary: oklch(98.147% 0.07515 106.114);
 }
+
+:root[lang="ar"] {
+    --app-font: "sf-arabic-rounded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}   
+
+:root[lang="en"] {
+    --app-font: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
 
 @layer base {
     * {
