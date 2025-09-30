@@ -6,7 +6,7 @@ import { Locale } from "@/i18n/routing";
 import { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import Providers from "../providers";
+import Providers from "../../providers";
 
 // Add generateMetadata function
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {

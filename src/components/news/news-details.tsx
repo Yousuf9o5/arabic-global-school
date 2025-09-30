@@ -59,7 +59,7 @@ export default function NewsDetails({ className }: NewsDetailsProps) {
                     </p>
 
                     <Image
-                        className="absolute top-full start-[90%] hidden lg:block rotate-30 -scale-x-100"
+                        className="absolute top-full start-[90%] hidden lg:block ltr:rotate-30 ltr:-scale-x-100"
                         width={200}
                         height={200}
                         src="/svg/hero/arrow-in-1.svg"
@@ -90,7 +90,7 @@ export default function NewsDetails({ className }: NewsDetailsProps) {
                     </p>
 
                     <Image
-                        className="absolute top-full end-[95%] hidden lg:block -scale-x-100 -rotate-45"
+                        className="absolute top-full end-[95%] hidden lg:block ltr:-scale-x-100 ltr:-rotate-45"
                         width={200}
                         height={200}
                         src="/svg/hero/arrow-in-2.svg"

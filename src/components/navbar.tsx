@@ -1,15 +1,15 @@
 "use client";
 
-import AppImage from "./app-image";
+import { BurgerMenu, ChevronRightIcon } from "@/assets/icons";
+import { useNavbarToggler } from "@/hooks/use-navbar-toggler";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import AppImage from "./app-image";
+import BergerMenu from "./berger-menu";
 import LangSwitcher from "./lang-switcher";
 import { Button } from "./ui/button";
-import { useNavbarToggler } from "@/hooks/use-navbar-toggler";
-import { BurgerMenu, ChevronRightIcon } from "@/assets/icons";
-import BergerMenu from "./berger-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { usePathname } from "next/navigation";
-import { Link } from "@/i18n/routing";
 
 function Navbar() {
     const { toggle, isOpen, close } = useNavbarToggler();
@@ -28,7 +28,7 @@ function Navbar() {
     return (
         <nav className="flex items-stretch justify-between p-4 w-full max-w-8xl mx-auto overflow-hidden bg-transparent">
             <aside className="border-border-primary border p-2 pe-4 hidden lg:flex items-center gap-4 rounded-full ">
-                <Link href={'/'} className="flex items-center gap-2">
+                <Link href={"/"} className="flex items-center gap-2">
                     <AppImage className="w-10 rounded-full" optimized width={200} height={200} src={"/images/logo-school.png"} />
                     <AppImage className="h-8" src={"/images/global-arabic-school.png"} />
                 </Link>

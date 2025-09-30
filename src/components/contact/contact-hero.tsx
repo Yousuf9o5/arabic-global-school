@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Section from "../ui/section";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 export default function ContactHero() {
     const t = useTranslations("contact_us.hero");

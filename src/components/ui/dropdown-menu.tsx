@@ -5,9 +5,11 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import useTextDirection from "@/hooks/use-text-direction";
 
 function DropdownMenu({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
-    return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />;
+    const { dir } = useTextDirection();
+    return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} dir={dir as "ltr" | "rtl"} />;
 }
 
 function DropdownMenuPortal({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Portal>) {

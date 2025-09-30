@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";
 import AppImage from "./app-image";
 import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/routing";
 
 interface NewsCardProps {
     id?: string;
@@ -40,18 +41,13 @@ export default function NewsCard({
     const t = useTranslations();
     const { push } = useRouter();
 
-    const handleClick = () => {
-        // Navigate to the news article page
-        push(`/news/${id}`);
-    };
-
     return (
-        <article
+        <Link 
+            href={`/news/${id}`}
             className={twMerge(
                 "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative duration-300 h-[560px] group transition-all cursor-pointer",
                 className
             )}
-            onClick={handleClick}
         >
             <div>
                 <AppImage
@@ -77,6 +73,6 @@ export default function NewsCard({
             </div>
 
             {hideBadge ? null : <img src="/svg/news-card-bottom-icon.svg" className="absolute end-0 bottom-0 translate-4" alt="" />}
-        </article>
+        </Link>
     );
 }

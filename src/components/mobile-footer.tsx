@@ -1,7 +1,7 @@
 import { EmailIcon, EmailIcon2, FacebookIcon, InstagramIcon, LocationIcon, PhoneIcon, TwitterIcon, YouTubeIcon } from "@/assets/icons";
 import { useTranslations } from "next-intl";
 import AppImage from "./app-image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "./ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 

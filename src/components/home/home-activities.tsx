@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import AppImage from "../app-image";
 import { Card, CardContent } from "../ui/card";
 import Section from "../ui/section";

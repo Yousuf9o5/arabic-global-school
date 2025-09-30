@@ -546,6 +546,12 @@
         },
         "copyright": "Semua hak dilindungi © untuk Duzu Creative Digital Marketing Company."
     },
+    "news_item": {
+        "highlight": {
+            "title": "Stay Informed:",
+            "subtitle": "Latest Announcements and School Highlights"
+        }
+    },
     "register": {
         "title": "Pendaftaran di Sekolah Internasional Arab – 2025/2026",
         "welcomeMessage": "Orang Tua Yang Terhormat,",
