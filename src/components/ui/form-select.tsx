@@ -26,12 +26,16 @@ export function FormSelect({ name, label, options, placeholder, disabled }: Form
                     {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
                     <FormControl>
                         <Select value={field.value} onValueChange={field.onChange} disabled={disabled}>
-                            <SelectTrigger id={name}>
-                                <SelectValue placeholder={placeholder} />
+                            <SelectTrigger
+                                id={name}
+                                className="rounded-[12px] w-full px-4 py-3 !text-[#6A81B0] border-[#D5DEF1] focus-visible:ring-[#D5DEF1] [&_svg]:stroke-[#6A81B0]"
+                            >
+                                <SelectValue className="" placeholder={placeholder} />
                             </SelectTrigger>
+
                             <SelectContent>
                                 {options.map((option) => (
-                                    <SelectItem key={option.value} value={option.value}>
+                                    <SelectItem className="!text-[#6A81B0]" key={option.value} value={option.value}>
                                         {option.label}
                                     </SelectItem>
                                 ))}

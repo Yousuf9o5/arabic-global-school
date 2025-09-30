@@ -3,12 +3,22 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { FormSelect } from "../ui/form-select";
+import { Form } from "../ui/form";
+import { useForm } from "react-hook-form";
 
 export default function Registration() {
     const t = useTranslations("register");
 
+    const form = useForm({
+        defaultValues: {
+            school: "",
+            nextClass: "",
+        },
+    });
+
     return (
-        <article className="bg-[#F9F8F4] rounded-4xl mx-auto p-10 relative max-w-2xl text-center flex flex-col items-center">
+        <article className="bg-[#F9F8F4] rounded-4xl mx-auto p-10 relative max-w-[700px] text-center flex flex-col items-center">
             <Image
                 src="/svg/registration/blue-ball.svg"
                 alt="Registration"
@@ -30,17 +40,34 @@ export default function Registration() {
                 <br />
             </div>
 
-            <div className="bg-white rounded-[20px] h-32 w-full"></div>
+            <Form {...form}>
+                <form action="" className="w-full">
+                    <div className="bg-white rounded-[20px] h-32 w-full flex gap-2 text-start p-6 *:flex-1">
+                        <FormSelect
+                            label="Choose your child's school for next year."
+                            name={""}
+                            placeholder="Select school"
+                            options={[{ label: "Primary school", value: "primary" }]}
+                        />
+                        <FormSelect
+                            label="Please select your child's next class."
+                            name={""}
+                            placeholder="Select class"
+                            options={[{ label: "Primary school", value: "primary" }]}
+                        />
+                    </div>
 
-            <div className="mt-12 flex items-center *:flex-1 w-full gap-2">
-                <Button size={"lg"} variant={"outline"} className="rounded-full max-w-64">
-                    {t("backToHome")}
-                </Button>
+                    <div className="mt-12 flex items-center *:flex-1 w-full gap-2">
+                        <Button size={"lg"} variant={"outline"} className="rounded-full max-w-64" type="button">
+                            {t("backToHome")}
+                        </Button>
 
-                <Button size={"lg"} className="rounded-full">
-                    {t("continue")}
-                </Button>
-            </div>
+                        <Button size={"lg"} className="rounded-full">
+                            {t("continue")}
+                        </Button>
+                    </div>
+                </form>
+            </Form>
         </article>
     );
 }
