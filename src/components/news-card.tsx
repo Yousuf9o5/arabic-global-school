@@ -3,6 +3,7 @@ import { cn, formatDate } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";
 import AppImage from "./app-image";
+import { useRouter } from "next/navigation";
 
 interface NewsCardProps {
     id?: string;
@@ -26,6 +27,7 @@ const defaultData = {
 };
 
 export default function NewsCard({
+    id = defaultData.id,
     title = defaultData.title,
     description = defaultData.description,
     image = defaultData.image,
@@ -36,13 +38,20 @@ export default function NewsCard({
     calenderSectionClass,
 }: NewsCardProps) {
     const t = useTranslations();
+    const { push } = useRouter();
+
+    const handleClick = () => {
+        // Navigate to the news article page
+        push(`/news/${id}`);
+    };
 
     return (
         <article
             className={twMerge(
-                "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative duration-300 h-[560px] group transition-all",
+                "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative duration-300 h-[560px] group transition-all cursor-pointer",
                 className
             )}
+            onClick={handleClick}
         >
             <div>
                 <AppImage

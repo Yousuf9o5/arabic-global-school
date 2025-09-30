@@ -35,7 +35,7 @@ function HomeHero() {
                 className="px-6 py-3 flex items-stretch gap-4 w-fit rounded-full mx-auto translate-y-1/2 relative z-20"
                 style={{ background: "linear-gradient(180deg, #FFFEED 0%, #FFFFFF 100%)" }}
             >
-                <CustomLink shadow="default" href={"/about"} className="text-natural-primary px-8 py-2 border rounded-full">
+                <CustomLink shadow="default" href={"/register"} className="text-natural-primary px-8 py-2 border rounded-full">
                     {t("registration")}
                 </CustomLink>
                 <CustomLink href={"/contact"} shadow={"none"} variant={"outline"} className="text-natural-primary px-6 py-3 border rounded-full">

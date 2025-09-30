@@ -1,7 +1,7 @@
 {
     "lang": "en",
 
-    "loading":{
+    "loading": {
         "message": "Loading",
         "please_wait": "Please wait a moment",
         "fetching_data": "Fetching data...",
@@ -492,6 +492,12 @@
             "title": "Contact us easily",
             "subtitle": "Do you have a question or inquiry? We are happy to hear from you and will respond as soon as possible.",
             "button": "Contact us"
+        }
+    },
+    "news_item": {
+        "highlight": {
+            "title": "Stay Informed:",
+            "subtitle": "Latest Announcements and School Highlights"
         }
     },
     "contact_us": {
