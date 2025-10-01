@@ -1,19 +1,20 @@
 import { CalenderIcon } from "@/assets/icons";
+import type { Matcher } from "react-day-picker";
 import { useFormContext } from "react-hook-form";
 import { Button } from "./button";
 import { Calendar } from "./calendar";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "./form";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
-import type { Matcher } from "react-day-picker";
 
 interface Props {
     name: string;
     label: string;
     optional?: boolean;
     hidden?: Matcher | Matcher[];
+    placeholder?: string;
 }
 
-function FormDate({ name, label, optional, hidden }: Props) {
+function FormDate({ name, label, optional, hidden, placeholder }: Props) {
     const { control } = useFormContext();
 
     // Calculate the maximum allowed date (15 years ago)
@@ -43,15 +44,19 @@ function FormDate({ name, label, optional, hidden }: Props) {
                     <FormControl>
                         <Popover>
                             <PopoverTrigger asChild>
-                                <Button variant="outline" className="!bg-white justify-start text-left font-sans rounded-xl h-[52px] font-semibold">
-                                    <CalenderIcon className="size-6" />
+                                <Button
+                                    variant="outline"
+                                    className="justify-between rounded-[12px] w-full px-4 py-3 !text-[#6A81B0] border-[#D5DEF1] focus-visible:ring-[#D5DEF1] [&_svg]:stroke-[#6A81B0] h-12"
+                                >
                                     {field.value
                                         ? new Date(field.value).toLocaleDateString("ar-US", {
                                               year: "numeric",
                                               month: "long",
                                               day: "numeric",
                                           })
-                                        : "الرجاء اختيار تاريخ الميلاد"}
+                                        : placeholder}
+
+                                    <CalenderIcon className="size-6" />
                                 </Button>
                             </PopoverTrigger>
                             <PopoverContent className="w-auto p-0">

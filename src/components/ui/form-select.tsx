@@ -28,9 +28,10 @@ export function FormSelect({ name, label, options, placeholder, disabled }: Form
                         <Select value={field.value} onValueChange={field.onChange} disabled={disabled}>
                             <SelectTrigger
                                 id={name}
+                                size="lg"
                                 className="rounded-[12px] w-full px-4 py-3 !text-[#6A81B0] border-[#D5DEF1] focus-visible:ring-[#D5DEF1] [&_svg]:stroke-[#6A81B0]"
                             >
-                                <SelectValue className="" placeholder={placeholder} />
+                                <SelectValue placeholder={placeholder} />
                             </SelectTrigger>
 
                             <SelectContent>

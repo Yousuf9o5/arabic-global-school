@@ -1,3 +1,110 @@
+"use client";
+
+import { Form } from "@/components/ui/form";
+import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { getStudentInfoSchema, StudentInfoFormValues } from "@/validations/student-info.validation";
+import { FormInput } from "@/components/ui/form-input";
+import FormDate from "@/components/ui/form-date";
+import { FormSelect } from "@/components/ui/form-select";
+import { Button } from "@/components/ui/button";
+
 export default function StudentInfoPage() {
-    return <></>;
+    const t = useTranslations("register.studentInformation");
+    const tValidations = useTranslations("register.studentInformation.validation");
+
+    const form = useForm({
+        resolver: zodResolver(getStudentInfoSchema(tValidations)),
+        defaultValues: {
+            fullName: "",
+            placeOfBirth: "",
+            nationalId: "",
+            surname: "",
+            religion: "",
+            dateOfBirth: "",
+            ageAsOfJuly: "",
+            nationalId2: "",
+            primaryLanguage: "",
+            childPosition: "",
+            gender: "",
+        },
+    });
+
+    const submit = (data: StudentInfoFormValues) => {
+        console.log(data);
+    };
+
+    return (
+        <section className="max-w-[660px] mx-auto my-8">
+            <div className="text-center mb-14">
+                <h3 className="text-primary text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: t.raw("step") }} />
+                <h2 className="text-content-natural-secondary text-2xl md:text-[32px] font-bold">{t("title")}</h2>
+                <p className="text-natural-tertiary">{t("subtitle")}</p>
+            </div>
+
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-4">
+                    <FormInput name="placeOfBirth" label={t("placeOfBirth")} placeholder={t("placeOfBirthPlaceholder")} />
+
+                    <FormInput name="nationalId" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <FormInput name="surname" label={t("surname")} placeholder={t("surnamePlaceholder")} />
+
+                        <FormInput name="religion" label={t("religion")} placeholder={t("religionPlaceholder")} />
+
+                        <FormDate name="dateOfBirth" label={t("dateOfBirth")} placeholder={t("dateOfBirthPlaceholder")} />
+
+                        <FormInput name="ageAsOfJuly" label={t("studentAge")} placeholder={t("ageNumber")} type="number" />
+
+                        <FormInput name="nationalId2" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />
+
+                        <FormSelect
+                            name="gender"
+                            label={t("gender")}
+                            placeholder={t("genderPlaceholder")}
+                            options={[
+                                { label: t("genderPlaceholder"), value: "none" },
+                                { label: t("male", { defaultValue: "Male" }), value: "male" },
+                                { label: t("female", { defaultValue: "Female" }), value: "female" },
+                            ]}
+                        />
+
+                        <FormSelect
+                            name="childPosition"
+                            label={t("siblingPosition")}
+                            placeholder={t("siblingPlaceholder")}
+                            options={[
+                                { label: t("siblingPlaceholder"), value: "none" },
+                                { label: t("first", { defaultValue: "First" }), value: "first" },
+                                { label: t("second", { defaultValue: "Second" }), value: "second" },
+                                { label: t("third", { defaultValue: "Third" }), value: "third" },
+                                { label: t("fourth", { defaultValue: "Fourth" }), value: "fourth" },
+                                { label: t("fifth", { defaultValue: "Fifth" }), value: "fifth" },
+                                { label: t("other", { defaultValue: "Other" }), value: "other" },
+                            ]}
+                        />
+
+                        <FormSelect
+                            name="primaryLanguage"
+                            label={t("primaryLanguage")}
+                            placeholder={t("languagePlaceholder")}
+                            options={[
+                                { label: t("languagePlaceholder"), value: "none" },
+                                { label: t("arabic", { defaultValue: "Arabic" }), value: "arabic" },
+                                { label: t("english", { defaultValue: "English" }), value: "english" },
+                                { label: t("indonesian", { defaultValue: "Indonesian" }), value: "indonesian" },
+                                { label: t("other", { defaultValue: "Other" }), value: "other" },
+                            ]}
+                        />
+                    </div>
+
+                    <Button className="rounded-full w-full mt-4" size={"md"}>
+                        {t("continue")}
+                    </Button>
+                </form>
+            </Form>
+        </section>
+    );
 }

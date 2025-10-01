@@ -542,11 +542,27 @@
         "continue": "continue",
         "steps": {
             "studentInfo": "Student Information",
+            "studentInfoDescription": "Provide the student's basic personal details such as full name, date of birth, nationality, and current grade.",
             "familyInfo": "Family Information",
+            "familyInfoDescription": "Include details about parents or guardians, such as names, occupations, contact information, and more.",
             "educationHealth": "Educational and Health Background",
-            "attachments": "Required Attachments"
+            "educationHealthDescription": "Share the student's academic history and any relevant health information, including allergies, conditions, or support needs.",
+            "attachments": "Required Attachments",
+            "attachmentsDescription": "Upload the necessary documents such as ID, previous school records, vaccination card, and recent photos."
         },
         "studentInformation": {
+            "male": "Male",
+            "female": "Female",
+            "first": "First",
+            "second": "Second",
+            "third": "Third",
+            "fourth": "Fourth",
+            "fifth": "Fifth",
+            "other": "Other",
+            "arabic": "Arabic",
+            "english": "English",
+            "indonesian": "Indonesian",
+            "step": "Step <strong>1</strong> of <strong>4</strong>",
             "title": "Info about the Learner",
             "subtitle": "Provide the student's basic personal details such as full name, date of birth, nationality, and current grade.",
             "fullName": "Full name of the student",
@@ -568,11 +584,21 @@
             "siblingPosition": "Child's position among siblings",
             "siblingPlaceholder": "Select child's position",
             "primaryLanguage": "Primary language spoken at home",
-            "languagePlaceholder": "Select language"
+            "languagePlaceholder": "Select language",
+            "continue": "continue",
+
+            "validation": {
+                "full_name_required": "Full name is required",
+                "place_of_birth_required": "Place of birth is required",
+                "national_id_required": "National ID/Passport is required",
+                "date_of_birth_required": "Date of birth is required",
+                "valid_age_required": "Enter a valid age",
+                "gender_required": "Gender is required",
+                "child_position_required": "Child's position is required",
+                "primary_language_required": "Primary language is required"
+            }
         },
         "familyInformation": {
-            "title": "Family Information Related to the Student",
-            "subtitle": "Provide accurate details about the student's parents or legal guardians, including contact and relationship information.",
             "fatherName": "Full name of the father",
             "fatherNamePlaceholder": "Enter the full name of the father",
             "motherName": "Full name of the mother",
@@ -598,9 +624,21 @@
             "officeAddress": "Office address",
             "officeAddressPlaceholder": "Enter the office address",
             "landlinePhone": "Landline phone",
-            "landlinePhonePlaceholder": "Enter the home phone number"
+            "landlinePhonePlaceholder": "Enter the home phone number",
+            "step": "Step <strong>2</strong> of <strong>4</strong>",
+            "title": "Family Information Related to the Student",
+            "subtitle": "Provide accurate details about the student's parents or legal guardians, including contact and relationship information.",
+            "validation": {
+                "father_name_required": "Father's name is required",
+                "mother_name_required": "Mother's name is required",
+                "national_id_required": "National ID/Passport is required",
+                "phone_number_required": "Phone number is required",
+                "valid_email_required": "Enter a valid email address"
+            },
+            "continue": "continue"
         },
         "educationHealth": {
+            "step": "Step <strong>3</strong> of <strong>4</strong>",
             "title": "Student Education and Health Journey",
             "subtitle": "Share the student's academic history and any important health information that may support their learning and well-being.",
             "previousSchool": "Name of the previous school",
@@ -620,9 +658,43 @@
             "vision": "Vision",
             "visionPlaceholder": "Select visual condition",
             "hearing": "Hearing",
-            "hearingPlaceholder": "Select hearing condition"
+            "hearingPlaceholder": "Select hearing condition",
+            "futureAspirationOptions": {
+                "doctor": "Doctor",
+                "engineer": "Engineer",
+                "scientist": "Scientist",
+                "teacher": "Teacher",
+                "entrepreneur": "Entrepreneur",
+                "artist": "Artist",
+                "other": "Other"
+            },
+            "visionOptions": {
+                "normal": "Normal vision",
+                "glasses": "Needs glasses",
+                "contacts": "Uses contact lenses",
+                "low": "Low vision support needed",
+                "other": "Other"
+            },
+            "hearingOptions": {
+                "normal": "Normal hearing",
+                "assistive": "Uses hearing aid",
+                "partial": "Partial hearing loss",
+                "support": "Additional support needed",
+                "other": "Other"
+            },
+            "validation": {
+                "previous_school_required": "Name of the previous school is required",
+                "school_address_required": "School address is required",
+                "enrollment_year_required": "Enter a valid year of enrollment",
+                "graduation_year_required": "Enter a valid year of graduation",
+                "future_aspiration_required": "Select the student's future aspiration",
+                "vision_required": "Select a vision condition",
+                "hearing_required": "Select a hearing condition"
+            },
+            "continue": "continue"
         },
         "attachments": {
+            "step": "Step <strong>4</strong> of <strong>4</strong>",
             "title": "Student Education and Health Journey",
             "subtitle": "Share the student's academic history and any important health information that may support their learning and well-being.",
             "parentsId": "Copies of both parents' ID cards.",

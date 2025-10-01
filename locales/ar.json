@@ -574,6 +574,18 @@
             "attachments": "المرفقات المطلوبة"
         },
         "studentInformation": {
+            "male": "ذكر",
+            "female": "أنثى",
+            "first": "الأول",
+            "second": "الثاني",
+            "third": "الثالث",
+            "fourth": "الرابع",
+            "fifth": "الخامس",
+            "other": "أخرى",
+            "arabic": "العربية",
+            "english": "الإنجليزية",
+            "indonesian": "الإندونيسية",
+            "step": "الخطوة <strong>1</strong> من <strong>4</strong>",
             "title": "معلومات عن المتعلم",
             "subtitle": "قدم التفاصيل الشخصية الأساسية للطالب مثل الاسم الكامل وتاريخ الميلاد والجنسية والصف الحالي.",
             "fullName": "الاسم الكامل للطالب",
@@ -595,39 +607,61 @@
             "siblingPosition": "موقع الطفل بين الأشقاء",
             "siblingPlaceholder": "اختر موقع الطفل",
             "primaryLanguage": "اللغة الأساسية المحكية في المنزل",
-            "languagePlaceholder": "اختر اللغة"
+            "languagePlaceholder": "اختر اللغة",
+            "continue": "متابعة",
+
+            "validation": {
+                "full_name_required": "الاسم الكامل مطلوب",
+                "place_of_birth_required": "مكان الميلاد مطلوب",
+                "national_id_required": "رقم الهوية/جواز السفر مطلوب",
+                "date_of_birth_required": "تاريخ الميلاد مطلوب",
+                "valid_age_required": "يرجى إدخال عمر صحيح",
+                "gender_required": "الجنس مطلوب",
+                "child_position_required": "ترتيب الطفل بين الإخوة مطلوب",
+                "primary_language_required": "اللغة الأساسية مطلوبة"
+            }
         },
         "familyInformation": {
-            "title": "معلومات العائلة المتعلقة بالطالب",
-            "subtitle": "قدم تفاصيل دقيقة حول والدي الطالب أو الأوصياء القانونيين، بما في ذلك معلومات الاتصال والعلاقة.",
-            "fatherName": "الاسم الكامل للوالد",
-            "fatherNamePlaceholder": "أدخل الاسم الكامل للوالد",
-            "motherName": "الاسم الكامل للوالدة",
-            "motherNamePlaceholder": "أدخل الاسم الكامل للوالدة",
-            "nationalIdNumber": "رقم الهوية الوطنية/جواز السفر",
-            "nationalIdPlaceholder": "أدخل رقم الهوية الوطنية أو جواز السفر",
+            "fatherName": "اسم الأب الكامل",
+            "fatherNamePlaceholder": "أدخل اسم الأب الكامل",
+            "motherName": "اسم الأم الكامل",
+            "motherNamePlaceholder": "أدخل اسم الأم الكامل",
+            "nationalIdNumber": "رقم الهوية/جواز السفر",
+            "nationalIdPlaceholder": "أدخل رقم الهوية أو جواز السفر",
             "monthlyIncome": "الدخل الشهري",
             "monthlyIncomePlaceholder": "أدخل الدخل الشهري",
             "phoneNumber": "رقم الهاتف",
             "phoneNumberPlaceholder": "أدخل رقم الهاتف",
-            "emailAddress": "عنوان البريد الإلكتروني",
-            "emailPlaceholder": "أدخل عنوان البريد الإلكتروني",
+            "emailAddress": "البريد الإلكتروني",
+            "emailPlaceholder": "أدخل البريد الإلكتروني",
             "guardianName": "اسم الوصي (إن وجد)",
             "guardianNamePlaceholder": "أدخل اسم الوصي",
-            "guardianRelationship": "علاقة الوصي بالطالب",
-            "guardianRelationshipPlaceholder": "حدد علاقة الوصي بالطالب",
-            "parentAge": "عمر الوالد/الوصي",
-            "parentAgePlaceholder": "أدخل عمر الوالد/الوصي",
+            "guardianRelationship": "صلة القرابة بالطالب",
+            "guardianRelationshipPlaceholder": "حدد صلة القرابة بالطالب",
+            "parentAge": "عمر ولي الأمر/الوصي",
+            "parentAgePlaceholder": "أدخل عمر ولي الأمر/الوصي",
             "occupation": "المهنة",
             "occupationPlaceholder": "أدخل المهنة",
             "workPlace": "مكان العمل",
             "workPlacePlaceholder": "أدخل اسم مكان العمل",
-            "officeAddress": "عنوان المكتب",
-            "officeAddressPlaceholder": "أدخل عنوان المكتب",
-            "landlinePhone": "هاتف أرضي",
-            "landlinePhonePlaceholder": "أدخل رقم الهاتف المنزلي"
+            "officeAddress": "عنوان العمل",
+            "officeAddressPlaceholder": "أدخل عنوان العمل",
+            "landlinePhone": "الهاتف الأرضي",
+            "landlinePhonePlaceholder": "أدخل رقم الهاتف المنزلي",
+            "step": "الخطوة <strong>2</strong> من <strong>4</strong>",
+            "title": "معلومات العائلة المتعلقة بالطالب",
+            "subtitle": "قدم تفاصيل دقيقة حول والدي الطالب أو الأوصياء القانونيين، بما في ذلك معلومات الاتصال والعلاقة."
+            ,
+            "validation": {
+                "father_name_required": "اسم الأب مطلوب",
+                "mother_name_required": "اسم الأم مطلوب",
+                "national_id_required": "رقم الهوية/جواز السفر مطلوب",
+                "phone_number_required": "رقم الهاتف مطلوب",
+                "valid_email_required": "يرجى إدخال بريد إلكتروني صحيح"
+            }
         },
         "educationHealth": {
+            "step": "الخطوة <strong>3</strong> من <strong>4</strong>",
             "title": "رحلة تعليم وصحة الطالب",
             "subtitle": "شارك التاريخ الأكاديمي للطالب وأي معلومات صحية مهمة قد تدعم تعلمه ورفاهيته.",
             "previousSchool": "اسم المدرسة السابقة",
@@ -647,9 +681,42 @@
             "vision": "البصر",
             "visionPlaceholder": "اختر الحالة البصرية",
             "hearing": "السمع",
-            "hearingPlaceholder": "اختر حالة السمع"
+            "hearingPlaceholder": "اختر حالة السمع",
+            "futureAspirationOptions": {
+                "doctor": "طبيب",
+                "engineer": "مهندس",
+                "scientist": "عالم",
+                "teacher": "معلم",
+                "entrepreneur": "رائد أعمال",
+                "artist": "فنان",
+                "other": "أخرى"
+            },
+            "visionOptions": {
+                "normal": "رؤية طبيعية",
+                "glasses": "يحتاج إلى نظارات",
+                "contacts": "يستخدم العدسات اللاصقة",
+                "low": "بحاجة إلى دعم للرؤية الضعيفة",
+                "other": "أخرى"
+            },
+            "hearingOptions": {
+                "normal": "سمع طبيعي",
+                "assistive": "يستخدم جهاز سمع",
+                "partial": "فقدان سمع جزئي",
+                "support": "بحاجة إلى دعم إضافي",
+                "other": "أخرى"
+            },
+            "validation": {
+                "previous_school_required": "اسم المدرسة السابقة مطلوب",
+                "school_address_required": "عنوان المدرسة مطلوب",
+                "enrollment_year_required": "يرجى إدخال سنة التحاق صحيحة",
+                "graduation_year_required": "يرجى إدخال سنة تخرج صحيحة",
+                "future_aspiration_required": "يرجى اختيار طموح الطالب المستقبلي",
+                "vision_required": "يرجى اختيار حالة البصر",
+                "hearing_required": "يرجى اختيار حالة السمع"
+            }
         },
         "attachments": {
+            "step": "الخطوة <strong>4</strong> من <strong>4</strong>",
             "title": "رحلة تعليم وصحة الطالب",
             "subtitle": "شارك التاريخ الأكاديمي للطالب وأي معلومات صحية مهمة قد تدعم تعلمه ورفاهيته.",
             "parentsId": "نسخ من بطاقات هوية كلا الوالدين.",
@@ -678,6 +745,17 @@
             "message": "لقد تلقينا طلبك وسنقوم بمراجعته قريباً. سنتواصل معك لترتيب مقابلة شخصية لإكمال عملية التسجيل.",
             "returnHome": "العودة إلى الصفحة الرئيسية"
         }
+    },
+    "common": {
+        "learnMore": "اعرف المزيد",
+        "readMore": "اقرأ المزيد",
+        "seeMore": "شاهد المزيد",
+        "seeAll": "عرض الكل",
+        "registerNow": "سجل الآن",
+        "next": "التالي",
+        "prev": "السابق",
+        "play": "تشغيل",
+        "pause": "إيقاف مؤقت"
     },
     "image_alt": {
         "default": "المدرسة العالمية العربية"

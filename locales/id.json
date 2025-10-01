@@ -572,6 +572,18 @@
             "attachments": "Lampiran yang Diperlukan"
         },
         "studentInformation": {
+            "male": "Laki-laki",
+            "female": "Perempuan",
+            "first": "Pertama",
+            "second": "Kedua",
+            "third": "Ketiga",
+            "fourth": "Keempat",
+            "fifth": "Kelima",
+            "other": "Lainnya",
+            "arabic": "Arab",
+            "english": "Inggris",
+            "indonesian": "Indonesia",
+            "step": "Langkah <strong>1</strong> dari <strong>4</strong>",
             "title": "Info tentang Pelajar",
             "subtitle": "Berikan detail pribadi dasar siswa seperti nama lengkap, tanggal lahir, kebangsaan, dan kelas saat ini.",
             "fullName": "Nama lengkap siswa",
@@ -593,24 +605,33 @@
             "siblingPosition": "Posisi anak di antara saudara kandung",
             "siblingPlaceholder": "Pilih posisi anak",
             "primaryLanguage": "Bahasa utama yang digunakan di rumah",
-            "languagePlaceholder": "Pilih bahasa"
+            "languagePlaceholder": "Pilih bahasa",
+            "continue": "lanjutkan",
+            "validation": {
+                "full_name_required": "Nama lengkap wajib diisi",
+                "place_of_birth_required": "Tempat lahir wajib diisi",
+                "national_id_required": "Nomor KTP/Passport wajib diisi",
+                "date_of_birth_required": "Tanggal lahir wajib diisi",
+                "valid_age_required": "Masukkan usia yang valid",
+                "gender_required": "Jenis kelamin wajib diisi",
+                "child_position_required": "Urutan anak wajib diisi",
+                "primary_language_required": "Bahasa utama wajib diisi"
+            }
         },
         "familyInformation": {
-            "title": "Informasi Keluarga Terkait Siswa",
-            "subtitle": "Berikan detail akurat tentang orang tua siswa atau wali yang sah, termasuk kontak dan informasi hubungan.",
             "fatherName": "Nama lengkap ayah",
             "fatherNamePlaceholder": "Masukkan nama lengkap ayah",
             "motherName": "Nama lengkap ibu",
             "motherNamePlaceholder": "Masukkan nama lengkap ibu",
-            "nationalIdNumber": "Nomor KTP/Paspor",
-            "nationalIdPlaceholder": "Masukkan nomor KTP atau paspor",
-            "monthlyIncome": "Pendapatan bulanan",
-            "monthlyIncomePlaceholder": "Masukkan pendapatan bulanan",
+            "nationalIdNumber": "Nomor KTP/Passport",
+            "nationalIdPlaceholder": "Masukkan nomor KTP atau passport",
+            "monthlyIncome": "Penghasilan bulanan",
+            "monthlyIncomePlaceholder": "Masukkan penghasilan bulanan",
             "phoneNumber": "Nomor telepon",
             "phoneNumberPlaceholder": "Masukkan nomor telepon",
             "emailAddress": "Alamat email",
             "emailPlaceholder": "Masukkan alamat email",
-            "guardianName": "Nama wali (jika berlaku)",
+            "guardianName": "Nama wali (jika ada)",
             "guardianNamePlaceholder": "Masukkan nama wali",
             "guardianRelationship": "Hubungan wali dengan siswa",
             "guardianRelationshipPlaceholder": "Tentukan hubungan wali dengan siswa",
@@ -623,9 +644,21 @@
             "officeAddress": "Alamat kantor",
             "officeAddressPlaceholder": "Masukkan alamat kantor",
             "landlinePhone": "Telepon rumah",
-            "landlinePhonePlaceholder": "Masukkan nomor telepon rumah"
+            "landlinePhonePlaceholder": "Masukkan nomor telepon rumah",
+            "step": "Langkah <strong>2</strong> dari <strong>4</strong>",
+            "title": "Informasi Keluarga Terkait Siswa",
+            "subtitle": "Berikan detail akurat tentang orang tua siswa atau wali yang sah, termasuk kontak dan informasi hubungan."
+            ,
+            "validation": {
+                "father_name_required": "Nama ayah wajib diisi",
+                "mother_name_required": "Nama ibu wajib diisi",
+                "national_id_required": "Nomor KTP/Passport wajib diisi",
+                "phone_number_required": "Nomor telepon wajib diisi",
+                "valid_email_required": "Masukkan alamat email yang valid"
+            }
         },
         "educationHealth": {
+            "step": "Langkah <strong>3</strong> dari <strong>4</strong>",
             "title": "Perjalanan Pendidikan dan Kesehatan Siswa",
             "subtitle": "Bagikan riwayat akademik siswa dan informasi kesehatan penting yang dapat mendukung pembelajaran dan kesejahteraan mereka.",
             "previousSchool": "Nama sekolah sebelumnya",
@@ -645,9 +678,42 @@
             "vision": "Penglihatan",
             "visionPlaceholder": "Pilih kondisi visual",
             "hearing": "Pendengaran",
-            "hearingPlaceholder": "Pilih kondisi pendengaran"
+            "hearingPlaceholder": "Pilih kondisi pendengaran",
+            "futureAspirationOptions": {
+                "doctor": "Dokter",
+                "engineer": "Insinyur",
+                "scientist": "Ilmuwan",
+                "teacher": "Guru",
+                "entrepreneur": "Pengusaha",
+                "artist": "Seniman",
+                "other": "Lainnya"
+            },
+            "visionOptions": {
+                "normal": "Penglihatan normal",
+                "glasses": "Membutuhkan kacamata",
+                "contacts": "Menggunakan lensa kontak",
+                "low": "Membutuhkan dukungan penglihatan rendah",
+                "other": "Lainnya"
+            },
+            "hearingOptions": {
+                "normal": "Pendengaran normal",
+                "assistive": "Menggunakan alat bantu dengar",
+                "partial": "Kehilangan pendengaran sebagian",
+                "support": "Membutuhkan dukungan tambahan",
+                "other": "Lainnya"
+            },
+            "validation": {
+                "previous_school_required": "Nama sekolah sebelumnya wajib diisi",
+                "school_address_required": "Alamat sekolah wajib diisi",
+                "enrollment_year_required": "Masukkan tahun pendaftaran yang valid",
+                "graduation_year_required": "Masukkan tahun kelulusan yang valid",
+                "future_aspiration_required": "Pilih aspirasi masa depan siswa",
+                "vision_required": "Pilih kondisi penglihatan",
+                "hearing_required": "Pilih kondisi pendengaran"
+            }
         },
         "attachments": {
+            "step": "Langkah <strong>4</strong> dari <strong>4</strong>",
             "title": "Perjalanan Pendidikan dan Kesehatan Siswa",
             "subtitle": "Bagikan riwayat akademik siswa dan informasi kesehatan penting yang dapat mendukung pembelajaran dan kesejahteraan mereka.",
             "parentsId": "Salinan KTP kedua orang tua.",
@@ -676,6 +742,17 @@
             "message": "Kami telah menerima aplikasi Anda dan akan meninjau segera. Kami akan menghubungi Anda untuk mengatur wawancara pribadi untuk menyelesaikan proses pendaftaran.",
             "returnHome": "Kembali ke beranda"
         }
+    },
+    "common": {
+        "learnMore": "Pelajari lebih lanjut",
+        "readMore": "Baca selengkapnya",
+        "seeMore": "Lihat lebih banyak",
+        "seeAll": "Lihat semua",
+        "registerNow": "Daftar sekarang",
+        "next": "Berikutnya",
+        "prev": "Sebelumnya",
+        "play": "Putar",
+        "pause": "Jeda"
     },
     "image_alt": {
         "default": "Sekolah Internasional Arab"
