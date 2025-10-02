@@ -647,8 +647,7 @@
             "landlinePhonePlaceholder": "Masukkan nomor telepon rumah",
             "step": "Langkah <strong>2</strong> dari <strong>4</strong>",
             "title": "Informasi Keluarga Terkait Siswa",
-            "subtitle": "Berikan detail akurat tentang orang tua siswa atau wali yang sah, termasuk kontak dan informasi hubungan."
-            ,
+            "subtitle": "Berikan detail akurat tentang orang tua siswa atau wali yang sah, termasuk kontak dan informasi hubungan.",
             "validation": {
                 "father_name_required": "Nama ayah wajib diisi",
                 "mother_name_required": "Nama ibu wajib diisi",
@@ -735,7 +734,13 @@
             "note3": "Diskon pendaftaran awal (hanya untuk tahap 1, 2, 3):",
             "stage1": "Tahap 1 - Diskon 50%",
             "stage2": "Tahap 2 - Diskon 30%",
-            "stage3": "Tahap 3 - Diskon 20%"
+            "stage3": "Tahap 3 - Diskon 20%",
+            "validation": {
+                "parents_id_required": "Harap unggah salinan KTP orang tua.",
+                "birth_certificate_required": "Harap unggah akta kelahiran siswa.",
+                "student_photos_required": "Harap unggah foto siswa.",
+                "family_card_required": "Harap unggah kartu keluarga."
+            }
         },
         "thankYou": {
             "title": "Terima kasih telah mendaftarkan putra Anda di Sekolah Internasional Arab.",
@@ -752,7 +757,10 @@
         "next": "Berikutnya",
         "prev": "Sebelumnya",
         "play": "Putar",
-        "pause": "Jeda"
+        "pause": "Jeda",
+        "drag_label": "Seret gambar ke sini atau",
+        "select_file": "pilih file dari perangkat Anda",
+        "choose": "Pilih"
     },
     "image_alt": {
         "default": "Sekolah Internasional Arab"

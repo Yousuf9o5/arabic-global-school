@@ -828,3 +828,24 @@ export const PaperUploadIcon = (props: SVGAttributes<SVGSVGElement>) => {
         </svg>
     );
 };
+
+export const UploadIcon = (props: SVGAttributes<SVGSVGElement>) => {
+    return (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path
+                d="M7.62059 9.92261H6.73811C4.81455 9.92261 3.25391 11.4833 3.25391 13.4068V18.0167C3.25488 19.9403 4.81455 21.5 6.73811 21.5H17.2617C19.1863 21.5 20.7459 19.9403 20.7459 18.0167V13.3981C20.7459 11.4794 19.1911 9.92358 17.2724 9.92261H16.3812"
+                stroke="#0064E2"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M11.9996 3.5V14.8847M11.9996 3.5L9.24414 6.2681M11.9996 3.5L14.758 6.2681"
+                stroke="#0064E2"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};

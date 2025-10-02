@@ -716,7 +716,13 @@
             "note3": "Early registration discounts (for stages 1, 2, 3 only):",
             "stage1": "Stage 1 - 50% discount",
             "stage2": "Stage 2 - 30% discount",
-            "stage3": "Stage 3 - 20% discount"
+            "stage3": "Stage 3 - 20% discount",
+            "validation": {
+                "parents_id_required": "Please upload copies of the parents' ID cards.",
+                "birth_certificate_required": "Please upload the student's birth certificate.",
+                "student_photos_required": "Please upload the student's photos.",
+                "family_card_required": "Please upload the family card."
+            }
         },
         "thankYou": {
             "title": "Thank you for enrolling your son with the International Arab School.",
@@ -733,7 +739,10 @@
         "next": "Next",
         "prev": "Previous",
         "play": "Play",
-        "pause": "Pause"
+        "pause": "Pause",
+        "drag_label": "Drag the images here or",
+        "select_file": "select a file from your device",
+        "choose": "Choose"
     },
     "image_alt": {
         "default": "International Arab School"

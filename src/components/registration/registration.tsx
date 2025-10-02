@@ -18,7 +18,7 @@ export default function Registration() {
     });
 
     return (
-        <article className="bg-[#F9F8F4] rounded-4xl mx-auto p-10 relative max-w-[700px] text-center flex flex-col items-center">
+        <article className="bg-[#F9F8F4] rounded-4xl mx-auto p-10 relative max-w-[700px] text-center flex flex-col items-center my-16">
             <Image
                 src="/svg/registration/blue-ball.svg"
                 alt="Registration"
@@ -43,26 +43,16 @@ export default function Registration() {
             <Form {...form}>
                 <form action="" className="w-full">
                     <div className="bg-white rounded-[20px] h-32 w-full flex gap-2 text-start p-6 *:flex-1">
-                        <FormSelect
-                            label="Choose your child's school for next year."
-                            name={""}
-                            placeholder="Select school"
-                            options={[{ label: "Primary school", value: "primary" }]}
-                        />
-                        <FormSelect
-                            label="Please select your child's next class."
-                            name={""}
-                            placeholder="Select class"
-                            options={[{ label: "Primary school", value: "primary" }]}
-                        />
+                        <FormSelect label={t("schoolSelection")} name="school" options={[{ label: t("primarySchool"), value: "primary" }]} />
+                        <FormSelect label={t("classSelection")} name="nextClass" options={[{ label: t("one"), value: "one" }]} />
                     </div>
 
                     <div className="mt-12 flex items-center *:flex-1 w-full gap-2">
-                        <Button size={"lg"} variant={"outline"} className="rounded-full max-w-64" type="button">
+                        <Button size="lg" variant="outline" className="rounded-full max-w-64" type="button">
                             {t("backToHome")}
                         </Button>
 
-                        <Button size={"lg"} className="rounded-full">
+                        <Button size="lg" className="rounded-full">
                             {t("continue")}
                         </Button>
                     </div>
