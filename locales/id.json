@@ -567,9 +567,13 @@
         "continue": "lanjutkan",
         "steps": {
             "studentInfo": "Informasi Siswa",
+            "studentInfoDescription": "Berikan detail pribadi dasar siswa seperti nama lengkap, tanggal lahir, kebangsaan, dan kelas saat ini.",
             "familyInfo": "Informasi Keluarga",
+            "familyInfoDescription": "Sertakan detail tentang orang tua atau wali, seperti nama, pekerjaan, informasi kontak, dan lainnya.",
             "educationHealth": "Latar Belakang Pendidikan dan Kesehatan",
-            "attachments": "Lampiran yang Diperlukan"
+            "educationHealthDescription": "Bagikan riwayat akademik siswa dan informasi kesehatan penting, termasuk alergi, kondisi, atau kebutuhan dukungan.",
+            "attachments": "Lampiran yang Diperlukan",
+            "attachmentsDescription": "Unggah dokumen yang diperlukan seperti KTP, catatan sekolah sebelumnya, kartu vaksinasi, dan foto terbaru."
         },
         "studentInformation": {
             "male": "Laki-laki",
