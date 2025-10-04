@@ -11,12 +11,7 @@ interface FilterButtonsProps {
 }
 
 export function FilterButtons({ items, onChange, defaultValue }: FilterButtonsProps) {
-    const initialIndex = (() => {
-        if (!defaultValue) return 0;
-        const i = items.findIndex((item) => item.value === defaultValue);
-        return i >= 0 ? i : 0;
-    })();
-    const [activeIndex, setActiveIndex] = useState(initialIndex);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [buttonDimensions, setButtonDimensions] = useState({ width: 0, height: 0, left: 0, top: 0 });
     const buttonsRef = useRef<(HTMLButtonElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -51,6 +46,15 @@ export function FilterButtons({ items, onChange, defaultValue }: FilterButtonsPr
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeIndex, items.join("|")]);
+
+    useEffect(() => {
+        if (!defaultValue) return;
+
+        const defaultIndex = items.findIndex((item) => item.value === defaultValue);
+        if (defaultIndex !== -1) {
+            setActiveIndex(defaultIndex);
+        }
+    }, [defaultValue, items]);
 
     const handleClick = (item: { label: string; value: string }, index: number) => {
         setActiveIndex(index);

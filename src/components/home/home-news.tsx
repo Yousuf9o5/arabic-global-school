@@ -23,7 +23,6 @@ export default function HomeNews() {
     const { locale } = useParams();
 
     const t = useTranslations("home.announcements");
-    const [activeIndex, setActiveIndex] = useState(0);
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
     const { dir } = useTextDirection();
@@ -50,7 +49,6 @@ export default function HomeNews() {
                             slidesPerView={1}
                             modules={[Navigation]}
                             onSlideChange={(swiper) => {
-                                setActiveIndex(swiper.activeIndex);
                                 setIsBeginning(swiper.isBeginning);
                                 setIsEnd(swiper.isEnd);
                             }}

@@ -9,10 +9,14 @@ import { FormInput } from "@/components/ui/form-input";
 import FormDate from "@/components/ui/form-date";
 import { FormSelect } from "@/components/ui/form-select";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import useTextDirection from "@/hooks/use-text-direction";
 
 export default function StudentInfoPage() {
+    const { locale } = useTextDirection();
     const t = useTranslations("register.studentInformation");
     const tValidations = useTranslations("register.studentInformation.validation");
+    const { push } = useRouter();
 
     const form = useForm({
         resolver: zodResolver(getStudentInfoSchema(tValidations)),
@@ -33,7 +37,11 @@ export default function StudentInfoPage() {
 
     const submit = (data: StudentInfoFormValues) => {
         console.log(data);
+        push(`/${locale}/registration/form/family-info`);
     };
+
+    console.log(form.formState.errors);
+    
 
     return (
         <section className="max-w-[660px] mx-auto my-8">
@@ -45,6 +53,8 @@ export default function StudentInfoPage() {
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-4">
+                    <FormInput name="fullName" label={t("fullName")} placeholder={t("placeOfBirthPlaceholder")} />
+                    
                     <FormInput name="placeOfBirth" label={t("placeOfBirth")} placeholder={t("placeOfBirthPlaceholder")} />
 
                     <FormInput name="nationalId" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />

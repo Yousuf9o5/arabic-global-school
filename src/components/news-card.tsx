@@ -1,10 +1,9 @@
 import { HappyCalenderIcon } from "@/assets/icons";
+import { Link } from "@/i18n/routing";
 import { cn, formatDate } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";
 import AppImage from "./app-image";
-import { useRouter } from "next/navigation";
-import { Link } from "@/i18n/routing";
 
 interface NewsCardProps {
     id?: string;
@@ -39,7 +38,6 @@ export default function NewsCard({
     calenderSectionClass,
 }: NewsCardProps) {
     const t = useTranslations();
-    const { push } = useRouter();
 
     return (
         <Link 

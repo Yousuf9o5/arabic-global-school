@@ -1,7 +1,7 @@
 "use client";
 
 import AppImage from "@/components/app-image";
-import { cubicBezier, easeInOut } from "motion";
+import { cubicBezier } from "motion";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 

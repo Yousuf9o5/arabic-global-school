@@ -64,7 +64,7 @@ function FormDate({ name, label, optional, hidden, placeholder }: Props) {
                                     dir="ltr"
                                     mode="single"
                                     selected={field.value ? new Date(field.value) : undefined}
-                                    onSelect={field.onChange}
+                                    onSelect={value => field.onChange(value?.toLocaleString())}
                                     disabled={combinedHidden}
                                     captionLayout="dropdown"
                                     defaultMonth={maxDate}
