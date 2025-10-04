@@ -11,6 +11,8 @@ import { FormSelect } from "@/components/ui/form-select";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import useTextDirection from "@/hooks/use-text-direction";
+import { useEffect } from "react";
+import { loadData, setData } from "@/lib/local-storage";
 
 export default function StudentInfoPage() {
     const { locale } = useTextDirection();
@@ -35,8 +37,16 @@ export default function StudentInfoPage() {
         },
     });
 
+    // Load saved data from localStorage on mount
+    useEffect(() => {
+        const savedData = loadData<StudentInfoFormValues>("student_info");
+        if (savedData) {
+            form.reset(savedData);
+        }
+    }, [form]);
+
     const submit = (data: StudentInfoFormValues) => {
-        console.log(data);
+        setData("student_info", data);
         push(`/${locale}/registration/form/family-info`);
     };
 

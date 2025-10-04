@@ -4,6 +4,7 @@ import { useLenisScroll } from "@/hooks/use-lenis-scroll";
 import { NavbarTogglerProvider } from "@/hooks/use-navbar-toggler";
 // Since QueryClientProvider relies on useContext under the hood, we have to put 'use client' on top
 import { isServer, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "sonner";
 
 function makeQueryClient() {
     return new QueryClient({
@@ -47,7 +48,10 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <NavbarTogglerProvider>{children}</NavbarTogglerProvider>
+            <NavbarTogglerProvider>
+                <Toaster position="top-center" richColors />
+                {children}
+            </NavbarTogglerProvider>
         </QueryClientProvider>
     );
 }

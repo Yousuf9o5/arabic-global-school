@@ -11,6 +11,8 @@ import { useForm } from "react-hook-form";
 import { FamilyInfoFormValues, getFamilyInfoSchema } from "@/validations/family-info.validation";
 import { useRouter } from "next/navigation";
 import useTextDirection from "@/hooks/use-text-direction";
+import { useEffect } from "react";
+import { loadData, setData } from "@/lib/local-storage";
 
 export default function FamilyInfoPage() {
     const t = useTranslations("register.familyInformation");
@@ -39,8 +41,16 @@ export default function FamilyInfoPage() {
         },
     });
 
+    // Load saved data from localStorage on mount
+    useEffect(() => {
+        const savedData = loadData<FamilyInfoFormValues>("family_info");
+        if (savedData) {
+            form.reset(savedData);
+        }
+    }, [form]);
+
     const submit = (data: FamilyInfoFormValues) => {
-        console.log(data);
+        setData("family_info", data);
         push(`/${locale}/registration/form/education-health`);
     };
 

@@ -8,29 +8,45 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { getEducationHealthSchema, EducationHealthFormValues } from "@/validations/education-health.validation";
+import { useRouter } from "next/navigation";
+import useTextDirection from "@/hooks/use-text-direction";
+import { useEffect } from "react";
+import { loadData, setData } from "@/lib/local-storage";
 
 export default function EducationHealthPage() {
-  const t = useTranslations("register.educationHealth");
-  const tValidations = useTranslations("register.educationHealth.validation");
+    const t = useTranslations("register.educationHealth");
+    const tValidations = useTranslations("register.educationHealth.validation");
 
-  const form = useForm<EducationHealthFormValues>({
-    resolver: zodResolver(getEducationHealthSchema(tValidations)),
-    defaultValues: {
-      previousSchool: "",
-      schoolAddress: "",
-      fieldOfStudy: "",
-      enrollmentYear: "",
-      graduationYear: "",
-      medicalHistory: "",
+    const { locale } = useTextDirection();
+    const { push } = useRouter();
+
+    const form = useForm<EducationHealthFormValues>({
+        resolver: zodResolver(getEducationHealthSchema(tValidations)),
+        defaultValues: {
+            previousSchool: "",
+            schoolAddress: "",
+            fieldOfStudy: "",
+            enrollmentYear: "",
+            graduationYear: "",
+            medicalHistory: "",
             futureAspiration: "placeholder",
             vision: "placeholder",
             hearing: "placeholder",
-    },
-  });
+        },
+    });
 
-  const submit = (values: EducationHealthFormValues) => {
-    console.log(values);
-  };
+    // Load saved data from localStorage on mount
+    useEffect(() => {
+        const savedData = loadData<EducationHealthFormValues>("education_health");
+        if (savedData) {
+            form.reset(savedData);
+        }
+    }, [form]);
+
+    const submit = (values: EducationHealthFormValues) => {
+        setData("education_health", values);
+        push(`/${locale}/registration/form/attachments`);
+    };
 
   const futureAspirationOptions = [
     { label: t("futureAspirationPlaceholder"), value: "placeholder" },
@@ -133,7 +149,7 @@ export default function EducationHealthPage() {
           </div>
 
           <Button className="rounded-full w-full mt-4" size="md">
-            {t("continue")}
+            {t("continue", { defaultValue: "Continue" })}
           </Button>
         </form>
       </Form>

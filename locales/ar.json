@@ -769,6 +769,17 @@
         "select_file": "اختر ملفاً من جهازك",
         "choose": "اختر"
     },
+    "toast": {
+        "registration_success": "تم إرسال التسجيل بنجاح!",
+        "registration_error": "فشل التسجيل. يرجى المحاولة مرة أخرى.",
+        "complete_steps": "يرجى إكمال جميع الخطوات السابقة أولاً",
+        "submitting": "جارٍ إرسال تسجيلك...",
+        "uploading_images": "جارٍ رفع الصور...",
+        "upload_success": "تم رفع الصور بنجاح",
+        "upload_error": "فشل رفع الصور. يرجى المحاولة مرة أخرى.",
+        "file_too_large": "حجم الملف يتجاوز حد 5 ميجابايت",
+        "invalid_file_type": "نوع الملف غير صالح. يرجى تحميل ملفات PNG أو JPG أو PDF فقط"
+    },
     "image_alt": {
         "default": "المدرسة العالمية العربية"
     }
