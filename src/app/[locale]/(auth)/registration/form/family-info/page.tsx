@@ -9,11 +9,16 @@ import { useForm } from "react-hook-form";
 
 // Minimal Zod schema for family info (expand as needed)
 import { FamilyInfoFormValues, getFamilyInfoSchema } from "@/validations/family-info.validation";
+import { useRouter } from "next/navigation";
+import useTextDirection from "@/hooks/use-text-direction";
 
 export default function FamilyInfoPage() {
     const t = useTranslations("register.familyInformation");
     const tValidations = useTranslations("register.familyInformation.validation");
     const tCommon = useTranslations("register.studentInformation");
+
+    const { locale } = useTextDirection();
+    const { push } = useRouter();
 
     const form = useForm<FamilyInfoFormValues>({
         resolver: zodResolver(getFamilyInfoSchema(tValidations)),
@@ -36,6 +41,7 @@ export default function FamilyInfoPage() {
 
     const submit = (data: FamilyInfoFormValues) => {
         console.log(data);
+        push(`/${locale}/registration/form/education-health`);
     };
 
     return (

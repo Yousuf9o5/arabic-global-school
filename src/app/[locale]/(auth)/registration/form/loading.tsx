@@ -1,113 +1,87 @@
 "use client";
 
-import AppImage from "@/components/app-image";
-import { cubicBezier } from "motion";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
 
 /**
- * A full-screen loading component displayed during page transitions.
- * It features the school logo, a loading animation, and localized text.
+ * A loading skeleton that mirrors the registration form layout structure.
+ * Displays animated placeholder blocks matching the actual page components.
  */
 export default function Loading() {
-    const t = useTranslations("loading");
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.7,
-                ease: cubicBezier(0.42, 0, 0.58, 1),
-            },
-        },
-    };
-
-    const logoVariants = {
-        hidden: { opacity: 0, scale: 0.85, y: 30, rotate: -8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            rotate: 0,
-            transition: { duration: 0.8, stiffness: 120, damping: 16 },
-        },
-    };
-
-    const dotVariants = {
-        initial: { y: 0, scale: 1, opacity: 0.7, backgroundColor: "#3B82F6" },
+    const pulseAnimation = {
         animate: {
-            y: [0, -12, 0],
-            scale: [1, 1.25, 1],
-            opacity: [0.7, 1, 0.7],
-            backgroundColor: ["#3B82F6", "#2563EB", "#3B82F6"],
+            opacity: [0.5, 0.8, 0.5],
         },
-    };
-
-    const dotTransition = {
-        duration: 1.1,
-        repeat: Infinity,
-        repeatType: "loop" as const,
-        ease: "easeInOut" as const,
+        transition: {
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut" as const,
+        },
     };
 
     return (
-        <motion.section
-            className="relative flex flex-col items-center justify-center min-h-[80lvh] bg-background p-4 overflow-hidden"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-        >
-            {/* Animated moving gradient background */}
-            <motion.div
-                aria-hidden
-                initial={{ opacity: 0, scale: 1.1, x: 0, y: 0 }}
-                animate={{
-                    opacity: 0.7,
-                    scale: 1,
-                    x: [0, 40, 0, -40, 0],
-                    y: [0, 20, 0, -20, 0],
-                }}
-                transition={{ duration: 8, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
-                className="pointer-events-none absolute inset-0 z-0"
-                style={{
-                    background: "radial-gradient(ellipse 80% 60% at 50% 30%, #e0e7ff 0%, #f0f6ff 60%, transparent 100%)",
-                }}
-            />
-            <div className="flex flex-col items-center justify-center gap-8 relative z-10">
+        <section className="mx-auto my-8 w-full max-w-[660px] px-4">
+            {/* Header skeleton */}
+            <div className="mb-14 space-y-3 text-center">
                 <motion.div
-                    variants={logoVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="shadow-2xl border border-primary/20 rounded-full backdrop-blur-sm"
-                >
-                    <AppImage className="w-36 rounded-full" optimized width={500} height={500} src={"/images/logo-school.png"} />
-                </motion.div>
-
-                <div className="flex flex-col items-center gap-3">
-                    <div className="flex items-center gap-3 text-xl font-bold text-foreground">
-                        <span>{t("message")}</span>
-                        <div className="flex w-10 items-center justify-center gap-1 min-w-max">
-                            {[...Array(3)].map((_, i) => (
-                                <motion.div
-                                    key={i}
-                                    className="block size-2.5 rounded-full"
-                                    variants={dotVariants}
-                                    transition={{ ...dotTransition, delay: i * 0.25 }}
-                                    initial="initial"
-                                    animate="animate"
-                                />
-                            ))}
-                        </div>
-                    </div>
-
-                    <h3 className="text-muted-foreground text-center max-w-md text-lg font-medium">
-                        {t("loading_description", {
-                            defaultMessage: "Please wait while we prepare the page for you.",
-                        })}
-                    </h3>
-                </div>
+                    className="mx-auto h-6 w-32 rounded-lg bg-primary/20"
+                    animate={pulseAnimation.animate}
+                    transition={pulseAnimation.transition}
+                />
+                <motion.div
+                    className="mx-auto h-8 w-64 rounded-lg bg-content-natural-secondary/20 md:h-10"
+                    animate={pulseAnimation.animate}
+                    transition={{ ...pulseAnimation.transition, delay: 0.1 }}
+                />
+                <motion.div
+                    className="mx-auto h-5 w-80 max-w-full rounded-lg bg-natural-tertiary/20"
+                    animate={pulseAnimation.animate}
+                    transition={{ ...pulseAnimation.transition, delay: 0.2 }}
+                />
             </div>
-        </motion.section>
+
+            {/* Form skeleton */}
+            <div className="flex flex-col gap-4">
+                {/* Full-width fields */}
+                {[1, 2, 3].map((i) => (
+                    <div key={`full-${i}`} className="space-y-2">
+                        <motion.div
+                            className="h-4 w-24 rounded bg-content-natural-secondary/20"
+                            animate={pulseAnimation.animate}
+                            transition={{ ...pulseAnimation.transition, delay: 0.1 * i }}
+                        />
+                        <motion.div
+                            className="h-12 w-full rounded-xl border border-[#D5DEF1] bg-[#F7FAFF]"
+                            animate={pulseAnimation.animate}
+                            transition={{ ...pulseAnimation.transition, delay: 0.1 * i + 0.05 }}
+                        />
+                    </div>
+                ))}
+
+                {/* Grid layout skeleton (2 columns on md+) */}
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    {[1, 2, 3, 4, 5, 6].map((i) => (
+                        <div key={`grid-${i}`} className="space-y-2">
+                            <motion.div
+                                className="h-4 w-28 rounded bg-content-natural-secondary/20"
+                                animate={pulseAnimation.animate}
+                                transition={{ ...pulseAnimation.transition, delay: 0.15 * i }}
+                            />
+                            <motion.div
+                                className="h-12 w-full rounded-xl border border-[#D5DEF1] bg-[#F7FAFF]"
+                                animate={pulseAnimation.animate}
+                                transition={{ ...pulseAnimation.transition, delay: 0.15 * i + 0.05 }}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Button skeleton */}
+                <motion.div
+                    className="mt-4 h-12 w-full rounded-full bg-primary/20"
+                    animate={pulseAnimation.animate}
+                    transition={{ ...pulseAnimation.transition, delay: 0.3 }}
+                />
+            </div>
+        </section>
     );
 }

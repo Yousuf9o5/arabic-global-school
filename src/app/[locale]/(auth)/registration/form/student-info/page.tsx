@@ -40,9 +40,6 @@ export default function StudentInfoPage() {
         push(`/${locale}/registration/form/family-info`);
     };
 
-    console.log(form.formState.errors);
-    
-
     return (
         <section className="max-w-[660px] mx-auto my-8">
             <div className="text-center mb-14">
