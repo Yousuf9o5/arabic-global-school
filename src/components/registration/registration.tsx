@@ -6,16 +6,23 @@ import { Button } from "../ui/button";
 import { FormSelect } from "../ui/form-select";
 import { Form } from "../ui/form";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { getStudentClassInfo, StudentClassInfo } from "@/validations/student-info.validation";
 
 export default function Registration() {
     const t = useTranslations("register");
 
     const form = useForm({
+        resolver: zodResolver(getStudentClassInfo(t)),
         defaultValues: {
-            school: "",
-            nextClass: "",
+            child_school: "",
+            child_next_class: "",
         },
     });
+
+    const submit = (data: StudentClassInfo) => {
+        console.log(data);
+    };
 
     return (
         <article className="bg-[#F9F8F4] rounded-4xl mx-auto p-10 relative max-w-[700px] text-center flex flex-col items-center my-16">
@@ -41,10 +48,29 @@ export default function Registration() {
             </div>
 
             <Form {...form}>
-                <form action="" className="w-full">
+                <form onSubmit={form.handleSubmit(submit)} className="w-full">
                     <div className="bg-white rounded-[20px] h-32 w-full flex gap-2 text-start p-6 *:flex-1">
-                        <FormSelect label={t("schoolSelection")} name="school" options={[{ label: t("primarySchool"), value: "primary" }]} />
-                        <FormSelect label={t("classSelection")} name="nextClass" options={[{ label: t("one"), value: "one" }]} />
+                        <FormSelect
+                            label={t("schoolSelection")}
+                            name="child_school"
+                            options={[
+                                { label: t("primarySchool"), value: "primary" },
+                                { label: t("secondarySchool"), value: "secondary" },
+                                { label: t("kindergarten"), value: "kindergarten" },
+                            ]}
+                        />
+                        <FormSelect
+                            label={t("classSelection")}
+                            name="child_next_class"
+                            options={[
+                                { label: t("one"), value: "one" },
+                                { label: t("two"), value: "two" },
+                                { label: t("three"), value: "three" },
+                                { label: t("four"), value: "four" },
+                                { label: t("five"), value: "five" },
+                                { label: t("six"), value: "six" },
+                            ]}
+                        />
                     </div>
 
                     <div className="mt-12 flex items-center *:flex-1 w-full gap-2">

@@ -1,5 +1,14 @@
 import { z } from "zod";
 
+export function getStudentClassInfo(t: (key: string) => string) {
+    return z.object({
+        child_school: z.string().min(2, t("")),
+        child_next_class: z.string().min(2, t("")),
+    });
+}
+
+export type StudentClassInfo = z.infer<ReturnType<typeof getStudentClassInfo>>;
+
 export function getStudentInfoSchema(t: (key: string) => string) {
     return z.object({
         fullName: z.string().min(2, t("full_name_required")),

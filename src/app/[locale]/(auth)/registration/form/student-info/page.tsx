@@ -1,18 +1,17 @@
 "use client";
 
-import { Form } from "@/components/ui/form";
-import { useTranslations } from "next-intl";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { getStudentInfoSchema, StudentInfoFormValues } from "@/validations/student-info.validation";
-import { FormInput } from "@/components/ui/form-input";
-import FormDate from "@/components/ui/form-date";
-import { FormSelect } from "@/components/ui/form-select";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { Form } from "@/components/ui/form";
+import FormDate from "@/components/ui/form-date";
+import { FormInput } from "@/components/ui/form-input";
+import { FormSelect } from "@/components/ui/form-select";
+import useFormData from "@/hooks/use-form-data";
 import useTextDirection from "@/hooks/use-text-direction";
-import { useEffect } from "react";
-import { loadData, setData } from "@/lib/local-storage";
+import { getStudentInfoSchema, StudentInfoFormValues } from "@/validations/student-info.validation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 export default function StudentInfoPage() {
     const { locale } = useTextDirection();
@@ -37,16 +36,13 @@ export default function StudentInfoPage() {
         },
     });
 
-    // Load saved data from localStorage on mount
-    useEffect(() => {
-        const savedData = loadData<StudentInfoFormValues>("student_info");
-        if (savedData) {
-            form.reset(savedData);
-        }
-    }, [form]);
+    const { updateFormData } = useFormData<StudentInfoFormValues>({
+        key: "student_info",
+        onLoad: (val) => form.reset(val),
+    });
 
     const submit = (data: StudentInfoFormValues) => {
-        setData("student_info", data);
+        updateFormData(data);
         push(`/${locale}/registration/form/family-info`);
     };
 
@@ -61,7 +57,7 @@ export default function StudentInfoPage() {
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-4">
                     <FormInput name="fullName" label={t("fullName")} placeholder={t("placeOfBirthPlaceholder")} />
-                    
+
                     <FormInput name="placeOfBirth" label={t("placeOfBirth")} placeholder={t("placeOfBirthPlaceholder")} />
 
                     <FormInput name="nationalId" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />

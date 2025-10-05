@@ -8,11 +8,10 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 
 // Minimal Zod schema for family info (expand as needed)
+import useFormData from "@/hooks/use-form-data";
+import useTextDirection from "@/hooks/use-text-direction";
 import { FamilyInfoFormValues, getFamilyInfoSchema } from "@/validations/family-info.validation";
 import { useRouter } from "next/navigation";
-import useTextDirection from "@/hooks/use-text-direction";
-import { useEffect } from "react";
-import { loadData, setData } from "@/lib/local-storage";
 
 export default function FamilyInfoPage() {
     const t = useTranslations("register.familyInformation");
@@ -41,16 +40,13 @@ export default function FamilyInfoPage() {
         },
     });
 
-    // Load saved data from localStorage on mount
-    useEffect(() => {
-        const savedData = loadData<FamilyInfoFormValues>("family_info");
-        if (savedData) {
-            form.reset(savedData);
-        }
-    }, [form]);
+    const { updateFormData } = useFormData<FamilyInfoFormValues>({
+        key: "family_info",
+        onLoad: (val) => form.reset(val),
+    });
 
     const submit = (data: FamilyInfoFormValues) => {
-        setData("family_info", data);
+        updateFormData(data);
         push(`/${locale}/registration/form/education-health`);
     };
 

@@ -67,12 +67,7 @@ export default function AttachmentsPage() {
             const imagePaths: string[] = [];
 
             // Upload all files (validation already normalized them to File[])
-            const allFiles = [
-                ...values.studentPhotos,
-                ...values.parentsId,
-                ...values.birthCertificate,
-                ...values.familyCard,
-            ];
+            const allFiles = [...values.studentPhotos, ...values.parentsId, ...values.birthCertificate, ...values.familyCard];
 
             for (const file of allFiles) {
                 const path = await uploadRegistrationImage(file);
