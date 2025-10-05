@@ -7,7 +7,8 @@ import { FormSelect } from "../ui/form-select";
 import { Form } from "../ui/form";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { getStudentClassInfo, StudentClassInfo } from "@/validations/student-info.validation";
+import { getStudentClassInfo, StudentClassInfo, StudentInfoFormValues } from "@/validations/student-info.validation";
+import useFormData from "@/hooks/use-form-data";
 
 export default function Registration() {
     const t = useTranslations("register");
@@ -18,6 +19,11 @@ export default function Registration() {
             child_school: "",
             child_next_class: "",
         },
+    });
+
+    const { } = useFormData<StudentInfoFormValues>({
+        key: "student_info",
+        onLoad: (val) => form.reset(val),
     });
 
     const submit = (data: StudentClassInfo) => {

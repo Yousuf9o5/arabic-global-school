@@ -9,7 +9,7 @@ export default function useFormData<T>({ key, onLoad }: { key: FormDataKeys; onL
     useEffect(() => {
         const data = loadData<T>(key);
         if (!data) return;
-        
+
         onLoad(data);
         setFormData(data);
     }, [key]);
