@@ -7,7 +7,8 @@ import { FormInput } from "@/components/ui/form-input";
 import { FormSelect } from "@/components/ui/form-select";
 import useFormData from "@/hooks/use-form-data";
 import useTextDirection from "@/hooks/use-text-direction";
-import { getStudentInfoSchema, StudentInfoFormValues } from "@/validations/student-info.validation";
+import type { StudentInfoFormValues } from "@/validations/student-info.validation";
+import { getStudentInfoSchema } from "@/validations/student-info.validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -19,20 +20,24 @@ export default function StudentInfoPage() {
     const tValidations = useTranslations("register.studentInformation.validation");
     const { push } = useRouter();
 
-    const form = useForm({
+    const form = useForm<StudentInfoFormValues>({
         resolver: zodResolver(getStudentInfoSchema(tValidations)),
         defaultValues: {
-            fullName: "",
-            placeOfBirth: "",
-            nationalId: "",
-            surname: "",
+            child_school: "",
+            child_next_class: "",
+            full_name: "",
+            birth_place: "",
+            family_name: "",
             religion: "",
-            dateOfBirth: "",
-            ageAsOfJuly: "",
-            nationalId2: "",
-            primaryLanguage: "",
-            childPosition: "",
+            birthday: "",
+            age_in_july: "",
+            id_passport_number: "",
             gender: "",
+            nationality: "",
+            weight_height: "",
+            sibling_order: "",
+            home_language: "",
+            living_with: "",
         },
     });
 
@@ -56,61 +61,81 @@ export default function StudentInfoPage() {
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-4">
-                    <FormInput name="fullName" label={t("fullName")} placeholder={t("placeOfBirthPlaceholder")} />
+                    <FormSelect
+                        name="child_school"
+                        label={t("childSchool")}
+                        placeholder={t("childSchoolPlaceholder")}
+                        options={[
+                            { label: t("childSchoolPlaceholder"), value: "0" },
+                            { label: t("primarySchool"), value: "1" },
+                            { label: t("middleSchool"), value: "2" },
+                            { label: t("highSchool"), value: "3" },
+                        ]}
+                    />
 
-                    <FormInput name="placeOfBirth" label={t("placeOfBirth")} placeholder={t("placeOfBirthPlaceholder")} />
+                    <FormInput
+                        name="child_next_class"
+                        label={t("childNextClass")}
+                        placeholder={t("childNextClassPlaceholder")}
+                    />
 
-                    <FormInput name="nationalId" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />
+                    <FormInput name="full_name" label={t("fullName")} placeholder={t("fullNamePlaceholder")} />
+
+                    <FormInput name="birth_place" label={t("birthPlace")} placeholder={t("birthPlacePlaceholder")} />
+
+                    <FormInput name="family_name" label={t("familyName")} placeholder={t("familyNamePlaceholder")} />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <FormInput name="surname" label={t("surname")} placeholder={t("surnamePlaceholder")} />
-
                         <FormInput name="religion" label={t("religion")} placeholder={t("religionPlaceholder")} />
 
-                        <FormDate name="dateOfBirth" label={t("dateOfBirth")} placeholder={t("dateOfBirthPlaceholder")} />
+                        <FormDate name="birthday" label={t("birthday")} placeholder={t("birthdayPlaceholder")} />
 
-                        <FormInput name="ageAsOfJuly" label={t("studentAge")} placeholder={t("ageNumber")} type="number" />
+                        <FormInput
+                            name="age_in_july"
+                            label={t("ageInJuly")}
+                            placeholder={t("ageInJulyPlaceholder")}
+                            type="number"
+                        />
 
-                        <FormInput name="nationalId2" label={t("nationalId")} placeholder={t("nationalIdPlaceholder")} />
+                        <FormInput
+                            name="id_passport_number"
+                            label={t("idPassportNumber")}
+                            placeholder={t("idPassportNumberPlaceholder")}
+                            type="number"
+                        />
 
                         <FormSelect
                             name="gender"
                             label={t("gender")}
                             placeholder={t("genderPlaceholder")}
                             options={[
-                                { label: t("genderPlaceholder"), value: "none" },
-                                { label: t("male", { defaultValue: "Male" }), value: "male" },
-                                { label: t("female", { defaultValue: "Female" }), value: "female" },
+                                { label: t("male"), value: "true" },
+                                { label: t("female"), value: "false" },
                             ]}
                         />
 
-                        <FormSelect
-                            name="childPosition"
-                            label={t("siblingPosition")}
-                            placeholder={t("siblingPlaceholder")}
-                            options={[
-                                { label: t("siblingPlaceholder"), value: "none" },
-                                { label: t("first", { defaultValue: "First" }), value: "first" },
-                                { label: t("second", { defaultValue: "Second" }), value: "second" },
-                                { label: t("third", { defaultValue: "Third" }), value: "third" },
-                                { label: t("fourth", { defaultValue: "Fourth" }), value: "fourth" },
-                                { label: t("fifth", { defaultValue: "Fifth" }), value: "fifth" },
-                                { label: t("other", { defaultValue: "Other" }), value: "other" },
-                            ]}
+                        <FormInput name="nationality" label={t("nationality")} placeholder={t("nationalityPlaceholder")} />
+
+                        <FormInput
+                            name="weight_height"
+                            label={t("weightHeight")}
+                            placeholder={t("weightHeightPlaceholder")}
                         />
 
-                        <FormSelect
-                            name="primaryLanguage"
-                            label={t("primaryLanguage")}
-                            placeholder={t("languagePlaceholder")}
-                            options={[
-                                { label: t("languagePlaceholder"), value: "none" },
-                                { label: t("arabic", { defaultValue: "Arabic" }), value: "arabic" },
-                                { label: t("english", { defaultValue: "English" }), value: "english" },
-                                { label: t("indonesian", { defaultValue: "Indonesian" }), value: "indonesian" },
-                                { label: t("other", { defaultValue: "Other" }), value: "other" },
-                            ]}
+                        <FormInput
+                            name="sibling_order"
+                            label={t("siblingOrder")}
+                            placeholder={t("siblingOrderPlaceholder")}
+                            type="number"
                         />
+
+                        <FormInput
+                            name="home_language"
+                            label={t("homeLanguage")}
+                            placeholder={t("homeLanguagePlaceholder")}
+                        />
+
+                        <FormInput name="living_with" label={t("livingWith")} placeholder={t("livingWithPlaceholder")} />
                     </div>
 
                     <Button className="rounded-full w-full mt-4" size={"md"}>

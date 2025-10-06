@@ -570,6 +570,8 @@
         "five": "Lima",
         "six": "Enam",
         "one": "Satu",
+        "current_class_required": "Kelas saat ini wajib diisi",
+        "next_class_required": "Kelas berikutnya wajib diisi",
         "backToHome": "Kembali ke beranda",
         "continue": "lanjutkan",
         "steps": {
@@ -583,8 +585,6 @@
             "attachmentsDescription": "Unggah dokumen yang diperlukan seperti KTP, catatan sekolah sebelumnya, kartu vaksinasi, dan foto terbaru."
         },
         "studentInformation": {
-            "male": "Laki-laki",
-            "female": "Perempuan",
             "first": "Pertama",
             "second": "Kedua",
             "third": "Ketiga",
@@ -597,36 +597,71 @@
             "step": "Langkah <strong>1</strong> dari <strong>4</strong>",
             "title": "Info tentang Pelajar",
             "subtitle": "Berikan detail pribadi dasar siswa seperti nama lengkap, tanggal lahir, kebangsaan, dan kelas saat ini.",
+            "childSchool": "Sekolah anak",
+            "childSchoolPlaceholder": "Pilih sekolah anak",
+            "primarySchool": "Sekolah dasar",
+            "middleSchool": "Sekolah menengah pertama",
+            "highSchool": "Sekolah menengah atas",
+
+            "childNextClass": "Kelas berikutnya untuk anak",
+            "childNextClassPlaceholder": "Pilih kelas berikutnya",
+
             "fullName": "Nama lengkap siswa",
             "fullNamePlaceholder": "Mohammad rasheed alfarogh",
-            "placeOfBirth": "Tempat lahir",
-            "placeOfBirthPlaceholder": "Masukkan tempat lahir siswa",
-            "nationalId": "KTP/Paspor",
-            "nationalIdPlaceholder": "94853976-978",
-            "surname": "Nama keluarga",
-            "surnamePlaceholder": "Masukkan nama keluarga",
+
+            "birthPlace": "Tempat lahir",
+            "birthPlacePlaceholder": "Masukkan tempat lahir siswa",
+
+            "familyName": "Nama keluarga",
+            "familyNamePlaceholder": "Masukkan nama keluarga",
+
             "religion": "Agama",
             "religionPlaceholder": "Masukkan agama siswa",
-            "dateOfBirth": "Tanggal lahir",
-            "dateOfBirthPlaceholder": "Pilih tanggal lahir siswa",
-            "studentAge": "Usia siswa per Juli",
-            "ageNumber": "8",
+
+            "birthday": "Tanggal lahir",
+            "birthdayPlaceholder": "Pilih tanggal lahir siswa",
+
+            "ageInJuly": "Usia siswa per Juli",
+            "ageInJulyPlaceholder": "Masukkan usia siswa per Juli",
+
+            "idPassportNumber": "Nomor KTP/Paspor",
+            "idPassportNumberPlaceholder": "94853976-978",
+
             "gender": "Jenis kelamin",
             "genderPlaceholder": "Pilih jenis kelamin",
-            "siblingPosition": "Posisi anak di antara saudara kandung",
-            "siblingPlaceholder": "Pilih posisi anak",
-            "primaryLanguage": "Bahasa utama yang digunakan di rumah",
-            "languagePlaceholder": "Pilih bahasa",
+            "male": "Laki-laki",
+            "female": "Perempuan",
+
+            "nationality": "Kebangsaan",
+            "nationalityPlaceholder": "Masukkan kebangsaan siswa",
+
+            "weightHeight": "Berat dan tinggi badan",
+            "weightHeightPlaceholder": "Masukkan berat dan tinggi badan",
+
+            "siblingOrder": "Urutan anak di antara saudara",
+            "siblingOrderPlaceholder": "Masukkan urutan anak",
+
+            "homeLanguage": "Bahasa utama yang digunakan di rumah",
+            "homeLanguagePlaceholder": "Pilih bahasa utama",
+
+            "livingWith": "Tinggal bersama",
+            "livingWithPlaceholder": "Tentukan dengan siapa anak tinggal",
             "continue": "lanjutkan",
             "validation": {
+                "school_required": "Pilihan sekolah wajib diisi",
+                "next_class_required": "Kelas berikutnya wajib diisi",
                 "full_name_required": "Nama lengkap wajib diisi",
                 "place_of_birth_required": "Tempat lahir wajib diisi",
-                "national_id_required": "Nomor KTP/Passport wajib diisi",
+                "family_name_required": "Nama keluarga wajib diisi",
                 "date_of_birth_required": "Tanggal lahir wajib diisi",
                 "valid_age_required": "Masukkan usia yang valid",
+                "id_passport_required": "KTP/Passport wajib diisi",
                 "gender_required": "Jenis kelamin wajib diisi",
-                "child_position_required": "Urutan anak wajib diisi",
-                "primary_language_required": "Bahasa utama wajib diisi"
+                "nationality_required": "Kebangsaan wajib diisi",
+                "weight_height_required": "Berat dan tinggi badan wajib diisi",
+                "sibling_order_required": "Urutan anak di antara saudara wajib diisi",
+                "primary_language_required": "Bahasa utama wajib diisi",
+                "living_with_required": "Harap tentukan dengan siapa anak tinggal"
             }
         },
         "familyInformation": {

@@ -1,24 +1,35 @@
 import { z } from "zod";
 
 /**
- * Returns the Zod schema for the family information form, using the provided translation function for error messages.
- * @param t - Translation function for validation messages
+ * Validation schema for parent information matching API structure.
+ * Creates separate objects for mother and father data.
  */
+const parentSchema = (t: (key: string) => string, parentType: 'mother' | 'father') => z.object({
+    full_name: z.string().min(2, t(`${parentType}_name_required`)),
+    birthday: z.string().min(1, t("birthday_required")),
+    age: z.string().min(1, t("age_required")),
+    religion: z.string().optional(),
+    birth_place: z.string().min(2, t("birth_place_required")),
+    nationality: z.string().min(2, t("nationality_required")),
+    registration_role: z.string().min(2, t("registration_role_required")),
+    specialization: z.string().optional(),
+    last_education: z.string().optional(),
+    job_title: z.string().optional(),
+    job_type: z.string().optional(),
+    employer: z.string().optional(),
+    employer_address: z.string().optional(),
+    office_phone: z.string().optional(),
+    monthly_income: z.string().optional(),
+    email: z.string().email(t("valid_email_required")),
+    phone: z.string().min(6, t("phone_number_required")),
+    emergency_phone: z.string().optional(),
+    contact_time: z.string().optional(),
+});
+
 export function getFamilyInfoSchema(t: (key: string) => string) {
     return z.object({
-        fatherName: z.string().min(2, t("father_name_required")),
-        motherName: z.string().min(2, t("mother_name_required")),
-        nationalIdNumber: z.string().min(6, t("national_id_required")),
-        monthlyIncome: z.string().optional(),
-        phoneNumber: z.string().min(6, t("phone_number_required")),
-        emailAddress: z.string().email(t("valid_email_required")),
-        guardianName: z.string().optional(),
-        guardianRelationship: z.string().optional(),
-        parentAge: z.string().optional(),
-        occupation: z.string().optional(),
-        workPlace: z.string().optional(),
-        officeAddress: z.string().optional(),
-        landlinePhone: z.string().optional(),
+        mother: parentSchema(t, 'mother'),
+        father: parentSchema(t, 'father'),
     });
 }
 

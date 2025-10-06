@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { loadData, setData } from "@/lib/local-storage";
 
-export type FormDataKeys = "student_info" | "family_info" | "education_health" | "attachments";
+export type FormDataKeys = "class_info" | "student_info" | "family_info" | "education_health" | "attachments";
 
 export default function useFormData<T>({ key, onLoad }: { key: FormDataKeys; onLoad: (data: T) => void }) {
     const [formData, setFormData] = useState<T>();

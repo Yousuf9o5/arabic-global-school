@@ -545,6 +545,8 @@
         "five": "Five",
         "six": "Six",
         "one": "One",
+        "current_class_required": "Current class is required",
+        "next_class_required": "Next class is required",
         "backToHome": "Back to home",
         "continue": "continue",
         "steps": {
@@ -558,8 +560,6 @@
             "attachmentsDescription": "Upload the necessary documents such as ID, previous school records, vaccination card, and recent photos."
         },
         "studentInformation": {
-            "male": "Male",
-            "female": "Female",
             "first": "First",
             "second": "Second",
             "third": "Third",
@@ -572,37 +572,71 @@
             "step": "Step <strong>1</strong> of <strong>4</strong>",
             "title": "Info about the Learner",
             "subtitle": "Provide the student's basic personal details such as full name, date of birth, nationality, and current grade.",
+            "childSchool": "Child's school",
+            "childSchoolPlaceholder": "Select the child's school",
+            "primarySchool": "Primary school",
+            "middleSchool": "Middle school",
+            "highSchool": "High school",
+
+            "childNextClass": "Child's next class",
+            "childNextClassPlaceholder": "Select the next class",
+
             "fullName": "Full name of the student",
             "fullNamePlaceholder": "Mohammad rasheed alfarogh",
-            "placeOfBirth": "Place of birth",
-            "placeOfBirthPlaceholder": "Enter the student's place of birth",
-            "nationalId": "National ID/Passport",
-            "nationalIdPlaceholder": "94853976-978",
-            "surname": "Surname",
-            "surnamePlaceholder": "Enter the surname",
+
+            "birthPlace": "Place of birth",
+            "birthPlacePlaceholder": "Enter the student's place of birth",
+
+            "familyName": "Family name",
+            "familyNamePlaceholder": "Enter the family name",
+
             "religion": "Religion",
             "religionPlaceholder": "Enter the student's religion",
-            "dateOfBirth": "Date of birth",
-            "dateOfBirthPlaceholder": "Select the student's date of birth",
-            "studentAge": "Student's age as of July",
-            "ageNumber": "8",
+
+            "birthday": "Date of birth",
+            "birthdayPlaceholder": "Select the student's date of birth",
+
+            "ageInJuly": "Student's age as of July",
+            "ageInJulyPlaceholder": "Enter the student's age as of July",
+
+            "idPassportNumber": "National ID/Passport number",
+            "idPassportNumberPlaceholder": "94853976-978",
+
             "gender": "Gender",
             "genderPlaceholder": "Select gender",
-            "siblingPosition": "Child's position among siblings",
-            "siblingPlaceholder": "Select child's position",
-            "primaryLanguage": "Primary language spoken at home",
-            "languagePlaceholder": "Select language",
-            "continue": "continue",
+            "male": "Male",
+            "female": "Female",
 
+            "nationality": "Nationality",
+            "nationalityPlaceholder": "Enter the student's nationality",
+
+            "weightHeight": "Weight and height",
+            "weightHeightPlaceholder": "Enter weight and height",
+
+            "siblingOrder": "Child's position among siblings",
+            "siblingOrderPlaceholder": "Enter the child's position",
+
+            "homeLanguage": "Primary language spoken at home",
+            "homeLanguagePlaceholder": "Select primary language",
+
+            "livingWith": "Living with",
+            "livingWithPlaceholder": "Specify who the child is living with",
+            "continue": "continue",
             "validation": {
+                "school_required": "School selection is required",
+                "next_class_required": "Next class is required",
                 "full_name_required": "Full name is required",
                 "place_of_birth_required": "Place of birth is required",
-                "national_id_required": "National ID/Passport is required",
+                "family_name_required": "Family name is required",
                 "date_of_birth_required": "Date of birth is required",
                 "valid_age_required": "Enter a valid age",
+                "id_passport_required": "National ID/Passport is required",
                 "gender_required": "Gender is required",
-                "child_position_required": "Child's position is required",
-                "primary_language_required": "Primary language is required"
+                "nationality_required": "Nationality is required",
+                "weight_height_required": "Weight and height are required",
+                "sibling_order_required": "Child's position among siblings is required",
+                "primary_language_required": "Primary language is required",
+                "living_with_required": "Please specify who the child is living with"
             }
         },
         "familyInformation": {

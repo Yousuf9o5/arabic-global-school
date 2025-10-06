@@ -59,12 +59,11 @@ function FormDate({ name, label, optional, hidden, placeholder }: Props) {
                                     <CalenderIcon className="size-6" />
                                 </Button>
                             </PopoverTrigger>
-                            <PopoverContent className="w-auto p-0">
+                            <PopoverContent className="w-auto p-0" dir="rtl">
                                 <Calendar
-                                    dir="ltr"
                                     mode="single"
                                     selected={field.value ? new Date(field.value) : undefined}
-                                    onSelect={value => field.onChange(value?.toLocaleString())}
+                                    onSelect={(value) => field.onChange(value?.toLocaleString())}
                                     disabled={combinedHidden}
                                     captionLayout="dropdown"
                                     defaultMonth={maxDate}

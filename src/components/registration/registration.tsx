@@ -1,16 +1,18 @@
 "use client";
 
+import useFormData from "@/hooks/use-form-data";
+import { getStudentClassInfo, StudentClassInfo } from "@/validations/student-info.validation";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Button } from "../ui/button";
-import { FormSelect } from "../ui/form-select";
-import { Form } from "../ui/form";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { getStudentClassInfo, StudentClassInfo, StudentInfoFormValues } from "@/validations/student-info.validation";
-import useFormData from "@/hooks/use-form-data";
+import { Button } from "../ui/button";
+import { Form } from "../ui/form";
+import { FormSelect } from "../ui/form-select";
+import { useRouter } from "@/i18n/routing";
 
 export default function Registration() {
+    const { push } = useRouter();
     const t = useTranslations("register");
 
     const form = useForm({
@@ -21,13 +23,14 @@ export default function Registration() {
         },
     });
 
-    const { } = useFormData<StudentInfoFormValues>({
-        key: "student_info",
+    const { updateFormData } = useFormData<StudentClassInfo>({
+        key: "class_info",
         onLoad: (val) => form.reset(val),
     });
 
     const submit = (data: StudentClassInfo) => {
-        console.log(data);
+        updateFormData(data);
+        push("/registration/form/student-info");
     };
 
     return (

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 interface Option {
     label: string;
     value: string;
+    disabled?: boolean;
 }
 
 interface FormSelectProps {
@@ -39,7 +40,7 @@ export function FormSelect({ name, label, options, placeholder, disabled }: Form
 
                             <SelectContent>
                                 {options.map((option) => (
-                                    <SelectItem className="!text-[#6A81B0]" key={option.value} value={option.value}>
+                                    <SelectItem className="!text-[#6A81B0]" key={option.value} value={option.value} disabled={option.disabled}>
                                         {option.label}
                                     </SelectItem>
                                 ))}

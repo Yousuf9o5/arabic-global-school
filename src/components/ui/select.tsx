@@ -5,9 +5,11 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import useTextDirection from "@/hooks/use-text-direction";
 
 function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {
-    return <SelectPrimitive.Root data-slot="select" {...props} />;
+    const { dir } = useTextDirection();
+    return <SelectPrimitive.Root data-slot="select" {...props} dir={dir as "ltr" | "rtl"} />;
 }
 
 function SelectGroup({ ...props }: React.ComponentProps<typeof SelectPrimitive.Group>) {
