@@ -10,8 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { getEducationHealthSchema, EducationHealthFormValues } from "@/validations/education-health.validation";
 import { useRouter } from "next/navigation";
 import useTextDirection from "@/hooks/use-text-direction";
-import { useEffect } from "react";
-import { loadData, setData } from "@/lib/local-storage";
+import useFormData from "@/hooks/use-form-data";
 
 export default function EducationHealthPage() {
     const t = useTranslations("register.educationHealth");
@@ -23,136 +22,163 @@ export default function EducationHealthPage() {
     const form = useForm<EducationHealthFormValues>({
         resolver: zodResolver(getEducationHealthSchema(tValidations)),
         defaultValues: {
-            previousSchool: "",
-            schoolAddress: "",
-            fieldOfStudy: "",
-            enrollmentYear: "",
-            graduationYear: "",
-            medicalHistory: "",
-            futureAspiration: "placeholder",
-            vision: "placeholder",
-            hearing: "placeholder",
+            education: {
+                previous_school: "",
+                school_address: "",
+                specialization: "",
+                enrollment_year: "",
+                graduation_year: "",
+            },
+            health: {
+                medical_history: "",
+                mobility: "",
+                hearing: "placeholder",
+                vision: "placeholder",
+                future_ambition: "",
+            },
         },
     });
 
-    // Load saved data from localStorage on mount
-    useEffect(() => {
-        const savedData = loadData<EducationHealthFormValues>("education_health");
-        if (savedData) {
-            form.reset(savedData);
-        }
-    }, [form]);
+    const { updateFormData } = useFormData<EducationHealthFormValues>({
+        key: "education_health",
+        onLoad: (val) => form.reset(val),
+    });
 
     const submit = (values: EducationHealthFormValues) => {
-        setData("education_health", values);
+        updateFormData(values);
         push(`/${locale}/registration/form/attachments`);
     };
 
-  const futureAspirationOptions = [
-    { label: t("futureAspirationPlaceholder"), value: "placeholder" },
-    { label: t("futureAspirationOptions.doctor"), value: "doctor" },
-    { label: t("futureAspirationOptions.engineer"), value: "engineer" },
-    { label: t("futureAspirationOptions.scientist"), value: "scientist" },
-    { label: t("futureAspirationOptions.teacher"), value: "teacher" },
-    { label: t("futureAspirationOptions.entrepreneur"), value: "entrepreneur" },
-    { label: t("futureAspirationOptions.artist"), value: "artist" },
-    { label: t("futureAspirationOptions.other"), value: "other" },
-  ];
+    const futureAspirationOptions = [
+        { label: t("futureAspirationPlaceholder"), value: "" },
+        { label: t("futureAspirationOptions.doctor"), value: "doctor" },
+        { label: t("futureAspirationOptions.engineer"), value: "engineer" },
+        { label: t("futureAspirationOptions.scientist"), value: "scientist" },
+        { label: t("futureAspirationOptions.teacher"), value: "teacher" },
+        { label: t("futureAspirationOptions.entrepreneur"), value: "entrepreneur" },
+        { label: t("futureAspirationOptions.artist"), value: "artist" },
+        { label: t("futureAspirationOptions.other"), value: "other" },
+    ];
 
-  const visionOptions = [
-    { label: t("visionPlaceholder"), value: "placeholder" },
-    { label: t("visionOptions.normal"), value: "normal" },
-    { label: t("visionOptions.glasses"), value: "glasses" },
-    { label: t("visionOptions.contacts"), value: "contacts" },
-    { label: t("visionOptions.low"), value: "low" },
-    { label: t("visionOptions.other"), value: "other" },
-  ];
+    const visionOptions = [
+        { label: t("visionPlaceholder"), value: "placeholder" },
+        { label: t("visionOptions.normal"), value: "normal" },
+        { label: t("visionOptions.glasses"), value: "glasses" },
+        { label: t("visionOptions.contacts"), value: "contacts" },
+        { label: t("visionOptions.low"), value: "low" },
+        { label: t("visionOptions.other"), value: "other" },
+    ];
 
-  const hearingOptions = [
-    { label: t("hearingPlaceholder"), value: "placeholder" },
-    { label: t("hearingOptions.normal"), value: "normal" },
-    { label: t("hearingOptions.assistive"), value: "assistive" },
-    { label: t("hearingOptions.partial"), value: "partial" },
-    { label: t("hearingOptions.support"), value: "support" },
-    { label: t("hearingOptions.other"), value: "other" },
-  ];
+    const hearingOptions = [
+        { label: t("hearingPlaceholder"), value: "placeholder" },
+        { label: t("hearingOptions.normal"), value: "normal" },
+        { label: t("hearingOptions.assistive"), value: "assistive" },
+        { label: t("hearingOptions.partial"), value: "partial" },
+        { label: t("hearingOptions.support"), value: "support" },
+        { label: t("hearingOptions.other"), value: "other" },
+    ];
 
-  return (
-    <section className="max-w-[660px] mx-auto my-8">
-      <div className="text-center mb-14">
-        <h3 className="text-primary text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: t.raw("step") }} />
-        <h2 className="text-content-natural-secondary text-2xl md:text-[32px] font-bold">{t("title")}</h2>
-        <p className="text-natural-tertiary">{t("subtitle")}</p>
-      </div>
+    const mobilityOptions = [
+        { label: t("mobilityPlaceholder"), value: "" },
+        { label: t("mobilityOptions.normal"), value: "normal" },
+        { label: t("mobilityOptions.wheelchair"), value: "wheelchair" },
+        { label: t("mobilityOptions.crutches"), value: "crutches" },
+        { label: t("mobilityOptions.limited"), value: "limited" },
+        { label: t("mobilityOptions.other"), value: "other" },
+    ];
 
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-6">
-          <FormInput
-            name="previousSchool"
-            label={t("previousSchool")}
-            placeholder={t("previousSchoolPlaceholder")}
-          />
+    return (
+        <section className="max-w-[660px] mx-auto my-8">
+            <div className="text-center mb-14">
+                <h3 className="text-primary text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: t.raw("step") }} />
+                <h2 className="text-content-natural-secondary text-2xl md:text-[32px] font-bold">{t("title")}</h2>
+                <p className="text-natural-tertiary">{t("subtitle")}</p>
+            </div>
 
-          <FormInput
-            name="schoolAddress"
-            label={t("schoolAddress")}
-            placeholder={t("schoolAddressPlaceholder")}
-          />
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-8">
+                    {/* Education Section */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-semibold text-content-natural-secondary">{t("educationSection")}</h3>
 
-          <FormInput
-            name="fieldOfStudy"
-            label={t("fieldOfStudy")}
-            placeholder={t("fieldOfStudyPlaceholder")}
-          />
+                        <FormInput
+                            name="education.previous_school"
+                            label={t("previousSchool")}
+                            placeholder={t("previousSchoolPlaceholder")}
+                        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FormInput
-              name="enrollmentYear"
-              label={t("enrollmentYear")}
-              placeholder={t("enrollmentYearPlaceholder")}
-            />
+                        <FormInput
+                            name="education.school_address"
+                            label={t("schoolAddress")}
+                            placeholder={t("schoolAddressPlaceholder")}
+                        />
 
-            <FormInput
-              name="graduationYear"
-              label={t("graduationYear")}
-              placeholder={t("graduationYearPlaceholder")}
-            />
-          </div>
+                        <FormInput
+                            name="education.specialization"
+                            label={t("specialization")}
+                            placeholder={t("specializationPlaceholder")}
+                        />
 
-          <FormInput
-            name="medicalHistory"
-            label={t("medicalHistory")}
-            placeholder={t("medicalHistoryPlaceholder")}
-          />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <FormInput
+                                name="education.enrollment_year"
+                                label={t("enrollmentYear")}
+                                placeholder={t("enrollmentYearPlaceholder")}
+                            />
 
-          <FormSelect
-            name="futureAspiration"
-            label={t("futureAspiration")}
-            placeholder={t("futureAspirationPlaceholder")}
-            options={futureAspirationOptions}
-          />
+                            <FormInput
+                                name="education.graduation_year"
+                                label={t("graduationYear")}
+                                placeholder={t("graduationYearPlaceholder")}
+                            />
+                        </div>
+                    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FormSelect
-              name="vision"
-              label={t("vision")}
-              placeholder={t("visionPlaceholder")}
-              options={visionOptions}
-            />
+                    {/* Health Section */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-semibold text-content-natural-secondary">{t("healthSection")}</h3>
 
-            <FormSelect
-              name="hearing"
-              label={t("hearing")}
-              placeholder={t("hearingPlaceholder")}
-              options={hearingOptions}
-            />
-          </div>
+                        <FormInput
+                            name="health.medical_history"
+                            label={t("medicalHistory")}
+                            placeholder={t("medicalHistoryPlaceholder")}
+                        />
 
-          <Button className="rounded-full w-full mt-4" size="md">
-            {t("continue", { defaultValue: "Continue" })}
-          </Button>
-        </form>
-      </Form>
-    </section>
-  );
+                        <FormSelect
+                            name="health.mobility"
+                            label={t("mobility")}
+                            placeholder={t("mobilityPlaceholder")}
+                            options={mobilityOptions}
+                        />
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <FormSelect
+                                name="health.vision"
+                                label={t("vision")}
+                                placeholder={t("visionPlaceholder")}
+                                options={visionOptions}
+                            />
+
+                            <FormSelect
+                                name="health.hearing"
+                                label={t("hearing")}
+                                placeholder={t("hearingPlaceholder")}
+                                options={hearingOptions}
+                            />
+                        </div>
+
+                        <FormInput
+                            name="health.future_ambition"
+                            label={t("futureAmbition")}
+                            placeholder={t("futureAmbitionPlaceholder")}
+                        />
+                    </div>
+
+                    <Button className="rounded-full w-full mt-4" size="md">
+                        {t("continue", { defaultValue: "Continue" })}
+                    </Button>
+                </form>
+            </Form>
+        </section>
+    );
 }

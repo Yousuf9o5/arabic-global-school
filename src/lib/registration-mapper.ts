@@ -5,79 +5,87 @@ import type { RegistrationPayload } from "@/types/registration.types";
 
 /**
  * Transform form data to API payload format
+ * Handles nested mother/father and education/health objects
+ * Transforms string inputs to numbers for API requirements
  */
 export function transformToApiPayload(
     studentInfo: StudentInfoFormValues,
     familyInfo: FamilyInfoFormValues,
-    educationHealth: EducationHealthFormValues,
-    schoolId: number = 1,
-    nextClass: string = "Grade 1"
+    educationHealth: EducationHealthFormValues
 ): RegistrationPayload {
     return {
         student: {
-            child_school: schoolId,
-            child_next_class: nextClass,
-            full_name: studentInfo.fullName,
-            birth_place: studentInfo.placeOfBirth,
-            family_name: studentInfo.surname || "",
+            child_school: parseInt(studentInfo.child_school) || 0,
+            child_next_class: studentInfo.child_next_class,
+            full_name: studentInfo.full_name,
+            birth_place: studentInfo.birth_place,
+            family_name: studentInfo.family_name,
             religion: studentInfo.religion || "",
-            birthday: studentInfo.dateOfBirth,
-            age_in_july: parseInt(studentInfo.ageAsOfJuly) || 0,
-            id_passport_number: parseInt(studentInfo.nationalId) || 0,
+            birthday: studentInfo.birthday,
+            age_in_july: parseInt(studentInfo.age_in_july) || 0,
+            id_passport_number: parseInt(studentInfo.id_passport_number) || 0,
             gender: studentInfo.gender === "male",
-            nationality: "", // Add nationality field to form if needed
-            sibling_order: mapSiblingPosition(studentInfo.childPosition),
-            home_language: studentInfo.primaryLanguage,
+            nationality: studentInfo.nationality,
+            weight_height: studentInfo.weight_height,
+            sibling_order: parseInt(studentInfo.sibling_order) || 0,
+            home_language: studentInfo.home_language,
+            living_with: studentInfo.living_with,
         },
         mother: {
-            full_name: familyInfo.motherName,
-            email: familyInfo.emailAddress,
-            phone: familyInfo.phoneNumber,
-            age: familyInfo.parentAge ? parseInt(familyInfo.parentAge) : undefined,
-            job_title: familyInfo.occupation || undefined,
-            employer: familyInfo.workPlace || undefined,
-            employer_address: familyInfo.officeAddress || undefined,
-            office_phone: familyInfo.landlinePhone || undefined,
-            monthly_income: familyInfo.monthlyIncome ? parseInt(familyInfo.monthlyIncome) : undefined,
+            full_name: familyInfo.mother.full_name,
+            birthday: familyInfo.mother.birthday,
+            age: parseInt(familyInfo.mother.age) || 0,
+            religion: familyInfo.mother.religion,
+            birth_place: familyInfo.mother.birth_place,
+            nationality: familyInfo.mother.nationality,
+            registration_role: familyInfo.mother.registration_role,
+            specialization: familyInfo.mother.specialization,
+            last_education: familyInfo.mother.last_education,
+            job_title: familyInfo.mother.job_title,
+            job_type: familyInfo.mother.job_type,
+            employer: familyInfo.mother.employer,
+            employer_address: familyInfo.mother.employer_address,
+            office_phone: familyInfo.mother.office_phone,
+            monthly_income: parseInt(familyInfo.mother.monthly_income || "0") || 0,
+            email: familyInfo.mother.email,
+            phone: familyInfo.mother.phone,
+            emergency_phone: familyInfo.mother.emergency_phone,
+            contact_time: familyInfo.mother.contact_time,
         },
         father: {
-            full_name: familyInfo.fatherName,
-            email: familyInfo.emailAddress, // You may want separate email fields
-            phone: familyInfo.phoneNumber, // You may want separate phone fields
-            age: familyInfo.parentAge ? parseInt(familyInfo.parentAge) : undefined,
-            job_title: familyInfo.occupation || undefined,
-            employer: familyInfo.workPlace || undefined,
-            employer_address: familyInfo.officeAddress || undefined,
-            office_phone: familyInfo.landlinePhone || undefined,
-            monthly_income: familyInfo.monthlyIncome ? parseInt(familyInfo.monthlyIncome) : undefined,
+            full_name: familyInfo.father.full_name,
+            birthday: familyInfo.father.birthday,
+            age: parseInt(familyInfo.father.age) || 0,
+            religion: familyInfo.father.religion,
+            birth_place: familyInfo.father.birth_place,
+            nationality: familyInfo.father.nationality,
+            registration_role: familyInfo.father.registration_role,
+            specialization: familyInfo.father.specialization,
+            last_education: familyInfo.father.last_education,
+            job_title: familyInfo.father.job_title,
+            job_type: familyInfo.father.job_type,
+            employer: familyInfo.father.employer,
+            employer_address: familyInfo.father.employer_address,
+            office_phone: familyInfo.father.office_phone,
+            monthly_income: parseInt(familyInfo.father.monthly_income || "0") || 0,
+            email: familyInfo.father.email,
+            phone: familyInfo.father.phone,
+            emergency_phone: familyInfo.father.emergency_phone,
+            contact_time: familyInfo.father.contact_time,
         },
         education: {
-            previous_school: educationHealth.previousSchool,
-            school_address: educationHealth.schoolAddress,
-            specialization: educationHealth.fieldOfStudy || undefined,
-            enrollment_year: parseInt(educationHealth.enrollmentYear) || 0,
-            graduation_year: parseInt(educationHealth.graduationYear) || 0,
+            previous_school: educationHealth.education.previous_school,
+            school_address: educationHealth.education.school_address,
+            specialization: educationHealth.education.specialization,
+            enrollment_year: parseInt(educationHealth.education.enrollment_year) || 0,
+            graduation_year: parseInt(educationHealth.education.graduation_year) || 0,
         },
         health: {
-            medical_history: educationHealth.medicalHistory || undefined,
-            hearing: educationHealth.hearing,
-            vision: educationHealth.vision,
-            future_ambition: educationHealth.futureAspiration,
+            medical_history: educationHealth.health.medical_history,
+            mobility: educationHealth.health.mobility,
+            hearing: educationHealth.health.hearing,
+            vision: educationHealth.health.vision,
+            future_ambition: educationHealth.health.future_ambition || "",
         },
     };
-}
-
-/**
- * Map sibling position text to number
- */
-function mapSiblingPosition(position: string): number {
-    const mapping: Record<string, number> = {
-        first: 1,
-        second: 2,
-        third: 3,
-        fourth: 4,
-        fifth: 5,
-        other: 0,
-    };
-    return mapping[position] || 0;
 }

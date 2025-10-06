@@ -665,72 +665,128 @@
             }
         },
         "familyInformation": {
-            "fatherName": "Nama lengkap ayah",
-            "fatherNamePlaceholder": "Masukkan nama lengkap ayah",
-            "motherName": "Nama lengkap ibu",
-            "motherNamePlaceholder": "Masukkan nama lengkap ibu",
-            "nationalIdNumber": "Nomor KTP/Passport",
-            "nationalIdPlaceholder": "Masukkan nomor KTP atau passport",
-            "monthlyIncome": "Penghasilan bulanan",
-            "monthlyIncomePlaceholder": "Masukkan penghasilan bulanan",
-            "phoneNumber": "Nomor telepon",
-            "phoneNumberPlaceholder": "Masukkan nomor telepon",
-            "emailAddress": "Alamat email",
-            "emailPlaceholder": "Masukkan alamat email",
-            "guardianName": "Nama wali (jika ada)",
-            "guardianNamePlaceholder": "Masukkan nama wali",
-            "guardianRelationship": "Hubungan wali dengan siswa",
-            "guardianRelationshipPlaceholder": "Tentukan hubungan wali dengan siswa",
-            "parentAge": "Usia orang tua/wali",
-            "parentAgePlaceholder": "Masukkan usia orang tua/wali",
-            "occupation": "Pekerjaan",
-            "occupationPlaceholder": "Masukkan pekerjaan",
-            "workPlace": "Tempat kerja",
-            "workPlacePlaceholder": "Masukkan nama tempat kerja",
-            "officeAddress": "Alamat kantor",
-            "officeAddressPlaceholder": "Masukkan alamat kantor",
-            "landlinePhone": "Telepon rumah",
-            "landlinePhonePlaceholder": "Masukkan nomor telepon rumah",
             "step": "Langkah <strong>2</strong> dari <strong>4</strong>",
             "title": "Informasi Keluarga Terkait Siswa",
             "subtitle": "Berikan detail akurat tentang orang tua siswa atau wali yang sah, termasuk kontak dan informasi hubungan.",
+            
+            "motherSection": "Informasi Ibu",
+            "fatherSection": "Informasi Ayah",
+            
+            "fullName": "Nama lengkap",
+            "fullNamePlaceholder": "Masukkan nama lengkap",
+            
+            "birthday": "Tanggal lahir",
+            "birthdayPlaceholder": "Pilih tanggal lahir",
+            
+            "age": "Usia",
+            "agePlaceholder": "Masukkan usia",
+            
+            "religion": "Agama",
+            "religionPlaceholder": "Masukkan agama",
+            
+            "birthPlace": "Tempat lahir",
+            "birthPlacePlaceholder": "Masukkan tempat lahir",
+            
+            "nationality": "Kebangsaan",
+            "nationalityPlaceholder": "Masukkan kebangsaan",
+            
+            "registrationRole": "Peran dalam pendaftaran",
+            "registrationRolePlaceholder": "Masukkan peran (misalnya: orang tua, wali)",
+            
+            "specialization": "Spesialisasi/Bidang studi",
+            "specializationPlaceholder": "Masukkan spesialisasi atau bidang studi",
+            
+            "lastEducation": "Pendidikan terakhir",
+            "lastEducationPlaceholder": "Masukkan pendidikan terakhir yang diselesaikan",
+            
+            "jobTitle": "Jabatan pekerjaan",
+            "jobTitlePlaceholder": "Masukkan jabatan pekerjaan",
+            
+            "jobType": "Jenis pekerjaan",
+            "jobTypePlaceholder": "Masukkan jenis atau kategori pekerjaan",
+            
+            "employer": "Nama tempat kerja",
+            "employerPlaceholder": "Masukkan nama tempat kerja",
+            
+            "employerAddress": "Alamat tempat kerja",
+            "employerAddressPlaceholder": "Masukkan alamat tempat kerja",
+            
+            "officePhone": "Nomor telepon kantor",
+            "officePhonePlaceholder": "Masukkan nomor telepon kantor",
+            
+            "monthlyIncome": "Penghasilan bulanan",
+            "monthlyIncomePlaceholder": "Masukkan penghasilan bulanan",
+            
+            "email": "Email",
+            "emailPlaceholder": "Masukkan alamat email",
+            
+            "phone": "Nomor telepon",
+            "phonePlaceholder": "Masukkan nomor telepon",
+            
+            "emergencyPhone": "Nomor telepon darurat",
+            "emergencyPhonePlaceholder": "Masukkan nomor telepon darurat",
+            
+            "contactTime": "Waktu kontak terbaik",
+            "contactTimePlaceholder": "Masukkan waktu terbaik untuk dihubungi",
+            
             "validation": {
-                "father_name_required": "Nama ayah wajib diisi",
-                "mother_name_required": "Nama ibu wajib diisi",
-                "national_id_required": "Nomor KTP/Passport wajib diisi",
-                "phone_number_required": "Nomor telepon wajib diisi",
-                "valid_email_required": "Masukkan alamat email yang valid"
-            }
+                "full_name_required": "Nama lengkap wajib diisi",
+                "birthday_required": "Tanggal lahir wajib diisi",
+                "age_required": "Usia wajib diisi dan harus berupa angka",
+                "religion_required": "Agama wajib diisi",
+                "birth_place_required": "Tempat lahir wajib diisi",
+                "nationality_required": "Kebangsaan wajib diisi",
+                "registration_role_required": "Peran dalam pendaftaran wajib diisi",
+                "specialization_required": "Spesialisasi wajib diisi",
+                "last_education_required": "Pendidikan terakhir wajib diisi",
+                "job_title_required": "Jabatan pekerjaan wajib diisi",
+                "job_type_required": "Jenis pekerjaan wajib diisi",
+                "employer_required": "Nama tempat kerja wajib diisi",
+                "employer_address_required": "Alamat tempat kerja wajib diisi",
+                "office_phone_required": "Nomor telepon kantor wajib diisi",
+                "monthly_income_required": "Penghasilan bulanan wajib diisi dan harus berupa angka",
+                "email_required": "Email wajib diisi",
+                "email_invalid": "Format email tidak valid",
+                "phone_required": "Nomor telepon wajib diisi",
+                "emergency_phone_required": "Nomor telepon darurat wajib diisi",
+                "contact_time_required": "Waktu kontak terbaik wajib diisi"
+            },
+            "continue": "Lanjutkan"
         },
         "educationHealth": {
             "step": "Langkah <strong>3</strong> dari <strong>4</strong>",
             "title": "Perjalanan Pendidikan dan Kesehatan Siswa",
             "subtitle": "Bagikan riwayat akademik siswa dan informasi kesehatan penting yang dapat mendukung pembelajaran dan kesejahteraan mereka.",
+            
+            "educationSection": "Informasi Pendidikan",
             "previousSchool": "Nama sekolah sebelumnya",
             "previousSchoolPlaceholder": "Masukkan nama sekolah/TK sebelumnya",
             "schoolAddress": "Alamat sekolah",
             "schoolAddressPlaceholder": "Masukkan alamat sekolah",
-            "fieldOfStudy": "Bidang studi",
-            "fieldOfStudyPlaceholder": "Masukkan bidang studi",
+            "specialization": "Bidang studi/Spesialisasi",
+            "specializationPlaceholder": "Masukkan bidang studi",
             "enrollmentYear": "Tahun pendaftaran",
-            "enrollmentYearPlaceholder": "Masukkan tahun pendaftaran",
+            "enrollmentYearPlaceholder": "Masukkan tahun pendaftaran (misalnya: 2020)",
             "graduationYear": "Tahun kelulusan",
-            "graduationYearPlaceholder": "Masukkan tahun kelulusan",
+            "graduationYearPlaceholder": "Masukkan tahun kelulusan (misalnya: 2024)",
+            
+            "healthSection": "Informasi Kesehatan",
             "medicalHistory": "Riwayat medis",
             "medicalHistoryPlaceholder": "Masukkan penyakit sebelumnya atau kronis",
-            "futureAspiration": "Aspirasi masa depan siswa",
-            "futureAspirationPlaceholder": "Pilih aspirasi masa depan siswa",
+            "mobility": "Kondisi mobilitas",
+            "mobilityPlaceholder": "Pilih kondisi mobilitas",
             "vision": "Penglihatan",
-            "visionPlaceholder": "Pilih kondisi visual",
+            "visionPlaceholder": "Pilih kondisi penglihatan",
             "hearing": "Pendengaran",
             "hearingPlaceholder": "Pilih kondisi pendengaran",
-            "futureAspirationOptions": {
-                "doctor": "Dokter",
-                "engineer": "Insinyur",
-                "scientist": "Ilmuwan",
-                "teacher": "Guru",
-                "entrepreneur": "Pengusaha",
-                "artist": "Seniman",
+            "futureAmbition": "Aspirasi masa depan siswa",
+            "futureAmbitionPlaceholder": "Masukkan aspirasi masa depan siswa",
+            
+            "mobilityOptions": {
+                "normal": "Mobilitas normal",
+                "wheelchair": "Menggunakan kursi roda",
+                "crutches": "Menggunakan kruk/alat bantu jalan",
+                "limited": "Mobilitas terbatas",
                 "other": "Lainnya"
             },
             "visionOptions": {
@@ -750,12 +806,12 @@
             "validation": {
                 "previous_school_required": "Nama sekolah sebelumnya wajib diisi",
                 "school_address_required": "Alamat sekolah wajib diisi",
-                "enrollment_year_required": "Masukkan tahun pendaftaran yang valid",
-                "graduation_year_required": "Masukkan tahun kelulusan yang valid",
-                "future_aspiration_required": "Pilih aspirasi masa depan siswa",
+                "enrollment_year_required": "Masukkan tahun pendaftaran yang valid (format YYYY)",
+                "graduation_year_required": "Masukkan tahun kelulusan yang valid (format YYYY)",
                 "vision_required": "Pilih kondisi penglihatan",
                 "hearing_required": "Pilih kondisi pendengaran"
-            }
+            },
+            "continue": "Lanjutkan"
         },
         "attachments": {
             "step": "Langkah <strong>4</strong> dari <strong>4</strong>",

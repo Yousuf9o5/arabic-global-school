@@ -66,10 +66,9 @@ export default function StudentInfoPage() {
                         label={t("childSchool")}
                         placeholder={t("childSchoolPlaceholder")}
                         options={[
-                            { label: t("childSchoolPlaceholder"), value: "0" },
-                            { label: t("primarySchool"), value: "1" },
-                            { label: t("middleSchool"), value: "2" },
-                            { label: t("highSchool"), value: "3" },
+                            { label: t("primarySchool"), value: "0" },
+                            { label: t("middleSchool"), value: "1" },
+                            { label: t("highSchool"), value: "2" },
                         ]}
                     />
 
