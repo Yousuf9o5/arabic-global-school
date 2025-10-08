@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import NewsCard from "../news-card";
 import Section from "../ui/section";
 
@@ -11,13 +11,13 @@ import Section from "../ui/section";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import { ChevronLeftIcon, ChevronRightIcon } from "@/assets/icons";
 import useTextDirection from "@/hooks/use-text-direction";
-import { useQuery } from "@tanstack/react-query";
+import { Locale } from "@/i18n/routing";
 import { APIKeys } from "@/services/api-keys";
 import { ApiService } from "@/services/api.service";
+import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
-import { Locale } from "@/i18n/routing";
-import { ChevronLeftIcon, ChevronRightIcon } from "@/assets/icons";
 
 export default function HomeNews() {
     const { locale } = useParams();
@@ -28,7 +28,7 @@ export default function HomeNews() {
     const { dir } = useTextDirection();
 
     const { data = { items: [] } } = useQuery({
-        queryKey: [APIKeys.NEWS_API_KEY, locale],
+        queryKey: [APIKeys.NEWS_API_KEY],
         queryFn: ApiService.getNews,
     });
 
@@ -73,16 +73,14 @@ export default function HomeNews() {
                         >
                             {data.items.map((news, i) => {
                                 // Handle both old and new response formats
-                                const title = typeof news.title === "string" ? news.title : news.title?.[locale as Locale] || news.title?.en || "";
-                                const description =
-                                    typeof news.description === "string"
-                                        ? news.description
-                                        : news.description?.[locale as Locale] || news.description?.en || "";
+                                const title = news.title?.[locale as Locale];
+                                const description = news.description?.[locale as Locale];
 
                                 return (
                                     <SwiperSlide key={news.id + title + i} className="pb-16 h-full px-4 md:px-0">
                                         <NewsCard
                                             id={news.id}
+                                            category={news.category.value?.toString() || ""}
                                             title={title}
                                             description={description}
                                             image={news.image}

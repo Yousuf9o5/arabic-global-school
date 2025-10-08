@@ -6,7 +6,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-async function PrefetchData({ children }: Props) {
+export async function HomePrefetchData({ children }: Props) {
     const queryClient = new QueryClient();
 
     await queryClient.prefetchQuery({
@@ -22,4 +22,40 @@ async function PrefetchData({ children }: Props) {
     return <HydrationBoundary state={dehydrate(queryClient)}>{children}</HydrationBoundary>;
 }
 
-export default PrefetchData;
+interface NewsProps {
+    searchParams: Record<string, string | string[] | undefined>;
+    children: React.ReactNode;
+}
+
+export async function NewsPrefetchData({ children, searchParams }: NewsProps) {
+    const queryClient = new QueryClient();
+
+    await queryClient.prefetchQuery({
+        queryKey: [APIKeys.NEWS_API_KEY, JSON.stringify(searchParams)],
+        queryFn: () => ApiService.getNewsWithParams({ searchParams }),
+    });
+
+    return <HydrationBoundary state={dehydrate(queryClient)}>{children}</HydrationBoundary>;
+}
+
+interface NewsDetailProps {
+    id: string;
+    children: React.ReactNode;
+    searchParams?: Record<string, string | string[] | undefined>;
+}
+
+export async function NewsDetailPrefetchData({ children, id, searchParams }: NewsDetailProps) {
+    const queryClient = new QueryClient();
+
+    await queryClient.prefetchQuery({
+        queryKey: [APIKeys.NEWS_DETAIL_API_KEY, id],
+        queryFn: () => ApiService.getNewsById(id),
+    });
+
+    await queryClient.prefetchQuery({
+        queryKey: [APIKeys.NEWS_API_KEY, JSON.stringify(searchParams)],
+        queryFn: () => ApiService.getNewsWithParams(searchParams),
+    });
+
+    return <HydrationBoundary state={dehydrate(queryClient)}>{children}</HydrationBoundary>;
+}

@@ -41,7 +41,7 @@ export default function AttachmentsPage() {
             toast.success(tToast("registration_success"));
             push(`/${locale}/registration/thank-you`);
         },
-        onError: (error) => {
+        onError: () => {
             toast.error(tToast("registration_error"));
         },
     });

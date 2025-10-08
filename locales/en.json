@@ -468,10 +468,16 @@
             "subtitle": "Stay informed with the latest news, events, and achievements from our school community",
             "search_placeholder": "Search",
             "filters": {
-                "notices": "Notices",
+                "announcements": "Announcements",
                 "events": "Events",
                 "awards": "Awards",
                 "moments": "Moments"
+            },
+            "reset_filters": "Reset Filters",
+            "no_data": {
+                "title": "No News Available",
+                "description": "Sorry, we couldn't find any news matching your search criteria. Try adjusting the filters or searching again.",
+                "reset_button": "Reset Search"
             }
         },
         "cards": {
@@ -498,7 +504,8 @@
         "highlight": {
             "title": "Stay Informed:",
             "subtitle": "Latest Announcements and School Highlights"
-        }
+        },
+        "no_image_available": "Image Not Available"
     },
     "contact_us": {
         "hero": {

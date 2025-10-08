@@ -15,6 +15,7 @@ interface NewsCardProps {
     className?: string;
     hideBadge?: boolean;
     calenderSectionClass?: string;
+    category?: string;
 }
 
 const defaultData = {
@@ -36,12 +37,13 @@ export default function NewsCard({
     className,
     hideBadge = false,
     calenderSectionClass,
+    category = "",
 }: NewsCardProps) {
     const t = useTranslations();
 
     return (
         <Link 
-            href={`/news/${id}`}
+            href={`/news/${id}?category=${category}`}
             className={twMerge(
                 "p-6 bg-white border-s-4 border-primary flex flex-col gap-6 relative duration-300 h-[560px] group transition-all cursor-pointer",
                 className

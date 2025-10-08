@@ -550,7 +550,8 @@
         "highlight": {
             "title": "Stay Informed:",
             "subtitle": "Latest Announcements and School Highlights"
-        }
+        },
+        "no_image_available": "Gambar Tidak Tersedia"
     },
     "register": {
         "title": "Pendaftaran di Sekolah Internasional Arab – 2025/2026",

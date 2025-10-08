@@ -4,7 +4,7 @@ import HomeCurricula from "@/components/home/home-curricula";
 import HomeHero from "@/components/home/home-hero";
 import HomeNews from "@/components/home/home-news";
 import HomeStep from "@/components/home/home-step";
-import PrefetchData from "@/components/prefetch-data";
+import { HomePrefetchData } from "@/components/prefetch-data";
 import ContactSection from "@/components/shared/contact-section";
 import FAQSection from "@/components/shared/faq-section";
 import LanguageSection from "@/components/shared/language-section";
@@ -12,7 +12,7 @@ import LanguageSection from "@/components/shared/language-section";
 export default function Home() {
     return (
         <main className="min-h-lvh bg-[url('/svg/background-grid.svg')] bg-center w-full overflow-hidden">
-            <PrefetchData>
+            <HomePrefetchData>
                 <HomeHero />
 
                 <HomeStep />
@@ -30,7 +30,7 @@ export default function Home() {
                 <FAQSection />
 
                 <ContactSection />
-            </PrefetchData>
+            </HomePrefetchData>
         </main>
     );
 }

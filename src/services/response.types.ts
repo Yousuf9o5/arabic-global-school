@@ -7,6 +7,11 @@ export interface RootResponse<T = unknown> {
     current_page: number;
 }
 
+// Single item response for detail pages
+export interface ItemResponse<T = unknown> {
+    item: T;
+}
+
 // Multilingual text structure from backend
 export interface MultilingualText {
     en: string;
@@ -55,6 +60,23 @@ export interface News {
     date?: Date;
     created_at?: string;
     updated_at?: string;
+    details?: NewsDetail[];
+    images?: NewsImage[];
+}
+
+// News detail section
+export interface NewsDetail {
+    id: string;
+    news_id: string;
+    title: MultilingualText;
+    description: MultilingualText;
+    path: string | null;
+}
+
+// News additional images
+export interface NewsImage {
+    id: string;
+    path: string; // Full URL
 }
 
 // Legacy interface for backward compatibility (deprecated)

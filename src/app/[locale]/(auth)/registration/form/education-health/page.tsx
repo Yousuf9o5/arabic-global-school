@@ -49,17 +49,6 @@ export default function EducationHealthPage() {
         push(`/${locale}/registration/form/attachments`);
     };
 
-    const futureAspirationOptions = [
-        { label: t("futureAspirationPlaceholder"), value: "" },
-        { label: t("futureAspirationOptions.doctor"), value: "doctor" },
-        { label: t("futureAspirationOptions.engineer"), value: "engineer" },
-        { label: t("futureAspirationOptions.scientist"), value: "scientist" },
-        { label: t("futureAspirationOptions.teacher"), value: "teacher" },
-        { label: t("futureAspirationOptions.entrepreneur"), value: "entrepreneur" },
-        { label: t("futureAspirationOptions.artist"), value: "artist" },
-        { label: t("futureAspirationOptions.other"), value: "other" },
-    ];
-
     const visionOptions = [
         { label: t("visionPlaceholder"), value: "placeholder" },
         { label: t("visionOptions.normal"), value: "normal" },
@@ -101,36 +90,16 @@ export default function EducationHealthPage() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold text-content-natural-secondary">{t("educationSection")}</h3>
 
-                        <FormInput
-                            name="education.previous_school"
-                            label={t("previousSchool")}
-                            placeholder={t("previousSchoolPlaceholder")}
-                        />
+                        <FormInput name="education.previous_school" label={t("previousSchool")} placeholder={t("previousSchoolPlaceholder")} />
 
-                        <FormInput
-                            name="education.school_address"
-                            label={t("schoolAddress")}
-                            placeholder={t("schoolAddressPlaceholder")}
-                        />
+                        <FormInput name="education.school_address" label={t("schoolAddress")} placeholder={t("schoolAddressPlaceholder")} />
 
-                        <FormInput
-                            name="education.specialization"
-                            label={t("specialization")}
-                            placeholder={t("specializationPlaceholder")}
-                        />
+                        <FormInput name="education.specialization" label={t("specialization")} placeholder={t("specializationPlaceholder")} />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <FormInput
-                                name="education.enrollment_year"
-                                label={t("enrollmentYear")}
-                                placeholder={t("enrollmentYearPlaceholder")}
-                            />
+                            <FormInput name="education.enrollment_year" label={t("enrollmentYear")} placeholder={t("enrollmentYearPlaceholder")} />
 
-                            <FormInput
-                                name="education.graduation_year"
-                                label={t("graduationYear")}
-                                placeholder={t("graduationYearPlaceholder")}
-                            />
+                            <FormInput name="education.graduation_year" label={t("graduationYear")} placeholder={t("graduationYearPlaceholder")} />
                         </div>
                     </div>
 
@@ -138,40 +107,17 @@ export default function EducationHealthPage() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold text-content-natural-secondary">{t("healthSection")}</h3>
 
-                        <FormInput
-                            name="health.medical_history"
-                            label={t("medicalHistory")}
-                            placeholder={t("medicalHistoryPlaceholder")}
-                        />
+                        <FormInput name="health.medical_history" label={t("medicalHistory")} placeholder={t("medicalHistoryPlaceholder")} />
 
-                        <FormSelect
-                            name="health.mobility"
-                            label={t("mobility")}
-                            placeholder={t("mobilityPlaceholder")}
-                            options={mobilityOptions}
-                        />
+                        <FormSelect name="health.mobility" label={t("mobility")} placeholder={t("mobilityPlaceholder")} options={mobilityOptions} />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <FormSelect
-                                name="health.vision"
-                                label={t("vision")}
-                                placeholder={t("visionPlaceholder")}
-                                options={visionOptions}
-                            />
+                            <FormSelect name="health.vision" label={t("vision")} placeholder={t("visionPlaceholder")} options={visionOptions} />
 
-                            <FormSelect
-                                name="health.hearing"
-                                label={t("hearing")}
-                                placeholder={t("hearingPlaceholder")}
-                                options={hearingOptions}
-                            />
+                            <FormSelect name="health.hearing" label={t("hearing")} placeholder={t("hearingPlaceholder")} options={hearingOptions} />
                         </div>
 
-                        <FormInput
-                            name="health.future_ambition"
-                            label={t("futureAmbition")}
-                            placeholder={t("futureAmbitionPlaceholder")}
-                        />
+                        <FormInput name="health.future_ambition" label={t("futureAmbition")} placeholder={t("futureAmbitionPlaceholder")} />
                     </div>
 
                     <Button className="rounded-full w-full mt-4" size="md">
