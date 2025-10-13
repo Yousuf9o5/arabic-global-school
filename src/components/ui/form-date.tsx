@@ -5,6 +5,7 @@ import { Button } from "./button";
 import { Calendar } from "./calendar";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "./form";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
+import useTextDirection from "@/hooks/use-text-direction";
 
 interface Props {
     name: string;
@@ -15,6 +16,7 @@ interface Props {
 }
 
 function FormDate({ name, label, optional, hidden, placeholder }: Props) {
+    const { locale } = useTextDirection();
     const { control } = useFormContext();
 
     // Calculate the maximum allowed date (15 years ago)
@@ -49,7 +51,7 @@ function FormDate({ name, label, optional, hidden, placeholder }: Props) {
                                     className="justify-between rounded-[12px] w-full px-4 py-3 !text-[#6A81B0] border-[#D5DEF1] focus-visible:ring-[#D5DEF1] [&_svg]:stroke-[#6A81B0] h-12"
                                 >
                                     {field.value
-                                        ? new Date(field.value).toLocaleDateString("ar-US", {
+                                        ? new Date(field.value).toLocaleDateString(`${locale}-US`, {
                                               year: "numeric",
                                               month: "long",
                                               day: "numeric",
@@ -59,11 +61,11 @@ function FormDate({ name, label, optional, hidden, placeholder }: Props) {
                                     <CalenderIcon className="size-6" />
                                 </Button>
                             </PopoverTrigger>
-                            <PopoverContent className="w-auto p-0" >
+                            <PopoverContent className="w-auto p-0">
                                 <Calendar
                                     mode="single"
                                     selected={field.value ? new Date(field.value) : undefined}
-                                    onSelect={(value) => field.onChange(value?.toLocaleString())}
+                                    onSelect={(value) => field.onChange(value?.toISOString())}
                                     disabled={combinedHidden}
                                     captionLayout="dropdown"
                                     defaultMonth={maxDate}

@@ -1,29 +1,32 @@
 import { z } from "zod";
 
-const normalizeFiles = (value: unknown): File[] => {
-    if (!value) return [];
-
-    if (Array.isArray(value)) {
-        return value.filter((file): file is File => file instanceof File);
-    }
-
-    if (value instanceof FileList) {
-        return Array.from(value);
-    }
-
-    return value instanceof File ? [value] : [];
-};
+export interface UploadedFile {
+    id: string;
+    file: File;
+    preview?: string;
+    type: string;
+    path?: string;
+    uploaded?: boolean; // Flag to track if file is already uploaded
+    uploadedId?: string; // Store the server-side ID for uploaded files
+}
 
 const createFileField = (message: string) =>
     z
-        .custom<File | File[] | FileList | null | undefined>((value) => normalizeFiles(value).length > 0, {
-            message,
-        })
-        .transform((value) => normalizeFiles(value));
+        .array(
+            z.object({
+                id: z.string(),
+                file: z.instanceof(File),
+                preview: z.string().optional(),
+                type: z.string(),
+                path: z.string().optional(),
+                uploaded: z.boolean().optional(),
+                uploadedId: z.string().optional(),
+            })
+        )
+        .min(1, message);
 
 /**
  * Returns the attachment schema enforcing that each required document is provided before submission.
- * Normalizes uploaded files to a `File[]` array for downstream consumption.
  */
 export function getAttachmentsSchema(t: (key: string) => string) {
     return z.object({
@@ -37,4 +40,3 @@ export function getAttachmentsSchema(t: (key: string) => string) {
 type AttachmentsSchema = ReturnType<typeof getAttachmentsSchema>;
 
 export type AttachmentsFormValues = z.infer<AttachmentsSchema>;
-export type AttachmentsFormInput = z.input<AttachmentsSchema>;

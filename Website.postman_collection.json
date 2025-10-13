@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "fd3cb38f-e523-4a83-9ddd-fd0ee28508cb",
+		"name": "Website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47623118",
+		"_collection_link": "https://shahadmodher404-7076916.postman.co/workspace/ArabicGlobalSchool~2338589c-cf57-4428-b66e-42216b450ff6/collection/47607604-fd3cb38f-e523-4a83-9ddd-fd0ee28508cb?action=share&source=collection_link&creator=47623118"
+	},
+	"item": [
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Display List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "{{lang}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/questions/?is_visible=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions",
+								""
+							],
+							"query": [
+								{
+									"key": "is_visible",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/questions/8e7a2ff6-d81f-466d-b60d-c555f79847be",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions",
+								"8e7a2ff6-d81f-466d-b60d-c555f79847be"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Display List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "{{lang}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/news?is_visible=1&category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "is_visible",
+									"value": "1"
+								},
+								{
+									"key": "category",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "{{lang}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/news/31f71bb0-9909-405f-a2fe-40af3fc0778c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news",
+								"31f71bb0-9909-405f-a2fe-40af3fc0778c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Hero Section Image",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Regestration",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"student\": {\r\n    \"child_school\": 1,\r\n    \"child_next_class\": \"Grade 5\",\r\n    \"full_name\": \"محمد رشيد\",\r\n    \"birth_place\": \"بغداد\",\r\n    \"family_name\": \"التميمي\",\r\n    \"religion\": \"الإسلام\",\r\n    \"birthday\": \"2015-06-15\",\r\n    \"age_in_july\": 10,\r\n    \"id_passport_number\": 94853976,\r\n    \"gender\": true,\r\n    \"nationality\": 1,\r\n    \"weight_height\": \"30kg/135cm\",\r\n    \"sibling_order\": 2,\r\n    \"home_language\": \"العربية\",\r\n    \"living_with\": 1\r\n  },\r\n  \"mother\": {\r\n    \"full_name\": \"فاطمة علي\",\r\n    \"birthday\": \"1985-03-12\",\r\n    \"age\": 40,\r\n    \"religion\": \"الإسلام\",\r\n    \"birth_place\": \"البصرة\",\r\n    \"nationality\": \"عراقية\",\r\n    \"registration_role\": \"ولي أمر\",\r\n    \"specialization\": \"علوم\",\r\n    \"last_education\": \"بكالوريوس\",\r\n    \"job_title\": \"مدرسة\",\r\n    \"job_type\": \"دوام كامل\",\r\n    \"employer\": \"وزارة التربية\",\r\n    \"employer_address\": \"البصرة، العراق\",\r\n    \"office_phone\": \"07701234567\",\r\n    \"monthly_income\": 2,\r\n    \"email\": \"mother@example.com\",\r\n    \"phone\": \"07719876543\",\r\n    \"emergency_phone\": \"07804561234\",\r\n    \"contact_time\": 0\r\n  },\r\n  \"father\": {\r\n    \"full_name\": \"أحمد رشيد\",\r\n    \"birthday\": \"1980-01-25\",\r\n    \"age\": 45,\r\n    \"religion\": \"الإسلام\",\r\n    \"birth_place\": \"بغداد\",\r\n    \"nationality\": \"عراقي\",\r\n    \"registration_role\": \"ولي أمر\",\r\n    \"specialization\": \"هندسة\",\r\n    \"last_education\": \"ماجستير\",\r\n    \"job_title\": \"مهندس مدني\",\r\n    \"job_type\": \"دوام كامل\",\r\n    \"employer\": \"شركة مقاولات بغداد\",\r\n    \"employer_address\": \"بغداد، الكرادة\",\r\n    \"office_phone\": \"07705432198\",\r\n    \"monthly_income\": 1200000,\r\n    \"email\": \"father@example.com\",\r\n    \"phone\": \"07717654321\",\r\n    \"emergency_phone\": \"07806543219\",\r\n    \"contact_time\": 1\r\n  },\r\n  \"education\": {\r\n    \"previous_school\": \"مدرسة الأمل الابتدائية\",\r\n    \"school_address\": \"بغداد - المنصور\",\r\n    \"specialization\": \"ابتدائي\",\r\n    \"enrollment_year\": 2020,\r\n    \"graduation_year\": 2024\r\n  },\r\n  \"health\" : {\r\n    \"medical_history\": \"حساسية بسيطة من الغبار\",\r\n    \"mobility\": 1,\r\n    \"hearing\": 0,\r\n    \"vision\": 1,\r\n    \"future_ambition\": \"أن يصبح طبيباً\"\r\n  }\r\n//   \"images\": [\r\n//     {\r\n//       \"path\": \"images/student_photo_1.jpg\",\r\n//       \"type\": \"student_photo\"\r\n//     },\r\n//     {\r\n//       \"path\": \"images/student_birth_certificate.jpg\",\r\n//       \"type\": \"birth_certificate\"\r\n//     },\r\n//     {\r\n//       \"path\": \"images/family_card.jpg\",\r\n//       \"type\": \"family_card\"\r\n//     }\r\n\r\n//   ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://main-website-api.arabicglobalschool.com/api/students",
+							"protocol": "https",
+							"host": [
+								"main-website-api",
+								"arabicglobalschool",
+								"com"
+							],
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoreImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "1f8ba65a-2435-45e2-a3f3-2b9834562df1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "path",
+									"type": "file",
+									"src": "tps9Q94IX/Screenshot 2025-09-30 210838.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://main-website-api.arabicglobalschool.com/api/studentImage",
+							"protocol": "https",
+							"host": [
+								"main-website-api",
+								"arabicglobalschool",
+								"com"
+							],
+							"path": [
+								"api",
+								"studentImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student Image",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://main-website-api.arabicglobalschool.com/api/studentImage/37466610-6c87-4524-93c6-07797f963ba0",
+							"protocol": "https",
+							"host": [
+								"main-website-api",
+								"arabicglobalschool",
+								"com"
+							],
+							"path": [
+								"api",
+								"studentImage",
+								"37466610-6c87-4524-93c6-07797f963ba0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images News",
+			"item": [
+				{
+					"name": "Get Images By News Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://main-website-api.arabicglobalschool.com/api/website/news-images/by-news/31f71bb0-9909-405f-a2fe-40af3fc0778c",
+							"protocol": "https",
+							"host": [
+								"main-website-api",
+								"arabicglobalschool",
+								"com"
+							],
+							"path": [
+								"api",
+								"website",
+								"news-images",
+								"by-news",
+								"31f71bb0-9909-405f-a2fe-40af3fc0778c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://main-website-api.arabicglobalschool.com/api/website"
+		},
+		{
+			"key": "lang",
+			"value": "ar"
+		}
+	]
+}

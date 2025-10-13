@@ -1,11 +1,21 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { FormControl, FormDescription, FormItem, FormLabel, FormMessage } from "./form";
 import { UploadIcon } from "@/assets/icons";
 import { useTranslations } from "next-intl";
-import { X } from "lucide-react";
+import { ImagePreviewList } from "./image-preview-list";
+
+interface UploadedFile {
+    id: string;
+    file: File;
+    preview?: string;
+    type: string;
+    path?: string;
+    uploaded?: boolean;
+    uploadedId?: string;
+}
 
 interface FormInputProps {
     name: string;
@@ -35,56 +45,59 @@ export default function FormFile({
     const t = useTranslations("common");
     const ref = useRef<HTMLInputElement>(null);
     const { control } = useFormContext();
-    const [previews, setPreviews] = useState<string[]>([]);
 
     const onChoseFile = () => {
         ref.current?.click();
     };
 
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, onChange: (value: FileList | File | null) => void) => {
+    const handleFileChange = (
+        e: React.ChangeEvent<HTMLInputElement>,
+        onChange: (value: UploadedFile[]) => void,
+        currentValue: UploadedFile[]
+    ) => {
         const files = e.target.files;
-        if (!files || files.length === 0) {
-            setPreviews([]);
-            onChange(null);
-            return;
-        }
+        if (!files || files.length === 0) return;
 
-        // Generate previews for images
-        const imageFiles = Array.from(files).filter((file) => file.type.startsWith("image/"));
-        const previewUrls = imageFiles.map((file) => URL.createObjectURL(file));
-        setPreviews(previewUrls);
+        const newFiles: UploadedFile[] = [];
+        Array.from(files).forEach((file) => {
+            const uploadedFile: UploadedFile = {
+                id: Math.random().toString(36).substring(7),
+                file,
+                type: name,
+                preview: file.type.startsWith("image/") ? URL.createObjectURL(file) : undefined,
+            };
+            newFiles.push(uploadedFile);
+        });
 
-        // Pass FileList for multiple, File for single
-        onChange(multiple ? files : files[0]);
-    };
-
-    const removeFile = (index: number, currentValue: FileList | File | null, onChange: (value: FileList | File | null) => void) => {
-        if (!currentValue) return;
-
-        // Revoke the preview URL
-        URL.revokeObjectURL(previews[index]);
-
-        if (multiple && currentValue instanceof FileList) {
-            const dt = new DataTransfer();
-            Array.from(currentValue).forEach((file, i) => {
-                if (i !== index) dt.items.add(file);
-            });
-            setPreviews((prev) => prev.filter((_, i) => i !== index));
-            onChange(dt.files.length > 0 ? dt.files : null);
+        if (multiple) {
+            onChange([...currentValue, ...newFiles]);
         } else {
-            setPreviews([]);
-            onChange(null);
+            // Clean up old preview
+            if (currentValue[0]?.preview) {
+                URL.revokeObjectURL(currentValue[0].preview);
+            }
+            onChange(newFiles);
         }
 
         // Reset input
         if (ref.current) ref.current.value = "";
     };
 
+    const removeFile = (id: string, currentValue: UploadedFile[], onChange: (value: UploadedFile[]) => void) => {
+        const fileToRemove = currentValue.find((f) => f.id === id);
+        if (fileToRemove?.preview) {
+            URL.revokeObjectURL(fileToRemove.preview);
+        }
+
+        const newFiles = currentValue.filter((f) => f.id !== id);
+        onChange(newFiles);
+    };
+
     return (
         <Controller
             name={name}
             control={control}
-            render={({ field: { onChange, value, ...field }, fieldState }) => (
+            render={({ field: { onChange, value = [], ...field }, fieldState }) => (
                 <FormItem className={className}>
                     {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
                     <FormDescription>{description}</FormDescription>
@@ -99,30 +112,13 @@ export default function FormFile({
                             className="hidden"
                             {...field}
                             ref={ref}
-                            onChange={(e) => handleFileChange(e, onChange)}
+                            onChange={(e) => handleFileChange(e, onChange, value)}
                         />
                     </FormControl>
 
-                    {previews.length > 0 && (
-                        <div className="grid grid-cols-2 gap-2 mb-2">
-                            {previews.map((preview, index) => (
-                                <div key={index} className="relative group">
-                                    <img src={preview} alt={`Preview ${index + 1}`} className="w-full h-24 object-cover rounded-lg" />
-                                    <button
-                                        type="button"
-                                        onClick={() => removeFile(index, value, onChange)}
-                                        className="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                                    >
-                                        <X className="h-4 w-4" />
-                                    </button>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-
                     <button
                         onClick={onChoseFile}
-                        className="flex flex-col items-center border-2 border-dashed border-[#A3AAB9] bg-background-container py-4 px-6 cursor-pointer rounded-2xl w-full"
+                        className="flex flex-col items-center border-2 border-dashed border-[#A3AAB9] bg-background-container py-4 px-6 cursor-pointer rounded-2xl w-full hover:border-primary/50 transition-colors "
                         type="button"
                     >
                         <div className="p-3 bg-white rounded-full size-12 grid place-items-center mb-2">
@@ -134,9 +130,13 @@ export default function FormFile({
                             <p className="font-medium leading-[130%] text-center underline underline-offset-0 decoration-solid text-primary">
                                 {t("select_file")}
                             </p>
-                            <p className="text-[#6A81B0]">{hint}</p>
+                            <p className="text-[#6A81B0] text-sm">{hint}</p>
                         </div>
                     </button>
+
+                    {/* Image Preview List */}
+                    <ImagePreviewList files={value} onRemove={(id) => removeFile(id, value, onChange)} />
+
                     <FormMessage>{fieldState.error?.message}</FormMessage>
                 </FormItem>
             )}

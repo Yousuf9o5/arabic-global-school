@@ -50,7 +50,6 @@ export default function EducationHealthPage() {
     };
 
     const visionOptions = [
-        { label: t("visionPlaceholder"), value: "placeholder" },
         { label: t("visionOptions.normal"), value: "normal" },
         { label: t("visionOptions.glasses"), value: "glasses" },
         { label: t("visionOptions.contacts"), value: "contacts" },
@@ -59,7 +58,6 @@ export default function EducationHealthPage() {
     ];
 
     const hearingOptions = [
-        { label: t("hearingPlaceholder"), value: "placeholder" },
         { label: t("hearingOptions.normal"), value: "normal" },
         { label: t("hearingOptions.assistive"), value: "assistive" },
         { label: t("hearingOptions.partial"), value: "partial" },
@@ -68,7 +66,6 @@ export default function EducationHealthPage() {
     ];
 
     const mobilityOptions = [
-        { label: t("mobilityPlaceholder"), value: "" },
         { label: t("mobilityOptions.normal"), value: "normal" },
         { label: t("mobilityOptions.wheelchair"), value: "wheelchair" },
         { label: t("mobilityOptions.crutches"), value: "crutches" },

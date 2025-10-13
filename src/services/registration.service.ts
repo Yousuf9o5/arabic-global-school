@@ -2,6 +2,17 @@ import { RegistrationPayload, RegistrationResponse } from "@/types/registration.
 import { API } from "./api.base";
 
 /**
+ * Response from image upload API
+ */
+interface ImageUploadResponse {
+    item: {
+        id: string;
+        type: string;
+        path: string;
+    };
+}
+
+/**
  * Submit registration data to the server
  */
 export async function submitRegistration(data: RegistrationPayload): Promise<RegistrationResponse> {
@@ -11,32 +22,36 @@ export async function submitRegistration(data: RegistrationPayload): Promise<Reg
 
 /**
  * Upload a single image for registration
- * Returns the path string from the API
+ * Returns the uploaded image data including id, type, and path
+ * 
+ * @param file - The file to upload
+ * @param type - Image type (0-3): 0=student_photo, 1=birth_certificate, 2=family_card, 3=parents_id
+ * @param studentId - Optional student ID (can be omitted for initial upload)
  */
-export async function uploadRegistrationImage(file: File): Promise<string> {
+export async function uploadRegistrationImage(
+    file: File, 
+    type: string,
+    studentId?: string
+): Promise<ImageUploadResponse["item"]> {
     const formData = new FormData();
-    formData.append("image", file);
+    formData.append("path", file);
+    formData.append("type", type);
+    if (studentId) {
+        formData.append("student_id", studentId);
+    }
 
-    const response = await API.post<{ path: string }>("/students/images", formData, {
+    const response = await API.post<ImageUploadResponse>("/studentImage", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
     });
 
-    return response.data.path;
+    return response.data.item;
 }
 
 /**
- * Upload images for registration
- * Note: Adjust based on actual file upload endpoint
+ * Delete uploaded image
  */
-export async function uploadRegistrationImages(files: File[]): Promise<string[]> {
-    const paths: string[] = [];
-
-    for (const file of files) {
-        const path = await uploadRegistrationImage(file);
-        paths.push(path);
-    }
-
-    return paths;
+export async function deleteRegistrationImage(imageId: string): Promise<void> {
+    await API.delete(`/studentImage/${imageId}`);
 }
