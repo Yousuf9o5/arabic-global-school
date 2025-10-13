@@ -870,9 +870,11 @@
         "registration_error": "Pendaftaran gagal. Silakan coba lagi.",
         "complete_steps": "Harap selesaikan semua langkah sebelumnya terlebih dahulu",
         "submitting": "Mengirim pendaftaran Anda...",
-        "uploading_images": "Mengunggah gambar...",
+        "uploading_images": "Mengunggah gambar",
         "upload_success": "Gambar berhasil diunggah",
         "upload_error": "Gagal mengunggah gambar. Silakan coba lagi.",
+        "all_images_uploaded": "Semua gambar sudah diunggah!",
+        "files": "file",
         "file_too_large": "Ukuran file melebihi batas 5MB",
         "invalid_file_type": "Jenis file tidak valid. Harap unggah file PNG, JPG, atau PDF saja"
     },

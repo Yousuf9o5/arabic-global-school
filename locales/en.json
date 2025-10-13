@@ -843,9 +843,11 @@
         "registration_error": "Registration failed. Please try again.",
         "complete_steps": "Please complete all previous steps first",
         "submitting": "Submitting your registration...",
-        "uploading_images": "Uploading images...",
+        "uploading_images": "Uploading images",
         "upload_success": "Images uploaded successfully",
         "upload_error": "Failed to upload images. Please try again.",
+        "all_images_uploaded": "All images already uploaded!",
+        "files": "files",
         "file_too_large": "File size exceeds 5MB limit",
         "invalid_file_type": "Invalid file type. Please upload PNG, JPG, or PDF files only"
     },
