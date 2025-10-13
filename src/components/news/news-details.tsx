@@ -148,7 +148,7 @@ export default function NewsDetails({ id, className }: NewsDetailsProps) {
                 <div className="flex flex-col md:flex-row items-stretch gap-4">
                     <div className="flex-1">
                         <Image
-                            className="w-full rounded-3xl object-cover h-96 md:h-auto"
+                            className="w-full rounded-3xl object-cover h-96 md:h-auto max-h-[700px]"
                             width={1048}
                             height={400}
                             sizes="(max-width: 1024px) 100vw, 50vw"
