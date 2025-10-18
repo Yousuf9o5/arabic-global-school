@@ -23,8 +23,6 @@ export default function StudentInfoPage() {
     const form = useForm<StudentInfoFormValues>({
         resolver: zodResolver(getStudentInfoSchema(tValidations)),
         defaultValues: {
-            child_school: "",
-            child_next_class: "",
             full_name: "",
             birth_place: "",
             family_name: "",
@@ -61,23 +59,6 @@ export default function StudentInfoPage() {
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(submit)} className="flex flex-col gap-4">
-                    <FormSelect
-                        name="child_school"
-                        label={t("childSchool")}
-                        placeholder={t("childSchoolPlaceholder")}
-                        options={[
-                            { label: t("primarySchool"), value: "0" },
-                            { label: t("middleSchool"), value: "1" },
-                            { label: t("highSchool"), value: "2" },
-                        ]}
-                    />
-
-                    <FormInput
-                        name="child_next_class"
-                        label={t("childNextClass")}
-                        placeholder={t("childNextClassPlaceholder")}
-                    />
-
                     <FormInput name="full_name" label={t("fullName")} placeholder={t("fullNamePlaceholder")} />
 
                     <FormInput name="birth_place" label={t("birthPlace")} placeholder={t("birthPlacePlaceholder")} />

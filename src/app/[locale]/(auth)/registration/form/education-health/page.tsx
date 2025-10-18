@@ -108,13 +108,13 @@ export default function EducationHealthPage() {
 
                         <FormSelect name="health.mobility" label={t("mobility")} placeholder={t("mobilityPlaceholder")} options={mobilityOptions} />
 
+                        <FormInput name="health.future_ambition" label={t("futureAmbition")} placeholder={t("futureAmbitionPlaceholder")} />
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <FormSelect name="health.vision" label={t("vision")} placeholder={t("visionPlaceholder")} options={visionOptions} />
 
                             <FormSelect name="health.hearing" label={t("hearing")} placeholder={t("hearingPlaceholder")} options={hearingOptions} />
                         </div>
-
-                        <FormInput name="health.future_ambition" label={t("futureAmbition")} placeholder={t("futureAmbitionPlaceholder")} />
                     </div>
 
                     <Button className="rounded-full w-full mt-4" size="md">
