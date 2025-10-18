@@ -43,7 +43,7 @@ export function RegistrationStepper() {
     const current = steps.findIndex((step) => pathname?.endsWith(step.path));
 
     return (
-        <div className="hidden lg:flex flex-col items-center gap-8 bg-[#EFEFEF] px-8 py-16 max-w-[480px]">
+        <div className="relative hidden xl:flex flex-col items-center gap-8 bg-[#EFEFEF] px-8 py-16 max-w-[480px]">
             <div className="">
                 {steps.map((step, i) => (
                     <div key={step.title} className="flex gap-4 items-start">
@@ -87,7 +87,7 @@ export function RegistrationStepper() {
                 ))}
             </div>
 
-            <div className="mt-auto w-full">
+            <div className="mt-auto w-full sticky bottom-8 start-8">
                 <Button className="w-fit !bg-transparent" asChild variant={"ghost"} onClick={back}>
                     <Link href="/">
                         <ArrowRightIcon className="ltr:-scale-x-100" /> {t("backToHome")}
