@@ -20,11 +20,11 @@ const parentSchema = (t: (key: string) => string, parentType: "mother" | "father
         employer: z.string().optional(),
         employer_address: z.string().optional(),
         office_phone: z.string().optional(),
-        monthly_income: z.string().optional(),
+        monthly_income: z.enum(["0", "1", "2", "3"], { message: t("monthly_income_required") }).optional(),
         email: z.string().email(t("valid_email_required")),
         phone: z.string().min(6, t("phone_number_required")),
         emergency_phone: z.string().optional(),
-        contact_time: z.string().optional(),
+        contact_time: z.enum(["0", "1", "2"], { message: t("contact_time_required") }).optional(),
     });
 
 export function getFamilyInfoSchema(t: (key: string) => string) {

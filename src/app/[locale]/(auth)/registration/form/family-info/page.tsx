@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { FormInput } from "@/components/ui/form-input";
+import { FormSelect } from "@/components/ui/form-select";
 import FormDate from "@/components/ui/form-date";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -38,11 +39,9 @@ export default function FamilyInfoPage() {
                 employer: "",
                 employer_address: "",
                 office_phone: "",
-                monthly_income: "",
                 email: "",
                 phone: "",
                 emergency_phone: "",
-                contact_time: "",
             },
             father: {
                 full_name: "",
@@ -59,11 +58,9 @@ export default function FamilyInfoPage() {
                 employer: "",
                 employer_address: "",
                 office_phone: "",
-                monthly_income: "",
                 email: "",
                 phone: "",
                 emergency_phone: "",
-                contact_time: "",
             },
         },
     });
@@ -91,36 +88,19 @@ export default function FamilyInfoPage() {
                     {/* Mother Information Section */}
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold text-content-natural-secondary">{t("motherSection")}</h3>
-                        
-                        <FormInput
-                            name="mother.full_name"
-                            label={t("motherFullName")}
-                            placeholder={t("motherFullNamePlaceholder")}
-                        />
+
+                        <FormInput name="mother.full_name" label={t("motherFullName")} placeholder={t("motherFullNamePlaceholder")} />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <FormDate name="mother.birthday" label={t("motherBirthday")} placeholder={t("birthdayPlaceholder")} />
-                            
-                            <FormInput
-                                name="mother.age"
-                                label={t("motherAge")}
-                                placeholder={t("agePlaceholder")}
-                                type="number"
-                            />
+
+                            <FormInput name="mother.age" label={t("motherAge")} placeholder={t("agePlaceholder")} type="number" />
 
                             <FormInput name="mother.religion" label={t("motherReligion")} placeholder={t("religionPlaceholder")} />
 
-                            <FormInput
-                                name="mother.birth_place"
-                                label={t("motherBirthPlace")}
-                                placeholder={t("birthPlacePlaceholder")}
-                            />
+                            <FormInput name="mother.birth_place" label={t("motherBirthPlace")} placeholder={t("birthPlacePlaceholder")} />
 
-                            <FormInput
-                                name="mother.nationality"
-                                label={t("motherNationality")}
-                                placeholder={t("nationalityPlaceholder")}
-                            />
+                            <FormInput name="mother.nationality" label={t("motherNationality")} placeholder={t("nationalityPlaceholder")} />
 
                             <FormInput
                                 name="mother.registration_role"
@@ -128,17 +108,9 @@ export default function FamilyInfoPage() {
                                 placeholder={t("registrationRolePlaceholder")}
                             />
 
-                            <FormInput
-                                name="mother.specialization"
-                                label={t("motherSpecialization")}
-                                placeholder={t("specializationPlaceholder")}
-                            />
+                            <FormInput name="mother.specialization" label={t("motherSpecialization")} placeholder={t("specializationPlaceholder")} />
 
-                            <FormInput
-                                name="mother.last_education"
-                                label={t("motherLastEducation")}
-                                placeholder={t("lastEducationPlaceholder")}
-                            />
+                            <FormInput name="mother.last_education" label={t("motherLastEducation")} placeholder={t("lastEducationPlaceholder")} />
 
                             <FormInput name="mother.job_title" label={t("motherJobTitle")} placeholder={t("jobTitlePlaceholder")} />
 
@@ -152,33 +124,35 @@ export default function FamilyInfoPage() {
                                 placeholder={t("employerAddressPlaceholder")}
                             />
 
-                            <FormInput
-                                name="mother.office_phone"
-                                label={t("motherOfficePhone")}
-                                placeholder={t("officePhonePlaceholder")}
-                            />
+                            <FormInput name="mother.office_phone" label={t("motherOfficePhone")} placeholder={t("officePhonePlaceholder")} />
 
-                            <FormInput
+                            <FormSelect
                                 name="mother.monthly_income"
                                 label={t("motherMonthlyIncome")}
                                 placeholder={t("monthlyIncomePlaceholder")}
-                                type="number"
+                                options={[
+                                    { label: "< Rp 5,000,000", value: "0" },
+                                    { label: "> Rp 5,000,000", value: "1" },
+                                    { label: "> Rp 10,000,000", value: "2" },
+                                    { label: "> Rp 15,000,000", value: "3" },
+                                ]}
                             />
 
                             <FormInput name="mother.email" label={t("motherEmail")} placeholder={t("emailPlaceholder")} type="email" />
 
                             <FormInput name="mother.phone" label={t("motherPhone")} placeholder={t("phonePlaceholder")} />
 
-                            <FormInput
-                                name="mother.emergency_phone"
-                                label={t("motherEmergencyPhone")}
-                                placeholder={t("emergencyPhonePlaceholder")}
-                            />
+                            <FormInput name="mother.emergency_phone" label={t("motherEmergencyPhone")} placeholder={t("emergencyPhonePlaceholder")} />
 
-                            <FormInput
+                            <FormSelect
                                 name="mother.contact_time"
                                 label={t("motherContactTime")}
                                 placeholder={t("contactTimePlaceholder")}
+                                options={[
+                                    { label: t("after17"), value: "0" },
+                                    { label: t("after1330"), value: "1" },
+                                    { label: t("everyDay"), value: "2" },
+                                ]}
                             />
                         </div>
                     </div>
@@ -186,36 +160,19 @@ export default function FamilyInfoPage() {
                     {/* Father Information Section */}
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold text-content-natural-secondary">{t("fatherSection")}</h3>
-                        
-                        <FormInput
-                            name="father.full_name"
-                            label={t("fatherFullName")}
-                            placeholder={t("fatherFullNamePlaceholder")}
-                        />
+
+                        <FormInput name="father.full_name" label={t("fatherFullName")} placeholder={t("fatherFullNamePlaceholder")} />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <FormDate name="father.birthday" label={t("fatherBirthday")} placeholder={t("birthdayPlaceholder")} />
-                            
-                            <FormInput
-                                name="father.age"
-                                label={t("fatherAge")}
-                                placeholder={t("agePlaceholder")}
-                                type="number"
-                            />
+
+                            <FormInput name="father.age" label={t("fatherAge")} placeholder={t("agePlaceholder")} type="number" />
 
                             <FormInput name="father.religion" label={t("fatherReligion")} placeholder={t("religionPlaceholder")} />
 
-                            <FormInput
-                                name="father.birth_place"
-                                label={t("fatherBirthPlace")}
-                                placeholder={t("birthPlacePlaceholder")}
-                            />
+                            <FormInput name="father.birth_place" label={t("fatherBirthPlace")} placeholder={t("birthPlacePlaceholder")} />
 
-                            <FormInput
-                                name="father.nationality"
-                                label={t("fatherNationality")}
-                                placeholder={t("nationalityPlaceholder")}
-                            />
+                            <FormInput name="father.nationality" label={t("fatherNationality")} placeholder={t("nationalityPlaceholder")} />
 
                             <FormInput
                                 name="father.registration_role"
@@ -223,17 +180,9 @@ export default function FamilyInfoPage() {
                                 placeholder={t("registrationRolePlaceholder")}
                             />
 
-                            <FormInput
-                                name="father.specialization"
-                                label={t("fatherSpecialization")}
-                                placeholder={t("specializationPlaceholder")}
-                            />
+                            <FormInput name="father.specialization" label={t("fatherSpecialization")} placeholder={t("specializationPlaceholder")} />
 
-                            <FormInput
-                                name="father.last_education"
-                                label={t("fatherLastEducation")}
-                                placeholder={t("lastEducationPlaceholder")}
-                            />
+                            <FormInput name="father.last_education" label={t("fatherLastEducation")} placeholder={t("lastEducationPlaceholder")} />
 
                             <FormInput name="father.job_title" label={t("fatherJobTitle")} placeholder={t("jobTitlePlaceholder")} />
 
@@ -247,33 +196,35 @@ export default function FamilyInfoPage() {
                                 placeholder={t("employerAddressPlaceholder")}
                             />
 
-                            <FormInput
-                                name="father.office_phone"
-                                label={t("fatherOfficePhone")}
-                                placeholder={t("officePhonePlaceholder")}
-                            />
+                            <FormInput name="father.office_phone" label={t("fatherOfficePhone")} placeholder={t("officePhonePlaceholder")} />
 
-                            <FormInput
+                            <FormSelect
                                 name="father.monthly_income"
                                 label={t("fatherMonthlyIncome")}
                                 placeholder={t("monthlyIncomePlaceholder")}
-                                type="number"
+                                options={[
+                                    { label: "< Rp 5,000,000", value: "0" },
+                                    { label: "> Rp 5,000,000", value: "1" },
+                                    { label: "> Rp 10,000,000", value: "2" },
+                                    { label: "> Rp 15,000,000", value: "3" },
+                                ]}
                             />
 
                             <FormInput name="father.email" label={t("fatherEmail")} placeholder={t("emailPlaceholder")} type="email" />
 
                             <FormInput name="father.phone" label={t("fatherPhone")} placeholder={t("phonePlaceholder")} />
 
-                            <FormInput
-                                name="father.emergency_phone"
-                                label={t("fatherEmergencyPhone")}
-                                placeholder={t("emergencyPhonePlaceholder")}
-                            />
+                            <FormInput name="father.emergency_phone" label={t("fatherEmergencyPhone")} placeholder={t("emergencyPhonePlaceholder")} />
 
-                            <FormInput
+                            <FormSelect
                                 name="father.contact_time"
                                 label={t("fatherContactTime")}
                                 placeholder={t("contactTimePlaceholder")}
+                                options={[
+                                    { label: t("after17"), value: "0" },
+                                    { label: t("after1330"), value: "1" },
+                                    { label: t("everyDay"), value: "2" },
+                                ]}
                             />
                         </div>
                     </div>

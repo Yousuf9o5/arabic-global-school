@@ -31,9 +31,9 @@ export default function EducationHealthPage() {
             },
             health: {
                 medical_history: "",
-                mobility: "",
-                hearing: "placeholder",
-                vision: "placeholder",
+                mobility: undefined,
+                hearing: undefined,
+                vision: undefined,
                 future_ambition: "",
             },
         },
@@ -50,27 +50,18 @@ export default function EducationHealthPage() {
     };
 
     const visionOptions = [
-        { label: t("visionOptions.normal"), value: "normal" },
-        { label: t("visionOptions.glasses"), value: "glasses" },
-        { label: t("visionOptions.contacts"), value: "contacts" },
-        { label: t("visionOptions.low"), value: "low" },
-        { label: t("visionOptions.other"), value: "other" },
+        { label: t("visionOptions.glasses"), value: "0" },
+        { label: t("visionOptions.normal"), value: "1" },
     ];
 
     const hearingOptions = [
-        { label: t("hearingOptions.normal"), value: "normal" },
-        { label: t("hearingOptions.assistive"), value: "assistive" },
-        { label: t("hearingOptions.partial"), value: "partial" },
-        { label: t("hearingOptions.support"), value: "support" },
-        { label: t("hearingOptions.other"), value: "other" },
+        { label: t("hearingOptions.normal"), value: "0" },
+        { label: t("hearingOptions.lessResponsive"), value: "1" },
     ];
 
     const mobilityOptions = [
-        { label: t("mobilityOptions.normal"), value: "normal" },
-        { label: t("mobilityOptions.wheelchair"), value: "wheelchair" },
-        { label: t("mobilityOptions.crutches"), value: "crutches" },
-        { label: t("mobilityOptions.limited"), value: "limited" },
-        { label: t("mobilityOptions.other"), value: "other" },
+        { label: t("mobilityOptions.normal"), value: "0" },
+        { label: t("mobilityOptions.lessControl"), value: "1" },
     ];
 
     return (

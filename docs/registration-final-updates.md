@@ -1,10 +1,46 @@
 # Registration Form - Final Updates
 
-**Updated:** 2025-01-XX
+**Updated:** 2025-10-24
 
 ## Summary
 
-This document outlines the comprehensive updates made to the registration form system to integrate with the new API structure, including validation schemas, form components, data mapping, internationalization, and complete documentation.
+This document outlines the comprehensive updates made to the registration form system including class info merge, enum validation, and complete API integration.
+
+---
+
+## Latest Update: Class Info Merge (2025-10-24)
+
+### Overview
+The registration flow has been updated to properly merge the class selection data (`child_school` and `child_next_class`) from the initial registration step with the student information during final submission.
+
+### Changes Made
+
+#### 1. Attachments Page (`attachments/page.tsx`)
+- Added `StudentClassInfo` import
+- Updated submit function to load `class_info` from localStorage
+- Merges class selection with student info before API submission
+- Clears all localStorage keys on successful submission (including `class_info`)
+
+#### 2. Registration Mapper (`registration-mapper.ts`)
+- Updated function signature to accept merged student info with class fields
+- Fixed gender enum conversion: `"0"` (Male) → `true`, `"1"` (Female) → `false`
+- All enum values now properly converted to numbers/booleans as expected by API
+
+### Data Flow
+1. **Step 0 (Registration):** User selects school and class → `localStorage.class_info`
+2. **Step 1:** Student info → `localStorage.student_info`
+3. **Step 2:** Family info → `localStorage.family_info`
+4. **Step 3:** Education & Health → `localStorage.education_health`
+5. **Step 4 (Attachments):** Merge all data and submit to API
+
+**Merged Data Structure:**
+```typescript
+const mergedStudentInfo = {
+  ...studentInfo,
+  child_school: classInfo.child_school,
+  child_next_class: classInfo.child_next_class
+}
+```
 
 ---
 

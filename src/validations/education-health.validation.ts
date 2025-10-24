@@ -15,13 +15,9 @@ export function getEducationHealthSchema(t: (key: string) => string) {
         }),
         health: z.object({
             medical_history: z.string().optional(),
-            mobility: z.string().optional(),
-            hearing: z.string().refine((value) => value !== "placeholder" && value.trim().length > 0, {
-                message: t("hearing_required"),
-            }),
-            vision: z.string().refine((value) => value !== "placeholder" && value.trim().length > 0, {
-                message: t("vision_required"),
-            }),
+            mobility: z.enum(["0", "1"], { message: t("mobility_required") }).optional(),
+            hearing: z.enum(["0", "1"], { message: t("hearing_required") }),
+            vision: z.enum(["0", "1"], { message: t("vision_required") }),
             future_ambition: z.string().optional(),
         }),
     });

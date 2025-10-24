@@ -44,15 +44,24 @@
                 "part1": "Langkah yang Membuat",
                 "part2": "Perbedaan dalam Kehidupan Anak Anda"
             },
-            "paragraph": "Sekolah Internasional Arab di Jakarta adalah sekolah internasional terkemuka yang menggabungkan pendidikan akademik yang unggul dengan nilai-nilai Islam yang otentik.",
-            "env": "Lingkungan yang menginspirasi pemimpin muda.",
+            "paragraph": "Arabic Global School merupakan lembaga pendidikan modern yang berlokasi di Cempaka Putih, Jakarta Pusat. Didirikan pada tahun 2024, Sekolah ini menawarkan program Pendidikan Anak Usia Dini (PAUD) dan Sekolah Dasar. Sebagai sekolah yang mengusung integrasi antara pendidikan modern dan nilai-nilai Islam, Arabic Global School menggabungkan tiga kurikulum utama: Kurikulum Nasional, Cambridge, dan ICO. Kami menawarkan pengalaman pendidikan yang terpadu, menggabungkan keunggulan akademik dengan nilai-nilai moral, menghargai perbedaan individu setiap peserta didik, serta membina generasi yang siap menghadapi tantangan masa depan dengan penuh percaya diri.",
+            "founding": {
+                "title": "Didirikan pada tahun 2024",
+                "description": "Di Cempaka Putih, Jakarta Pusat"
+            },
+            "programs": {
+                "title": "Program Pendidikan",
+                "current": "Pendidikan Anak Usia Dini dan Sekolah Dasar",
+                "future": "Dengan rencana membuka Sekolah Menengah Pertama dan Atas"
+            },
+            "env": "Lingkungan yang menginspirasi pemimpin muda",
             "envParagraph": "Kami peduli untuk membina dan mengembangkan kepribadian setiap anak agar percaya diri dan kreatif.",
             "education": "Pendidikan dalam tiga bahasa",
             "educationParagraph": "Arab, Inggris, dan Indonesia, untuk membangun fondasi yang kuat dan beragam bagi anak Anda.",
             "balance": "Keseimbangan antara nilai dan keunggulan akademik",
             "balanceParagraph": "Kurikulum yang menggabungkan nilai-nilai Islam otentik dengan pendidikan modern.",
             "team": "Tim pengajar profesional",
-            "teamParagraph": "Arab, Inggris, dan Indonesia, untuk membangun fondasi yang kuat dan beragam bagi anak Anda."
+            "teamParagraph": "Guru berpengalaman yang peduli terhadap pertumbuhan anak Anda dalam segala aspek."
         },
         "curricula": {
             "title": "Kurikulum Pendidikan Terpadu Kami",
@@ -85,7 +94,10 @@
             }
         },
         "language": {
-            "title": "Sistem Bahasa di Sekolah",
+            "title": "Sistem Pendidikan Trilingual",
+            "subtitle": "Tiap pekan kami bergantian memfokuskan dalam 1 bahasa namun dalam subject tertentu tetap menggunakan bahasa yang sama",
+            "approach": "Kami menggunakan metode immersi dan pembelajaran berbasis tema untuk membantu siswa beradaptasi dengan tiga bahasa secara alami",
+            "methods": "Menggunakan game bahasa interaktif, lagu anak-anak, cerita bergambar, dan proyek kolaboratif untuk meningkatkan pemahaman dan ekspresi bahasa",
             "arabic": "Bahasa Arab",
             "english": "Bahasa Inggris",
             "indonesian": "Bahasa Indonesia",
@@ -96,21 +108,21 @@
                         "part1": "Bahasa",
                         "part2": "Arab"
                     },
-                    "desc": "Mengajarkan bahasa Arab, agama, dan pembacaan Al-Qur'an dengan penguasaan."
+                    "desc": "Mengajarkan bahasa Arab, agama, dan pembacaan Al-Qur'an dengan penguasaan menggunakan metode Nurul Bayan yang terbukti efektif dalam pembelajaran membaca Al-Qur'an dengan benar"
                 },
                 "english": {
                     "title": {
                         "part1": "Bahasa",
                         "part2": "Inggris"
                     },
-                    "desc": "Untuk sains, matematika, dan komunikasi global dengan lancar dan percaya diri."
+                    "desc": "Untuk sains, matematika, dan komunikasi global dengan lancar dan percaya diri melalui kurikulum Cambridge International yang diakui di seluruh dunia"
                 },
                 "indonesian": {
                     "title": {
                         "part1": "Bahasa",
                         "part2": "Indonesia"
                     },
-                    "desc": "Mempelajari kurikulum nasional, seni, dan budaya lokal."
+                    "desc": "Mempelajari kurikulum nasional, seni, dan budaya lokal mengikuti Kurikulum Merdeka yang menekankan pembelajaran berbasis projek dan pengembangan karakter"
                 }
             }
         },
@@ -169,6 +181,7 @@
             "q5": "Apakah sekolah menawarkan layanan bimbingan sebagai bagian dari programnya?",
             "answer": "Bagaimana sekolah memperhatikan pengajaran nilai-nilai Islam? Sekolah kami menyediakan program pendidikan Islam yang komprehensif yang mengintegrasikan nilai-nilai ke dalam pembelajaran dan aktivitas harian."
         },
+
         "contact": {
             "title": "Hubungi kami dengan mudah",
             "desc": "Punya pertanyaan atau ingin bertanya? Kami senang mendengar dari Anda. Silakan kirim pesan!",
@@ -275,15 +288,16 @@
         },
         "safe_start": {
             "title": "Awal yang Aman untuk Pembelajaran Aktif dan Seimbang",
-            "subtitle": "Kami menyediakan lingkungan kelas yang hangat yang mendorong pembelajaran yang aktif dan fleksibel, dengan dukungan pendidikan yang mempertimbangkan pertumbuhan psikologis dan emosional anak.",
+            "subtitle": "Pendidikan agama Islam dan pembentukan karakter menjadi pilar utama dalam model pembelajaran di Arabic Global School jenjang Playgroup dan Kindergarten. Pendekatan ini dilandasi dengan metode Montessori yang menekankan pada kemandirian, keterlibatan aktif, dan penghormatan terhadap tahapan perkembangan anak.",
+            "philosophy": "AGS memprioritaskan pengembangan kemandirian, kepercayaan diri, dan kegembiraan belajar sejak usia dini. Kami mendukung pertumbuhan anak-anak melalui aktivitas yang menarik dan sesuai dengan tahap perkembangan mereka, mencakup lima bidang utama: Fisik, Kognitif, Bahasa, Sosial-Emosional, dan Kreativitas.",
             "programs": {
                 "kindergarten": {
                     "title": "Taman Kanak-kanak",
-                    "desc": "Lingkungan belajar berbasis bermain yang mengembangkan keterampilan sosial dan akademik"
+                    "desc": "Aktivitas pembelajaran yang komprehensif dan interaktif meliputi pengembangan seni, literasi, numerasi, sains, serta keterampilan sosial dan emosional melalui pembelajaran berbasis pengalaman Montessori yang menekankan otonomi dan eksplorasi mandiri."
                 },
                 "primary": {
                     "title": "Sekolah Dasar",
-                    "desc": "Membangun fondasi dengan fokus pada mata pelajaran inti dan pengembangan karakter"
+                    "desc": "Di Arabic Global School (AGS), jenjang sekolah dasar bukan sekadar tahap akademik, tetapi masa penting dalam pembentukan identitas, akal, dan jiwa anak. Kami meyakini bahwa pendidikan sejati tidak hanya mengajarkan pengetahuan, tetapi juga menumbuhkan rasa cinta belajar, kemampuan berpikir, dan nilai-nilai moral yang luhur."
                 },
                 "intermediate": {
                     "title": "Sekolah Menengah",
@@ -292,6 +306,29 @@
                 "ICO": {
                     "title": "ICO",
                     "desc": "Mengajarkan bahasa Arab dan nilai-nilai Islam dengan cara yang disederhanakan."
+                }
+            },
+            "development_areas": {
+                "title": "Lima Bidang Pengembangan Utama",
+                "physical": {
+                    "title": "Perkembangan Fisik",
+                    "desc": "Meningkatkan kemampuan motorik kasar melalui aktivitas fisik seperti berlari, melompat, dan bermain. Mengembangkan kemampuan motorik halus melalui kegiatan seperti menggunting, menulis, dan meronce."
+                },
+                "cognitive": {
+                    "title": "Perkembangan Kognitif",
+                    "desc": "Mengenal konsep dasar matematika (angka, bentuk, ukuran). Mengembangkan kemampuan pemecahan masalah dan berpikir kritis melalui aktivitas yang menantang. Meningkatkan rasa ingin tahu dan eksplorasi lingkungan sekitar."
+                },
+                "language": {
+                    "title": "Perkembangan Bahasa",
+                    "desc": "Meningkatkan kemampuan berbahasa lisan melalui diskusi, bercerita, dan bernyanyi. Mengembangkan kemampuan mendengarkan dan memahami instruksi sederhana."
+                },
+                "social_emotional": {
+                    "title": "Perkembangan Sosial dan Emosional",
+                    "desc": "Membangun kemampuan sosial melalui bermain bersama, berbagi, dan kerja sama. Mengembangkan kemampuan mengelola emosi dan empati terhadap orang lain."
+                },
+                "creativity": {
+                    "title": "Perkembangan Kreativitas",
+                    "desc": "Mengekspresikan diri melalui seni (menggambar, mewarnai, membentuk). Mengembangkan kreativitas melalui musik, gerakan, dan drama."
                 }
             }
         },
@@ -359,6 +396,51 @@
             },
             "button": "Berbicara Bahasa Inggris"
         },
+        "teaching_methods": {
+            "title": "Metodologi Pengajaran Kami",
+            "subtitle": "Implementasi metode pengajaran AGS melibatkan pengintegrasian beberapa pendekatan untuk memfasilitasi perkembangan anak secara holistik",
+            "methods": {
+                "montessori": {
+                    "title": "Metode Montessori",
+                    "desc": "Menekankan pembelajaran mandiri dan eksplorasi, memungkinkan anak untuk menemukan konsep dengan kecepatan mereka sendiri di lingkungan yang dipersiapkan yang mendukung otonomi dan aktivitas yang diarahkan sendiri."
+                },
+                "cambridge": {
+                    "title": "Metode Cambridge",
+                    "desc": "Berfokus pada pengembangan keterampilan berpikir kritis dan pemecahan masalah melalui kurikulum yang sistematis yang mendorong pemikiran analitis dan pemahaman konseptual yang mendalam."
+                },
+                "nurul_bayan": {
+                    "title": "Metode Nurul Bayan",
+                    "desc": "Mendalami pembelajaran Al-Qur'an dengan pendekatan yang menekankan pembacaan dan pengulangan kata dan ayat-ayat suci untuk membentuk karakter spiritual anak dengan pengucapan dan tajwid yang benar."
+                },
+                "project_based": {
+                    "title": "Pembelajaran Berbasis Proyek",
+                    "desc": "Mendorong anak untuk bekerja sama, berpikir kreatif, dan mengembangkan keterampilan sosial melalui proyek yang relevan dengan kehidupan sehari-hari, memupuk kerja tim dan penerapan praktis pengetahuan."
+                }
+            }
+        },
+        "assessment": {
+            "title": "Kebijakan Penilaian",
+            "subtitle": "Kebijakan Penilaian di Taman Kanak-Kanak AGS dirancang untuk memantau kemajuan anak secara menyeluruh melalui beberapa metode",
+            "methods": {
+                "exams": {
+                    "title": "Ujian",
+                    "desc": "Menilai kemampuan kognitif melalui tes terstruktur yang dirancang untuk evaluasi yang sesuai usia."
+                },
+                "projects": {
+                    "title": "Penilaian Proyek",
+                    "desc": "Menilai kemampuan anak dalam menerapkan pengetahuan dan keterampilan dalam konteks praktis dunia nyata melalui proyek langsung."
+                },
+                "reports": {
+                    "title": "Laporan Berkala",
+                    "desc": "Memantau perkembangan anak melalui laporan kemajuan reguler yang dibagikan dengan orang tua untuk melacak pertumbuhan seiring waktu."
+                },
+                "cambridge_standards": {
+                    "title": "Standar Cambridge",
+                    "desc": "Kami menggunakan Cambridge resources dalam kegiatan pembelajaran untuk menilai kemampuan anak berdasarkan standar internasional, memastikan tolok ukur kualitas global."
+                }
+            },
+            "conclusion": "Dengan implementasi yang komprehensif, kebijakan penilaian ini dapat memberikan informasi yang akurat tentang kemampuan anak dan membantu guru serta orang tua dalam mendukung perkembangan anak secara efektif."
+        },
         "monitoring": {
             "enrichment": "Kegiatan dan program pengayaan",
             "title": "Pemantauan Komprehensif Kinerja Akademik dan Perilaku",
@@ -377,6 +459,82 @@
                 }
             }
         },
+        "primary_curriculum": {
+            "title": "Sistem Akademik – Tingkat Sekolah Dasar",
+            "subtitle": "Kurikulum sekolah dasar kami dirancang untuk memadukan nilai global dan iman, logika dan emosi, ilmu dan karakter",
+            "intro": "Di Arabic Global School (AGS), jenjang sekolah dasar bukan sekadar tahap akademik, tetapi masa penting dalam pembentukan identitas, akal, dan jiwa anak. Kami meyakini bahwa pendidikan sejati tidak hanya mengajarkan pengetahuan, tetapi juga menumbuhkan rasa cinta belajar, kemampuan berpikir, dan nilai-nilai moral yang luhur.",
+            "curricula": {
+                "cambridge": {
+                    "title": "Kurikulum Cambridge (Cambridge International Curriculum)",
+                    "desc": "Kurikulum internasional Cambridge diterapkan pada empat mata pelajaran utama: Bahasa Inggris, Sains, Matematika, dan Komputer (ICT). Kurikulum ini menekankan pengembangan kemampuan berpikir tingkat tinggi (Higher Order Thinking Skills), serta pembelajaran berbasis eksplorasi, diskusi, dan praktik nyata. Melalui pendekatan ini, siswa tumbuh percaya diri dalam menggunakan bahasa Inggris, berpikir analitis dalam sains, memahami konsep matematika dengan mendalam, dan menggunakan teknologi secara cerdas dan aman.",
+                    "goal": "Tujuan kami adalah melahirkan pelajar yang berpikir kritis, kreatif, dan mandiri — belajar bukan hanya untuk nilai, tetapi untuk kehidupan.",
+                    "subjects": ["Bahasa Inggris", "Sains", "Matematika", "ICT"]
+                },
+                "nurul_bayan": {
+                    "title": "Metode Noor Al-Bayan",
+                    "desc": "Metode utama kami dalam pembelajaran Al-Qur'an dan Tajwid, di mana siswa belajar membaca Al-Qur'an dengan tajwid yang benar, memahami makna, dan menumbuhkan cinta terhadap Kalamullah. Pembelajaran dilakukan secara menarik dengan pendekatan fonetik, visual, dan kontekstual.",
+                    "focus": [
+                        "Pengenalan makhraj dan sifat huruf",
+                        "Membaca dengan tartil alami tanpa mengeja kaku",
+                        "Menghafal Al-Qur'an secara bertahap dan terencana"
+                    ],
+                    "achievement": "Pada akhir kelas 6, siswa diharapkan telah menghafal dua hingga lima juz, serta memahami nilai dan pesan Qur'ani yang terkandung di dalamnya. Di Noor Al-Bayan, kami menanamkan cinta Al-Qur'an di hati sebelum di lisan."
+                },
+                "ico": {
+                    "title": "Kurikulum ICO (International Curriculum Organization)",
+                    "desc": "Kurikulum ICO digunakan untuk mata pelajaran Bahasa Arab dan Pendidikan Islam. Ini adalah kurikulum global yang seimbang antara ilmu, iman, dan bahasa yang berkualitas.",
+                    "focus": [
+                        "Mengembangkan kemampuan berbicara, membaca, dan menulis dalam Bahasa Arab fusha",
+                        "Memahami nilai-nilai Islam secara praktis dan relevan dengan kehidupan sehari-hari",
+                        "Membangun karakter positif yang menghormati Allah, sesama manusia, dan lingkungan"
+                    ],
+                    "philosophy": "Kurikulum ICO mengajarkan anak untuk mengamalkan Islam dengan cinta dan akhlak, bukan sekadar dengan hafalan."
+                },
+                "merdeka": {
+                    "title": "Kurikulum Merdeka Nasional",
+                    "desc": "Sebagai bagian dari visi kami untuk menggabungkan identitas nasional dengan keunggulan global, AGS menerapkan Kurikulum Merdeka yang disahkan oleh Kementerian Pendidikan Indonesia.",
+                    "focus": [
+                        "Kebebasan berpikir dan berekspresi",
+                        "Kreativitas dan tanggung jawab sosial",
+                        "Penguatan Profil Pelajar Pancasila: beriman, mandiri, gotong royong, dan kreatif"
+                    ],
+                    "outcome": "Dengan pendekatan ini, siswa tumbuh menjadi pribadi yang bangga dengan jati diri Indonesia, namun memiliki jiwa dan wawasan global."
+                }
+            },
+            "teaching_methodology": {
+                "title": "Metode Pembelajaran (Teaching Methodologies)",
+                "subtitle": "Di tingkat sekolah dasar AGS, kami tidak mengajarkan anak apa yang harus dipikirkan, tetapi bagaimana cara berpikir",
+                "pillars": {
+                    "critical_thinking": {
+                        "title": "Berpikir Kritis (Critical Thinking)",
+                        "desc": "Anak diajak bertanya, menganalisis, dan membandingkan untuk menumbuhkan rasa ingin tahu alami."
+                    },
+                    "active_learning": {
+                        "title": "Belajar Aktif (Active Learning)",
+                        "desc": "Pembelajaran dilakukan melalui dialog, kegiatan interaktif, dan pengalaman nyata yang menjadikan siswa sebagai pelaku utama dalam proses belajar."
+                    },
+                    "integrated_learning": {
+                        "title": "Belajar Terpadu (Integrated Learning)",
+                        "desc": "Menghubungkan sains, bahasa, matematika, dan nilai kehidupan dalam satu kesatuan pembelajaran yang bermakna."
+                    }
+                },
+                "philosophy": "Pendidikan dengan cinta — karena ketika anak mencintai gurunya, ia akan mencintai ilmu dan kehidupan."
+            },
+            "primary_assessment": {
+                "title": "Sistem Penilaian (Assessment Policy)",
+                "subtitle": "Bagi kami, penilaian bukan alat untuk menghakimi, tetapi sarana untuk menumbuhkan dan mengembangkan potensi anak",
+                "approach": "Kami menerapkan sistem evaluasi yang holistik dan berkelanjutan, mencakup aspek akademik, sosial, emosional, dan spiritual.",
+                "methods": [
+                    "Penilaian formatif selama proses pembelajaran",
+                    "Penilaian sumatif di akhir setiap unit",
+                    "Penilaian berbasis proyek untuk keterampilan praktis",
+                    "Ujian checkpoint Cambridge untuk standar internasional",
+                    "Penilaian hafalan dan tajwid Al-Qur'an",
+                    "Evaluasi karakter dan perilaku"
+                ],
+                "reporting": "Laporan kemajuan komprehensif dibagikan kepada orang tua setiap triwulan, termasuk pencapaian akademis, pengembangan karakter, dan rekomendasi untuk pertumbuhan berkelanjutan."
+            }
+        },
         "contact": {
             "title": "Hubungi kami dengan mudah",
             "desc": "Apakah Anda memiliki pertanyaan tentang program pendidikan kami? Kami di sini untuk membantu Anda memilih jalur terbaik untuk pendidikan anak Anda.",
@@ -392,20 +550,22 @@
         "hero": {
             "title": "Di Sini {stories} Dimulai dan Nilai Tumbuh",
             "desc": {
-                "part1": "Sekolah terakreditasi yang menggabungkan kurikulum pendidikan modern terbaru, nilai-nilai Islam, dan bahasa Arab, dalam lingkungan yang aman di jantung Jakarta.",
-                "part2": "Kami menawarkan program anak usia dini, sekolah dasar, dan menengah, menerapkan kurikulum internasional (ICO) yang mendukung pemikiran kritis, nilai-nilai, dan keterampilan masa depan."
+                "part1": "Arabic Global School (AGS) didirikan untuk menjadi model pendidikan terdepan yang mengintegrasikan keunggulan akademik dengan nilai-nilai moral Islam. Sejak awal, para pendiri menyadari pentingnya menciptakan sekolah yang tidak hanya fokus pada pencapaian akademik, tetapi juga membangun karakter, menanamkan rasa hormat, belas kasih, dan integritas pada setiap siswa.",
+                "part2": "Didirikan atas keyakinan bahwa setiap anak adalah unik dan memiliki potensi luar biasa, AGS mengusung التميز الفردي (keunggulan personal) dengan menyediakan lingkungan belajar yang mendukung siswa berkembang sesuai bakat dan minat masing-masing. Kami dibangun di atas semangat التعاون لا التنافس (kolaborasi, bukan kompetisi), menciptakan suasana kelas yang kolaboratif di mana anak-anak belajar saling mendukung dalam meraih keberhasilan bersama.",
+                "part3": "Yang membedakan Arabic Global School: pendekatan pendidikan trilingual (Bahasa Arab, Inggris, Indonesia) yang digunakan secara natural dalam pembelajaran sehari-hari; integrasi kurikulum internasional (ICO dan Cambridge) dengan Kurikulum Merdeka Indonesia dan nilai-nilai moral Qur'ani; pembentukan karakter yang konsisten; lingkungan belajar yang kreatif dan kolaboratif; serta implementasi teknologi pendidikan modern.",
+                "part4": "Kami sedang dalam proses akreditasi BAN-S/M, sertifikasi Cambridge International School, sertifikasi ICO untuk Pendidikan Bahasa Arab dan Islam, serta telah mulai menerapkan prinsip-prinsip Kurikulum Merdeka. Melalui kemitraan dengan International Curricula Organization (ICO), Cambridge Assessment International Education, dan Kementerian Pendidikan Indonesia, kami memastikan kualitas pendidikan berkelas dunia."
             },
             "button": "Hubungi kami"
         },
         "vision": {
             "top-title": "Visi Kami",
-            "title": "Menginspirasi Pemimpin Masa Depan melalui Pendidikan Islam Berbasis Nilai",
-            "desc": "Menjadi model terdepan dalam <strong class='text-content-natural-primary>pendidikan Islam Arab internasional</strong>, menyediakan pengalaman pendidikan berkualitas tinggi yang <strong class='text-content-natural-primary>memelihara</strong> pikiran anak, memperbaiki perilaku mereka, dan meningkatkan kepercayaan diri mereka. <br/> Kami percaya setiap siswa memiliki <strong class='text-content-natural-primary>potensi unik</strong> di dalam dirinya, dan kami berkomitmen untuk merangkul <strong class='text-content-natural-primary>perbedaan individu</strong> ini guna membentuk generasi kreatif dan percaya diri yang siap menghadapi tantangan dunia dengan kesadaran dan nilai-nilai yang kuat."
+            "title": "Model Pendidikan Terdepan yang Menyatukan Keunggulan Akademik dengan Nilai Moral",
+            "desc": "Menjadi <strong class='text-content-natural-primary'>model pendidikan terdepan</strong> yang menyatukan keunggulan akademik dengan penanaman nilai moral, menghargai perbedaan individu setiap peserta didik, dan menyiapkan generasi percaya diri dan sadar, siap menghadapi tantangan masa depan."
         },
         "mission": {
             "top-title": "Misi Kami",
-            "title": "Memberdayakan Pemuda dalam Lingkungan Multibahasa Berbasis Nilai",
-            "desc": "Kami menyediakan lingkungan pendidikan yang <strong class='text-content-natural-primary'>hangat</strong> dan <strong class='text-content-natural-primary'>merangsang</strong> yang mengintegrasikan tiga bahasa <strong class='text-content-natural-primary'>(Arab – Inggris – Indonesia)</strong> dalam kerangka nilai-nilai Islam yang mempromosikan rasa hormat dan keterbukaan terhadap keberagaman. <br> Kami berfokus pada pengembangan <strong class='text-content-natural-primary'>kemampuan akademik</strong> dan <strong class='text-content-natural-primary'>pribadi</strong> anak, memungkinkan mereka untuk mengekspresikan diri, berkomunikasi, bertanggung jawab, dan berkontribusi positif bagi komunitas serta dunia di sekitar mereka."
+            "title": "Mendukung Peserta Didik Meraih Potensi Mereka Melalui Lingkungan Pembelajaran Berbasis Nilai",
+            "desc": "Kami mendukung peserta didik dalam meraih <strong class='text-content-natural-primary'>potensi penuh mereka</strong> melalui <strong class='text-content-natural-primary'>lingkungan pembelajaran berbasis nilai</strong> yang mendorong kreativitas dan merayakan keberagaman budaya."
         },
         "message": {
             "title": "Kata Sambutan Direktur",
@@ -414,21 +574,25 @@
         },
         "values": {
             "title": "Nilai-nilai Kami... Fondasi Segala Sesuatu yang Kami Bangun.",
+            "respect": {
+                "title": "Rasa Saling Menghormati",
+                "desc": "Mengajarkan peserta didik untuk menghormati guru, teman, dan lingkungan sekitar, menghargai perbedaan pendapat, budaya, dan keyakinan, sehingga tercipta suasana belajar yang harmonis."
+            },
+            "love": {
+                "title": "Kasih Sayang dan Kebaikan",
+                "desc": "Menumbuhkan sikap peduli, empati, dan saling membantu, agar anak-anak tumbuh menjadi pribadi yang berbelas kasih dan menyebarkan kebaikan."
+            },
+            "collaboration": {
+                "title": "Kerja Sama",
+                "desc": "Mendorong kolaborasi antar peserta didik untuk mencapai tujuan bersama, menumbuhkan semangat saling mendukung daripada bersaing secara tidak sehat."
+            },
             "excellence": {
-                "title": "Keunggulan",
-                "desc": "Kami mendorong setiap kekuatan siswa dan menjadikannya jalan menuju keunggulan akademik dan pertumbuhan pribadi yang menyeluruh."
+                "title": "Keunggulan Pribadi",
+                "desc": "Menghargai potensi unik setiap anak dan memberikan kesempatan untuk berkembang sesuai bakat dan minat mereka, sehingga mereka percaya diri dengan pencapaian masing-masing."
             },
             "integrity": {
                 "title": "Integritas",
-                "desc": "Kami menanamkan nilai-nilai moral dan kejujuran dalam setiap aspek pembelajaran, membentuk dasar karakter yang mulia dan seimbang."
-            },
-            "respect": {
-                "title": "Rasa Hormat",
-                "desc": "Kami menanamkan rasa hormat terhadap diri sendiri dan orang lain, serta menyediakan lingkungan belajar yang inklusif yang menghargai perbedaan individu dan merangkul semua orang."
-            },
-            "collaboration": {
-                "title": "Kolaborasi",
-                "desc": "Kami mendorong semangat kerja sama antara siswa, guru, dan seluruh komunitas sekolah untuk mencapai tujuan bersama dengan harmoni dan kepercayaan."
+                "desc": "Menanamkan kejujuran, tanggung jawab, dan sikap malu ketika melakukan hal yang salah, sehingga peserta didik tumbuh dengan karakter mulia dan etika yang kuat."
             }
         }
     },
@@ -635,6 +799,8 @@
 
             "nationality": "Kebangsaan",
             "nationalityPlaceholder": "Masukkan kebangsaan siswa",
+            "indonesianCitizen": "Warga Negara Indonesia",
+            "foreignNational": "Warga Negara Asing",
 
             "weightHeight": "Berat dan tinggi badan",
             "weightHeightPlaceholder": "Masukkan berat dan tinggi badan",
@@ -647,6 +813,8 @@
 
             "livingWith": "Tinggal bersama",
             "livingWithPlaceholder": "Tentukan dengan siapa anak tinggal",
+            "biologicalParents": "Orang Tua Kandung",
+            "guardian": "Wali",
             "continue": "lanjutkan",
             "validation": {
                 "school_required": "Pilihan sekolah wajib diisi",
@@ -729,6 +897,9 @@
             
             "contactTime": "Waktu kontak terbaik",
             "contactTimePlaceholder": "Masukkan waktu terbaik untuk dihubungi",
+            "after17": "Setelah 17:00",
+            "after1330": "Setelah 13:30",
+            "everyDay": "Setiap Hari",
             
             "validation": {
                 "full_name_required": "Nama lengkap wajib diisi",
@@ -785,24 +956,15 @@
             
             "mobilityOptions": {
                 "normal": "Mobilitas normal",
-                "wheelchair": "Menggunakan kursi roda",
-                "crutches": "Menggunakan kruk/alat bantu jalan",
-                "limited": "Mobilitas terbatas",
-                "other": "Lainnya"
+                "lessControl": "Kontrol gerakan lebih sedikit"
             },
             "visionOptions": {
-                "normal": "Penglihatan normal",
-                "glasses": "Membutuhkan kacamata",
-                "contacts": "Menggunakan lensa kontak",
-                "low": "Membutuhkan dukungan penglihatan rendah",
-                "other": "Lainnya"
+                "glasses": "Memakai Kacamata",
+                "normal": "Penglihatan normal"
             },
             "hearingOptions": {
                 "normal": "Pendengaran normal",
-                "assistive": "Menggunakan alat bantu dengar",
-                "partial": "Kehilangan pendengaran sebagian",
-                "support": "Membutuhkan dukungan tambahan",
-                "other": "Lainnya"
+                "lessResponsive": "Kurang responsif terhadap suara"
             },
             "validation": {
                 "previous_school_required": "Nama sekolah sebelumnya wajib diisi",
@@ -810,7 +972,8 @@
                 "enrollment_year_required": "Masukkan tahun pendaftaran yang valid (format YYYY)",
                 "graduation_year_required": "Masukkan tahun kelulusan yang valid (format YYYY)",
                 "vision_required": "Pilih kondisi penglihatan",
-                "hearing_required": "Pilih kondisi pendengaran"
+                "hearing_required": "Pilih kondisi pendengaran",
+                "mobility_required": "Pilih kondisi mobilitas"
             },
             "continue": "Lanjutkan"
         },

@@ -44,15 +44,24 @@
                 "part1": "The Step That Makes",
                 "part2": "A Difference In Your Child's Life"
             },
-            "paragraph": "The Arab International School in Jakarta is a distinguished international school that combines excellent academic education with authentic Islamic values.",
-            "env": "An environment that inspires young leaders.",
+            "paragraph": "Arabic Global School is a modern educational institution located in Cempaka Putih, Central Jakarta. Founded in 2024, the school offers Early Childhood Education (PAUD) and Elementary School programs. As a school that integrates modern education with Islamic values, Arabic Global School combines three main curricula: National Curriculum, Cambridge, and ICO. We offer a comprehensive educational experience that integrates academic excellence with ethical values, respects individual differences of each student, and prepares a confident generation ready to face future challenges.",
+            "founding": {
+                "title": "Founded in 2024",
+                "description": "In Cempaka Putih, Central Jakarta"
+            },
+            "programs": {
+                "title": "Educational Programs",
+                "current": "Early Childhood Education and Elementary School",
+                "future": "With plans to open Junior and Senior High School"
+            },
+            "env": "An environment that inspires young leaders",
             "envParagraph": "We care for nurturing and developing each child's personality to be confident and creative.",
             "education": "Education in three languages",
             "educationParagraph": "Arabic, English, and Indonesian, to build a strong and diverse foundation for your child.",
             "balance": "A balance between values and academic excellence",
             "balanceParagraph": "A curriculum that combines authentic Islamic values with modern education.",
             "team": "Professional teaching team",
-            "teamParagraph": "Arabic, English, and Indonesian, to build a strong and diverse foundation for your child."
+            "teamParagraph": "Experienced teachers who care for your child's growth in all aspects."
         },
         "curricula": {
             "title": "Our Integrated Educational Curricula",
@@ -85,7 +94,10 @@
             }
         },
         "language": {
-            "title": "Language System Of School",
+            "title": "Trilingual Education System",
+            "subtitle": "The three-language integration program at AGS Kindergarten is designed to facilitate children's language development through a comprehensive and contextual learning approach. Each week we alternate focus on one language, while certain subjects consistently use the same language.",
+            "approach": "All three languages are introduced through immersion methods and theme-based learning relevant to children's lives, enabling children to develop strong language skills and become more confident in using these languages in various contexts.",
+            "methods": "Learning activities are designed to facilitate children's language development through various methods such as language games, children's songs, picture stories, and collaborative projects that encourage children to use language in meaningful contexts.",
             "arabic": "Arabic language",
             "english": "English language",
             "indonesian": "Indonesian language",
@@ -95,21 +107,21 @@
                         "part1": "Arabic",
                         "part2": "language"
                     },
-                    "desc": "Teaching Arabic language, religion, and Quran recitation with mastery."
+                    "desc": "Teaching Arabic language, Islamic education, and Quran recitation through the Nurul Bayan method with emphasis on proper pronunciation and tajweed."
                 },
                 "english": {
                     "title": {
                         "part1": "English",
                         "part2": "language"
                     },
-                    "desc": "For sciences, mathematics, and global communication with fluency and confidence."
+                    "desc": "Cambridge curriculum for sciences, mathematics, and global communication, developing fluency and confidence in international contexts."
                 },
                 "indonesian": {
                     "title": {
                         "part1": "Indonesian",
                         "part2": "language"
                     },
-                    "desc": "Learning national curricula, arts, and local culture."
+                    "desc": "National curricula (Kurikulum Merdeka), arts, local culture, and character strengthening based on Pancasila student profile."
                 }
             }
         },
@@ -321,15 +333,16 @@
         },
         "safe_start": {
             "title": "A Safe Start For Active And Balanced Learning",
-            "subtitle": "We provide a warm classroom environment that encourages active and flexible learning, with educational support that considers the child's psychological and emotional growth.",
+            "subtitle": "Islamic education and character building are the main pillars in the learning model at Arabic Global School's Playgroup and Kindergarten levels. This approach is based on the Montessori method which emphasizes independence, active involvement, and respect for children's developmental stages.",
+            "philosophy": "AGS prioritizes the development of independence, confidence, and joy of learning from an early age. We support children's growth through engaging activities appropriate to their developmental stages, covering five key areas: Physical, Cognitive, Language, Social-Emotional, and Creativity.",
             "programs": {
                 "kindergarten": {
                     "title": "Kindergarten",
-                    "desc": "Play-based learning environment that develops social and academic skills"
+                    "desc": "Comprehensive and interactive learning activities covering arts, literacy, numeracy, science, and social-emotional skills through Montessori-based experiential learning that emphasizes autonomy and independent exploration."
                 },
                 "primary": {
                     "title": "Primary School",
-                    "desc": "Foundation building with focus on core subjects and character development"
+                    "desc": "At Arabic Global School (AGS), primary school is not just an academic stage, but a crucial period in forming a child's identity, mind, and soul. We believe that true education not only teaches knowledge, but also cultivates love of learning, thinking ability, and noble moral values."
                 },
                 "intermediate": {
                     "title": "Intermediate School",
@@ -338,6 +351,29 @@
                 "ICO": {
                     "title": "ICO",
                     "desc": "Teach Arabic language and Islamic values in a simplified manner."
+                }
+            },
+            "development_areas": {
+                "title": "Five Key Development Areas",
+                "physical": {
+                    "title": "Physical Development",
+                    "desc": "Improving gross motor skills through physical activities such as running, jumping, and playing. Developing fine motor skills through activities like cutting, writing, and threading."
+                },
+                "cognitive": {
+                    "title": "Cognitive Development",
+                    "desc": "Recognizing basic math concepts (numbers, shapes, sizes). Developing problem-solving and critical thinking skills through challenging activities. Enhancing curiosity and environmental exploration."
+                },
+                "language": {
+                    "title": "Language Development",
+                    "desc": "Improving oral language skills through discussion, storytelling, and singing. Developing listening skills and understanding simple instructions."
+                },
+                "social_emotional": {
+                    "title": "Social and Emotional Development",
+                    "desc": "Building social skills through playing together, sharing, and cooperation. Developing emotion management skills and empathy towards others."
+                },
+                "creativity": {
+                    "title": "Creativity Development",
+                    "desc": "Expressing oneself through art (drawing, coloring, forming). Developing creativity through music, movement, and drama."
                 }
             }
         },
@@ -388,6 +424,127 @@
                 }
             }
         },
+        "teaching_methods": {
+            "title": "Our Teaching Methodology",
+            "subtitle": "AGS teaching implementation integrates several approaches to facilitate children's holistic development",
+            "methods": {
+                "montessori": {
+                    "title": "Montessori Method",
+                    "desc": "Emphasizes independent learning and exploration, allowing children to discover concepts at their own pace in a prepared environment that supports autonomy and self-directed activity."
+                },
+                "cambridge": {
+                    "title": "Cambridge Method",
+                    "desc": "Focuses on developing critical thinking and problem-solving skills through a systematic curriculum that encourages analytical thinking and deep conceptual understanding."
+                },
+                "nurul_bayan": {
+                    "title": "Nurul Bayan Method",
+                    "desc": "Deepens Quranic learning through an approach emphasizing reading and repetition of sacred words and verses to shape children's spiritual character with proper pronunciation and tajweed."
+                },
+                "project_based": {
+                    "title": "Project-Based Learning",
+                    "desc": "Encourages children to collaborate, think creatively, and develop social skills through projects relevant to daily life, fostering teamwork and practical application of knowledge."
+                }
+            }
+        },
+        "assessment": {
+            "title": "Assessment Policy",
+            "subtitle": "AGS Kindergarten Assessment Policy is designed to comprehensively monitor children's progress through multiple methods",
+            "methods": {
+                "exams": {
+                    "title": "Examinations",
+                    "desc": "Assess cognitive abilities through structured tests designed for age-appropriate evaluation."
+                },
+                "projects": {
+                    "title": "Project Assessment",
+                    "desc": "Evaluate children's ability to apply knowledge and skills in practical, real-world contexts through hands-on projects."
+                },
+                "reports": {
+                    "title": "Periodic Reports",
+                    "desc": "Monitor children's development through regular progress reports shared with parents to track growth over time."
+                },
+                "cambridge_standards": {
+                    "title": "Cambridge Standards",
+                    "desc": "We use Cambridge resources in learning activities to assess children's abilities based on international standards, ensuring global quality benchmarks."
+                }
+            },
+            "conclusion": "With this comprehensive implementation, the assessment policy provides accurate information about children's abilities and helps teachers and parents support their development effectively."
+        },
+        "primary_curriculum": {
+            "title": "Primary School Academic System",
+            "subtitle": "Our primary curriculum is designed to integrate global values with faith, logic with emotion, knowledge with character",
+            "intro": "At Arabic Global School (AGS), primary school is not just an academic stage, but a crucial period in forming a child's identity, mind, and soul. We believe that true education not only teaches knowledge, but also cultivates love of learning, thinking ability, and noble moral values.",
+            "curricula": {
+                "cambridge": {
+                    "title": "Cambridge International Curriculum",
+                    "desc": "Applied to four main subjects: English, Science, Mathematics, and Computer (ICT). This curriculum emphasizes development of Higher Order Thinking Skills through exploration, discussion, and real practice. Through this approach, students grow confident in using English, thinking analytically in science, understanding mathematics deeply, and using technology intelligently and safely.",
+                    "goal": "Our goal is to produce learners who think critically, creatively, and independently — learning not just for grades, but for life.",
+                    "subjects": ["English", "Science", "Mathematics", "ICT"]
+                },
+                "nurul_bayan": {
+                    "title": "Noor Al-Bayan Method",
+                    "desc": "Our main method for Quranic and Tajweed learning, where students learn to read the Quran with proper tajweed, understand meanings, and cultivate love for the Kalamullah. Learning is conducted engagingly with phonetic, visual, and contextual approaches.",
+                    "focus": [
+                        "Introduction to makhraj and characteristics of letters",
+                        "Reading with natural tartil without rigid spelling",
+                        "Gradual and planned Quran memorization"
+                    ],
+                    "achievement": "By the end of grade 6, students are expected to have memorized two to five juz, and understand the Quranic values and messages contained within. In Noor Al-Bayan, we plant love of the Quran in hearts before tongues."
+                },
+                "ico": {
+                    "title": "ICO Curriculum (International Curriculum Organization)",
+                    "desc": "Used for Arabic Language and Islamic Education subjects. This is a global curriculum balanced between knowledge, faith, and quality language.",
+                    "focus": [
+                        "Developing speaking, reading, and writing abilities in Fusha Arabic",
+                        "Understanding Islamic values practically and relevant to daily life",
+                        "Building positive character that respects Allah, fellow humans, and the environment"
+                    ],
+                    "philosophy": "ICO curriculum teaches children to practice Islam with love and character, not just memorization."
+                },
+                "merdeka": {
+                    "title": "National Merdeka Curriculum",
+                    "desc": "As part of our vision to combine national identity with global excellence, AGS implements the Merdeka Curriculum endorsed by the Indonesian Ministry of Education.",
+                    "focus": [
+                        "Freedom of thought and expression",
+                        "Creativity and social responsibility",
+                        "Strengthening Pancasila Student Profile: faithful, independent, collaborative, and creative"
+                    ],
+                    "outcome": "With this approach, students grow as individuals proud of their Indonesian identity, yet possessing global spirit and perspective."
+                }
+            },
+            "teaching_methodology": {
+                "title": "Teaching Methodologies",
+                "subtitle": "At AGS primary school level, we don't teach children what to think, but how to think",
+                "pillars": {
+                    "critical_thinking": {
+                        "title": "Critical Thinking",
+                        "desc": "Children are invited to ask, analyze, and compare to cultivate natural curiosity."
+                    },
+                    "active_learning": {
+                        "title": "Active Learning",
+                        "desc": "Learning is conducted through dialogue, interactive activities, and real experiences that make students the main actors in the learning process."
+                    },
+                    "integrated_learning": {
+                        "title": "Integrated Learning",
+                        "desc": "Connecting science, language, mathematics, and life values in a unified meaningful learning experience."
+                    }
+                },
+                "philosophy": "Education with love — because when children love their teacher, they will love knowledge and life."
+            },
+            "primary_assessment": {
+                "title": "Primary School Assessment System",
+                "subtitle": "For us, assessment is not a tool for judging, but a means to nurture and develop children's potential",
+                "approach": "We implement a holistic and continuous evaluation system covering academic, social, emotional, and spiritual aspects.",
+                "methods": [
+                    "Formative assessments during the learning process",
+                    "Summative assessments at the end of each unit",
+                    "Project-based assessments for practical skills",
+                    "Cambridge checkpoint examinations for international standards",
+                    "Quran memorization and tajweed assessments",
+                    "Character and behavior evaluations"
+                ],
+                "reporting": "Comprehensive progress reports shared with parents quarterly, including academic achievement, character development, and recommendations for continued growth."
+            }
+        },
         "monitoring": {
             "enrichment": "Enrichment activities and programs",
             "title": "Comprehensive monitoring of academic and behavioral performance",
@@ -416,20 +573,22 @@
         "hero": {
             "title": "Where {stories} Begin and Values Grow",
             "desc": {
-                "part1": "An accredited school that combines the latest modern educational curricula, Islamic values, and the Arabic language, in a safe environment in the heart of Jakarta.",
-                "part2": "We offer early childhood, elementary, and middle school programs, applying an international curriculum (ICO) that supports critical thinking, values, and future skills."
+                "part1": "Arabic Global School (AGS) was established to be a leading educational model that integrates academic excellence with Islamic moral values. From the beginning, the founders recognized the importance of creating a school that not only focuses on academic achievement but also builds character, instills respect, compassion, and integrity in every student.",
+                "part2": "Founded on the belief that every child is unique and has extraordinary potential, AGS embraces personal excellence by providing a learning environment that supports students to develop according to their talents and interests. We are built on the spirit of collaboration, not competition, creating a collaborative classroom atmosphere where children learn to support one another in achieving collective success.",
+                "part3": "What sets Arabic Global School apart: trilingual education approach (Arabic, English, Indonesian) used naturally in daily learning; integration of international curricula (ICO and Cambridge) with Indonesia's Merdeka Curriculum and Quranic moral values; consistent character formation; creative and collaborative learning environment; and modern educational technology implementation.",
+                "part4": "We are pursuing BAN-S/M accreditation, Cambridge International School certification, ICO certification for Arabic and Islamic Education, and have begun implementing the Merdeka Curriculum principles. Through partnerships with International Curricula Organization (ICO), Cambridge Assessment International Education, and the Indonesian Ministry of Education, we ensure world-class education quality."
             },
             "button": "Contact us"
         },
         "vision": {
             "top-title": "Our Vision",
-            "title": "Inspiring Future Leaders through Values-Based Islamic Education",
-            "desc": "To be a leading model in international <strong class='text-content-natural-primary'>Arab Islamic education</strong>, providing a high-quality educational experience that <strong class='text-content-natural-primary'>nurtures</strong> the child's mind, refines their behavior, and enhances their self-confidence. <br/> We believe that every student carries <strong class='text-content-natural-primary'>unique potentials</strong> within them, and we are committed to embracing these <strong class='text-content-natural-primary'>individual differences</strong> to cultivate a creative, confident generation ready to face the challenges of the world with awareness and strong values."
+            "title": "A Leading Educational Model Uniting Academic Excellence with Moral Values",
+            "desc": "To be a <strong class='text-content-natural-primary'>leading educational model</strong> that unites academic excellence with moral values cultivation, respects individual differences of each student, and prepares a confident and conscious generation ready to face future challenges."
         },
         "mission": {
             "top-title": "Our Mission",
-            "title": "Empowering Youth in a Multilingual, Values-Based Setting",
-            "desc": "We provide a <strong class='text-content-natural-primary'>warm</strong> and <strong class='text-content-natural-primary'>stimulating</strong> educational environment that integrates three languages <strong class='text-content-natural-primary'>(Arabic – English – Indonesian)</strong> within an Islamic values framework that promotes respect and openness to diversity. <br> We focus on developing the child's <strong class='text-content-natural-primary'>academic</strong> and <strong class='text-content-natural-primary'>personal skills</strong>, enabling them to express themselves, communicate, take responsibility, and contribute positively to their community and the world around them."
+            "title": "Supporting Students to Reach Their Potential Through a Value-Based Learning Environment",
+            "desc": "We support students in achieving their <strong class='text-content-natural-primary'>full potential</strong> through a <strong class='text-content-natural-primary'>value-based learning environment</strong> that encourages creativity and celebrates cultural diversity."
         },
         "message": {
             "title": "The director's word",
@@ -438,21 +597,25 @@
         },
         "values": {
             "title": "Our values... the foundation upon which we build everything.",
-            "excellence": {
-                "title": "Excellence",
-                "desc": "We encourage every strength in the student, making it a pathway to academic excellence and holistic personal growth."
-            },
-            "integrity": {
-                "title": "Integrity",
-                "desc": "We promote ethical values and honesty in every aspect of learning, to form a foundation for a noble and balanced character."
-            },
             "respect": {
                 "title": "Respect",
-                "desc": "We instill self-respect and respect for others, and provide an inclusive educational environment that values individual differences and embraces everyone."
+                "desc": "We teach students to respect teachers, peers, and the surrounding environment, appreciating different opinions, cultures, and beliefs, creating a harmonious learning atmosphere."
+            },
+            "love": {
+                "title": "Love and Kindness",
+                "desc": "We cultivate caring, empathy, and mutual assistance, so children grow into compassionate individuals who spread goodness."
             },
             "collaboration": {
                 "title": "Collaboration",
-                "desc": "We enhance the spirit of collaboration among students, teachers, and all members of the school community to achieve our common goals in harmony and trust."
+                "desc": "We encourage collaboration among students to achieve common goals, fostering a spirit of mutual support rather than unhealthy competition."
+            },
+            "excellence": {
+                "title": "Personal Excellence",
+                "desc": "We appreciate each child's unique potential and provide opportunities to develop according to their talents and interests, so they feel confident in their own achievements."
+            },
+            "integrity": {
+                "title": "Integrity",
+                "desc": "We instill honesty, responsibility, and a positive sense of shame when doing wrong, so students grow with noble character and strong ethics."
             }
         }
     },
@@ -616,6 +779,8 @@
 
             "nationality": "Nationality",
             "nationalityPlaceholder": "Enter the student's nationality",
+            "indonesianCitizen": "Indonesian Citizen",
+            "foreignNational": "Foreign National",
 
             "weightHeight": "Weight and height",
             "weightHeightPlaceholder": "Enter weight and height",
@@ -628,6 +793,8 @@
 
             "livingWith": "Living with",
             "livingWithPlaceholder": "Specify who the child is living with",
+            "biologicalParents": "Biological Parents",
+            "guardian": "Guardian",
             "continue": "continue",
             "validation": {
                 "school_required": "School selection is required",
@@ -713,6 +880,9 @@
             "phonePlaceholder": "Enter phone number",
             "emergencyPhonePlaceholder": "Enter emergency phone",
             "contactTimePlaceholder": "Enter preferred contact time",
+            "after17": "After 17:00",
+            "after1330": "After 13:30",
+            "everyDay": "Every Day",
             
             "validation": {
                 "father_name_required": "Father's name is required",
@@ -723,7 +893,9 @@
                 "nationality_required": "Nationality is required",
                 "registration_role_required": "Registration role is required",
                 "phone_number_required": "Phone number is required",
-                "valid_email_required": "Enter a valid email address"
+                "valid_email_required": "Enter a valid email address",
+                "monthly_income_required": "Monthly income is required",
+                "contact_time_required": "Contact time is required"
             },
             "continue": "continue"
         },
@@ -758,24 +930,15 @@
             
             "mobilityOptions": {
                 "normal": "Normal mobility",
-                "wheelchair": "Uses wheelchair",
-                "crutches": "Uses crutches/walking aids",
-                "limited": "Limited mobility",
-                "other": "Other"
+                "lessControl": "Less control over movements"
             },
             "visionOptions": {
-                "normal": "Normal vision",
-                "glasses": "Needs glasses",
-                "contacts": "Uses contact lenses",
-                "low": "Low vision support needed",
-                "other": "Other"
+                "glasses": "Wears Glasses",
+                "normal": "Normal vision"
             },
             "hearingOptions": {
                 "normal": "Normal hearing",
-                "assistive": "Uses hearing aid",
-                "partial": "Partial hearing loss",
-                "support": "Additional support needed",
-                "other": "Other"
+                "lessResponsive": "Less responsive to sound"
             },
             "validation": {
                 "previous_school_required": "Name of the previous school is required",
@@ -783,7 +946,8 @@
                 "enrollment_year_required": "Enter a valid year of enrollment (YYYY format)",
                 "graduation_year_required": "Enter a valid year of graduation (YYYY format)",
                 "vision_required": "Select a vision condition",
-                "hearing_required": "Select a hearing condition"
+                "hearing_required": "Select a hearing condition",
+                "mobility_required": "Select a mobility condition"
             },
             "continue": "continue"
         },

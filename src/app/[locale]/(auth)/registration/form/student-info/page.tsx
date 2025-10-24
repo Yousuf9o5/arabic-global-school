@@ -30,12 +30,11 @@ export default function StudentInfoPage() {
             birthday: "",
             age_in_july: "",
             id_passport_number: "",
-            gender: "",
-            nationality: "",
+            gender: undefined,
+            nationality: undefined,
             weight_height: "",
             sibling_order: "",
             home_language: "",
-            living_with: "",
         },
     });
 
@@ -89,12 +88,20 @@ export default function StudentInfoPage() {
                             label={t("gender")}
                             placeholder={t("genderPlaceholder")}
                             options={[
-                                { label: t("male"), value: "true" },
-                                { label: t("female"), value: "false" },
+                                { label: t("male"), value: "0" },
+                                { label: t("female"), value: "1" },
                             ]}
                         />
 
-                        <FormInput name="nationality" label={t("nationality")} placeholder={t("nationalityPlaceholder")} />
+                        <FormSelect
+                            name="nationality"
+                            label={t("nationality")}
+                            placeholder={t("nationalityPlaceholder")}
+                            options={[
+                                { label: t("indonesianCitizen"), value: "0" },
+                                { label: t("foreignNational"), value: "1" },
+                            ]}
+                        />
 
                         <FormInput
                             name="weight_height"
@@ -115,7 +122,15 @@ export default function StudentInfoPage() {
                             placeholder={t("homeLanguagePlaceholder")}
                         />
 
-                        <FormInput name="living_with" label={t("livingWith")} placeholder={t("livingWithPlaceholder")} />
+                        <FormSelect
+                            name="living_with"
+                            label={t("livingWith")}
+                            placeholder={t("livingWithPlaceholder")}
+                            options={[
+                                { label: t("biologicalParents"), value: "0" },
+                                { label: t("guardian"), value: "1" },
+                            ]}
+                        />
                     </div>
 
                     <Button className="rounded-full w-full mt-4" size={"md"}>

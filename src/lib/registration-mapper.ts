@@ -9,7 +9,7 @@ import type { RegistrationPayload } from "@/types/registration.types";
  * Transforms string inputs to numbers for API requirements
  */
 export function transformToApiPayload(
-    studentInfo: StudentInfoFormValues,
+    studentInfo: StudentInfoFormValues & { child_school: string; child_next_class: string },
     familyInfo: FamilyInfoFormValues,
     educationHealth: EducationHealthFormValues
 ): RegistrationPayload {
@@ -24,7 +24,7 @@ export function transformToApiPayload(
             birthday: studentInfo.birthday,
             age_in_july: parseInt(studentInfo.age_in_july) || 0,
             id_passport_number: parseInt(studentInfo.id_passport_number) || 0,
-            gender: studentInfo.gender === "true",
+            gender: parseInt(studentInfo.gender) === 0, // 0 = Male (true), 1 = Female (false)
             nationality: parseInt(studentInfo.nationality) || 0,
             weight_height: studentInfo.weight_height || "",
             sibling_order: parseInt(studentInfo.sibling_order) || 0,

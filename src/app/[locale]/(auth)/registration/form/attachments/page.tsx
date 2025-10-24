@@ -18,6 +18,7 @@ import { loadData } from "@/lib/local-storage";
 import { transformToApiPayload } from "@/lib/registration-mapper";
 import { uploadRegistrationImage, deleteRegistrationImage } from "@/services/registration.service";
 import type { StudentInfoFormValues } from "@/validations/student-info.validation";
+import type { StudentClassInfo } from "@/validations/student-info.validation";
 import type { FamilyInfoFormValues } from "@/validations/family-info.validation";
 import type { EducationHealthFormValues } from "@/validations/education-health.validation";
 import useTextDirection from "@/hooks/use-text-direction";
@@ -54,6 +55,7 @@ export default function AttachmentsPage() {
         onSuccess: () => {
             toast.success(tToast("registration_success"));
             // Clear localStorage
+            localStorage.removeItem("class_info");
             localStorage.removeItem("student_info");
             localStorage.removeItem("family_info");
             localStorage.removeItem("education_health");
@@ -66,14 +68,22 @@ export default function AttachmentsPage() {
 
     const submit = async (values: AttachmentsFormValues) => {
         // Load all form data from localStorage
+        const classInfo = loadData<StudentClassInfo>("class_info");
         const studentInfo = loadData<StudentInfoFormValues>("student_info");
         const familyInfo = loadData<FamilyInfoFormValues>("family_info");
         const educationHealth = loadData<EducationHealthFormValues>("education_health");
 
-        if (!studentInfo || !familyInfo || !educationHealth) {
+        if (!classInfo || !studentInfo || !familyInfo || !educationHealth) {
             toast.warning(tToast("complete_steps"));
             return;
         }
+
+        // Merge class info with student info
+        const mergedStudentInfo = {
+            ...studentInfo,
+            child_school: classInfo.child_school,
+            child_next_class: classInfo.child_next_class,
+        };
 
         try {
             setIsUploading(true);
@@ -117,7 +127,7 @@ export default function AttachmentsPage() {
 
                 // Transform to API payload with already uploaded images
                 const payload = {
-                    ...transformToApiPayload(studentInfo, familyInfo, educationHealth),
+                    ...transformToApiPayload(mergedStudentInfo, familyInfo, educationHealth),
                     images: alreadyUploadedImages,
                 };
 
@@ -185,7 +195,7 @@ export default function AttachmentsPage() {
 
             // Transform to API payload with image paths
             const payload = {
-                ...transformToApiPayload(studentInfo, familyInfo, educationHealth),
+                ...transformToApiPayload(mergedStudentInfo, familyInfo, educationHealth),
                 images: allUploadedImages,
             };
 

@@ -50,11 +50,7 @@ export default function FormFile({
         ref.current?.click();
     };
 
-    const handleFileChange = (
-        e: React.ChangeEvent<HTMLInputElement>,
-        onChange: (value: UploadedFile[]) => void,
-        currentValue: UploadedFile[]
-    ) => {
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, onChange: (value: UploadedFile[]) => void, currentValue: UploadedFile[]) => {
         const files = e.target.files;
         if (!files || files.length === 0) return;
 
