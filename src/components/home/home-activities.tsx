@@ -63,7 +63,7 @@ function HomeActivities() {
                                             />
                                         </div>
                                         <div className="max-w-[300px]">
-                                            <h3 className="text-[20px] md:text-[24px] leading-[130%] text-natural-primary">
+                                            <h3 className="text-[20px] md:text-[24px] leading-[130%] text-content-natural-primary">
                                                 {t(`cards.${index}.title`)}
                                             </h3>
                                             <p className="text-natural-tertiary">{t(`cards.${index}.desc`)}</p>
