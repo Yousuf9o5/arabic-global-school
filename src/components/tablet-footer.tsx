@@ -110,7 +110,7 @@ function TabletFooter() {
                 <div className="">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">{t("newsletter.title")}</h1>
 
-                    <div className="flex items-stretch gap-4">
+                    {/* <div className="flex items-stretch gap-4">
                         <div className="bg-white flex items-center h-[52px] px-4 gap-4 rounded-full w-full">
                             <EmailIcon2 />
                             <input type="text" className="!outline-none !border-none flex-1" placeholder={t("newsletter.placeholder")} />
@@ -119,7 +119,7 @@ function TabletFooter() {
                         <Button shadow="default" className="rounded-full h-[unset] px-8">
                             {t("newsletter.button")}
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
 
                 <p>{t("newsletter.privacy_text")}</p>
