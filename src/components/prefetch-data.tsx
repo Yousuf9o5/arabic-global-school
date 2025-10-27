@@ -1,5 +1,6 @@
 import { APIKeys } from "@/services/api-keys";
 import { ApiService } from "@/services/api.service";
+import { fetchHeroImage } from "@/services/images.service";
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 
 interface Props {
@@ -9,15 +10,20 @@ interface Props {
 export async function HomePrefetchData({ children }: Props) {
     const queryClient = new QueryClient();
 
-    await queryClient.prefetchQuery({
-        queryKey: [APIKeys.FAQ_API_KEY],
-        queryFn: ApiService.getFAQs,
-    });
-
-    await queryClient.prefetchQuery({
-        queryKey: [APIKeys.NEWS_API_KEY],
-        queryFn: ApiService.getNews,
-    });
+    await Promise.all([
+        queryClient.prefetchQuery({
+            queryKey: ["heroImage"],
+            queryFn: fetchHeroImage,
+        }),
+        queryClient.prefetchQuery({
+            queryKey: [APIKeys.FAQ_API_KEY],
+            queryFn: ApiService.getFAQs,
+        }),
+        queryClient.prefetchQuery({
+            queryKey: [APIKeys.NEWS_API_KEY],
+            queryFn: ApiService.getNews,
+        }),
+    ]);
 
     return <HydrationBoundary state={dehydrate(queryClient)}>{children}</HydrationBoundary>;
 }

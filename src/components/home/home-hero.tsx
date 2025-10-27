@@ -1,10 +1,24 @@
+"use client"
+
 import { useTranslations } from "next-intl";
+import { useQuery } from "@tanstack/react-query";
 import AppImage from "../app-image";
 import CustomLink from "../ui/Link";
 import Section from "../ui/section";
+import { fetchHeroImage } from "@/services/images.service";
 
 function HomeHero() {
     const t = useTranslations("home.hero");
+
+    // Fetch hero image from API
+    const { data: heroImage } = useQuery({
+        queryKey: ["heroImage"],
+        queryFn: fetchHeroImage,
+        staleTime: 1000 * 60 * 5, // 5 minutes
+    });
+
+    // Use API image if available, otherwise fallback to local image
+    const heroImageSrc = heroImage?.path || "/images/hero-image.jpg";
 
     return (
         <Section className="relative overflow-hidden min-[400px]:px-0">
@@ -48,7 +62,7 @@ function HomeHero() {
                     height={800}
                     className="w-full sm:rounded-[40px] max-h-[560px] object-cover"
                     optimized
-                    src={"/images/hero-image.jpg"}
+                    src={heroImageSrc}
                     priority
                 />
             </div>
