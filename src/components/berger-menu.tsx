@@ -17,24 +17,23 @@ interface BurgerMenuProps {
 //     href: string;
 // }
 
-
 function BergerMenu({ isOpen, onClose }: BurgerMenuProps) {
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const t = useTranslations("navbar");
     const tHome = useTranslations("home");
 
     const menuItems = [
-        { title: t("navigation.about"), href: "/about" },
+        { title: t("navigation.about"), href: "/about-us" },
         { title: t("navigation.activities"), href: "/activities" },
         {
             title: t("navigation.curricula"),
-            href: "/curricula",
+            href: "/educational-programs",
             hasDropdown: true,
             dropdownItems: [
                 { title: tHome("curricula.quran"), href: "/curricula/light-of-the-quran" },
                 { title: tHome("curricula.montessori"), href: "/curricula/montessori-curriculum" },
                 { title: tHome("curricula.cambridge"), href: "/curricula/cambridge-eyfs" },
-                { title: tHome("curricula.ico"), href: "/curricula/ico" }
+                { title: tHome("curricula.ico"), href: "/curricula/ico" },
             ],
         },
         { title: t("navigation.news"), href: "/news" },
