@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import Section from "../ui/section";
 import CustomLink from "../ui/Link";
+import { Link } from "@/i18n/routing";
+import { Button } from "../ui/button";
 
 export default function ContactSection() {
     const t = useTranslations("contact");
@@ -26,9 +28,11 @@ export default function ContactSection() {
                         <p className="section-description mt-4 max-w-xl text-center relative z-10 mx-auto">{t("desc")}</p>
                     </div>
 
-                    <CustomLink shadow={"default"} href="" className="mt-16 w-[200px] py-4 rounded-full relative z-10">
-                        {t("button")}
-                    </CustomLink>
+                    <Button shadow={"default"} className="mt-16 w-[200px] py-4 rounded-full relative z-10" asChild>
+                        <Link  href="/contact" >
+                            {t("button")}
+                        </Link>
+                    </Button>
                 </Section.Inner>
             </Section>
         </div>

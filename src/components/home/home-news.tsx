@@ -60,13 +60,14 @@ export default function HomeNews() {
                                 nextEl: ".swiper-button-next-custom",
                                 prevEl: ".swiper-button-prev-custom",
                             }}
+                            watchOverflow={true}
                             breakpoints={{
                                 640: {
                                     slidesPerView: 1,
                                     spaceBetween: 0,
                                 },
                                 1024: {
-                                    slidesPerView: 3,
+                                    slidesPerView: Math.min(3, data.items.length),
                                     spaceBetween: 30,
                                 },
                             }}
