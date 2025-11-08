@@ -7,8 +7,8 @@ import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import Image from "next/image";
 
-import { PaperUploadIcon } from "@/assets/icons";
 import { Button } from "@/components/ui/button";
 import FormFile from "@/components/ui/form-file";
 import { Form } from "@/components/ui/form";
@@ -22,7 +22,6 @@ import type { StudentClassInfo } from "@/validations/student-info.validation";
 import type { FamilyInfoFormValues } from "@/validations/family-info.validation";
 import type { EducationHealthFormValues } from "@/validations/education-health.validation";
 import useTextDirection from "@/hooks/use-text-direction";
-import Image from "next/image";
 
 // Map field names to image types (0-3)
 const IMAGE_TYPE_MAP: Record<string, string> = {
@@ -31,6 +30,19 @@ const IMAGE_TYPE_MAP: Record<string, string> = {
     familyCard: "2", // family_card
     parentsId: "3", // parents_id
 };
+
+interface UploadedImage {
+    ids: string;
+    path: string;
+    type: string;
+}
+
+interface FileToUpload {
+    file: File;
+    type: string;
+    fieldName: string;
+    uploadedFile: UploadedFile;
+}
 
 export default function AttachmentsPage() {
     const t = useTranslations("register.attachments");
@@ -54,11 +66,7 @@ export default function AttachmentsPage() {
     const mutation = useRegistrationMutation({
         onSuccess: () => {
             toast.success(tToast("registration_success"));
-            // Clear localStorage
-            localStorage.removeItem("class_info");
-            localStorage.removeItem("student_info");
-            localStorage.removeItem("family_info");
-            localStorage.removeItem("education_health");
+            clearLocalStorage();
             push(`/${locale}/registration/thank-you`);
         },
         onError: () => {
@@ -66,8 +74,16 @@ export default function AttachmentsPage() {
         },
     });
 
-    const submit = async (values: AttachmentsFormValues) => {
-        // Load all form data from localStorage
+    // Helper: Clear all registration data from localStorage
+    const clearLocalStorage = () => {
+        localStorage.removeItem("class_info");
+        localStorage.removeItem("student_info");
+        localStorage.removeItem("family_info");
+        localStorage.removeItem("education_health");
+    };
+
+    // Helper: Load and validate all form data
+    const loadAllFormData = () => {
         const classInfo = loadData<StudentClassInfo>("class_info");
         const studentInfo = loadData<StudentInfoFormValues>("student_info");
         const familyInfo = loadData<FamilyInfoFormValues>("family_info");
@@ -75,134 +91,179 @@ export default function AttachmentsPage() {
 
         if (!classInfo || !studentInfo || !familyInfo || !educationHealth) {
             toast.warning(tToast("complete_steps"));
-            return;
+            return null;
         }
 
-        // Merge class info with student info
-        const mergedStudentInfo = {
-            ...studentInfo,
-            child_school: classInfo.child_school,
-            child_next_class: classInfo.child_next_class,
+        return {
+            mergedStudentInfo: {
+                ...studentInfo,
+                child_school: classInfo.child_school || "",
+                child_next_class: classInfo.child_next_class,
+            },
+            familyInfo,
+            educationHealth,
         };
+    };
+
+    // Helper: Collect files that need to be uploaded
+    const collectFilesToUpload = (values: AttachmentsFormValues): FileToUpload[] => {
+        const filesToUpload: FileToUpload[] = [];
+
+        Object.entries(values).forEach(([fieldName, uploadedFiles]) => {
+            if (!uploadedFiles) return;
+
+            const imageType = IMAGE_TYPE_MAP[fieldName] || "0";
+            uploadedFiles.forEach((uploaded) => {
+                if (!uploaded.uploaded) {
+                    filesToUpload.push({
+                        file: uploaded.file,
+                        type: imageType,
+                        fieldName,
+                        uploadedFile: uploaded,
+                    });
+                }
+            });
+        });
+
+        return filesToUpload;
+    };
+
+    // Helper: Collect already uploaded images
+    const collectUploadedImages = (values: AttachmentsFormValues): UploadedImage[] => {
+        const uploadedImages: UploadedImage[] = [];
+
+        Object.entries(values).forEach(([fieldName, uploadedFiles]) => {
+            if (!uploadedFiles) return;
+
+            const imageType = IMAGE_TYPE_MAP[fieldName] || "0";
+            uploadedFiles.forEach((uploaded) => {
+                if (uploaded.uploaded && uploaded.uploadedId && uploaded.path) {
+                    uploadedImages.push({
+                        ids: uploaded.uploadedId,
+                        path: uploaded.path,
+                        type: imageType,
+                    });
+                }
+            });
+        });
+
+        return uploadedImages;
+    };
+
+    // Helper: Upload a single file
+    const uploadSingleFile = async (fileData: FileToUpload): Promise<UploadedImage> => {
+        const uploadResponse = await uploadRegistrationImage(fileData.file, fileData.type);
+
+        // Update the form field to mark as uploaded
+        const currentFieldValue = form.getValues(fileData.fieldName as keyof AttachmentsFormValues);
+        const updatedFiles = (currentFieldValue as UploadedFile[] | undefined)?.map((uf) =>
+            uf.id === fileData.uploadedFile.id
+                ? {
+                      ...uf,
+                      path: uploadResponse.path,
+                      uploaded: true,
+                      uploadedId: uploadResponse.id,
+                  }
+                : uf
+        );
+
+        if (updatedFiles) {
+            form.setValue(fileData.fieldName as keyof AttachmentsFormValues, updatedFiles as any);
+        }
+
+        return {
+            ids: uploadResponse.id,
+            path: uploadResponse.path,
+            type: uploadResponse.type,
+        };
+    };
+
+    // Helper: Upload multiple files with cleanup on failure
+    const uploadAllFiles = async (filesToUpload: FileToUpload[]): Promise<UploadedImage[]> => {
+        const uploadedImages: UploadedImage[] = [];
+        const uploadedIds: string[] = [];
+
+        const uploadingToast = toast.loading(
+            `${tToast("uploading_images") || "Uploading images"} (${filesToUpload.length} ${tToast("files") || "files"})...`
+        );
+
+        try {
+            for (const fileData of filesToUpload) {
+                try {
+                    const uploadedImage = await uploadSingleFile(fileData);
+                    uploadedImages.push(uploadedImage);
+                    uploadedIds.push(uploadedImage.ids);
+                } catch (error) {
+                    console.error(`Error uploading ${fileData.file.name}:`, error);
+                    // Cleanup previously uploaded images
+                    await cleanupUploadedImages(uploadedIds);
+                    throw new Error(`Failed to upload ${fileData.file.name}`);
+                }
+            }
+
+            toast.dismiss(uploadingToast);
+            toast.success(tToast("upload_success") || "Images uploaded successfully!");
+
+            return uploadedImages;
+        } catch (error) {
+            toast.dismiss(uploadingToast);
+            throw error;
+        }
+    };
+
+    // Helper: Cleanup uploaded images on error
+    const cleanupUploadedImages = async (imageIds: string[]) => {
+        for (const id of imageIds) {
+            try {
+                await deleteRegistrationImage(id);
+            } catch (cleanupError) {
+                console.error("Error cleaning up uploaded image:", cleanupError);
+            }
+        }
+    };
+
+    // Helper: Submit registration with images
+    const submitRegistration = (formData: ReturnType<typeof loadAllFormData>, images: UploadedImage[]) => {
+        if (!formData) return;
+
+        const payload = {
+            ...transformToApiPayload(formData.mergedStudentInfo, formData.familyInfo, formData.educationHealth),
+            images: images.length > 0 ? images : undefined,
+        };
+
+        console.log("Submitting registration payload:", payload);
+        mutation.mutate(payload);
+    };
+
+    const submit = async (values: AttachmentsFormValues) => {
+        // Load all form data
+        const formData = loadAllFormData();
+        if (!formData) return;
 
         try {
             setIsUploading(true);
 
-            // Collect all files with their types
-            const allFiles: Array<{ file: File; type: string; fieldName: string; uploadedFile: UploadedFile }> = [];
-
-            Object.entries(values).forEach(([fieldName, uploadedFiles]) => {
-                const imageType = IMAGE_TYPE_MAP[fieldName] || "0";
-                uploadedFiles.forEach((uploaded) => {
-                    // Only include files that haven't been uploaded yet
-                    if (!uploaded.uploaded) {
-                        allFiles.push({
-                            file: uploaded.file,
-                            type: imageType,
-                            fieldName,
-                            uploadedFile: uploaded,
-                        });
-                    }
-                });
-            });
-
             // Collect already uploaded images
-            const alreadyUploadedImages: Array<{ ids: string; path: string; type: string }> = [];
-            Object.entries(values).forEach(([fieldName, uploadedFiles]) => {
-                const imageType = IMAGE_TYPE_MAP[fieldName] || "0";
-                uploadedFiles.forEach((uploaded) => {
-                    if (uploaded.uploaded && uploaded.uploadedId && uploaded.path) {
-                        alreadyUploadedImages.push({
-                            ids: uploaded.uploadedId,
-                            path: uploaded.path,
-                            type: imageType,
-                        });
-                    }
-                });
-            });
+            const alreadyUploadedImages = collectUploadedImages(values);
 
-            // If all files are already uploaded, skip upload step
-            if (allFiles.length === 0) {
-                toast.success(tToast("all_images_uploaded") || "All images already uploaded!");
+            // Collect files that need to be uploaded
+            const filesToUpload = collectFilesToUpload(values);
 
-                // Transform to API payload with already uploaded images
-                const payload = {
-                    ...transformToApiPayload(mergedStudentInfo, familyInfo, educationHealth),
-                    images: alreadyUploadedImages,
-                };
-
-                console.log("Submitting registration payload with existing images:", payload);
-
-                // Submit registration
-                mutation.mutate(payload);
+            // If no files to upload, submit directly
+            if (filesToUpload.length === 0) {
+                if (alreadyUploadedImages.length > 0) {
+                    toast.success(tToast("all_images_uploaded") || "All images already uploaded!");
+                }
+                submitRegistration(formData, alreadyUploadedImages);
                 return;
             }
 
-            // Show uploading toast only if there are new files to upload
-            const uploadingToast = toast.loading(
-                `${tToast("uploading_images") || "Uploading images"} (${allFiles.length} ${tToast("files") || "files"})...`
-            );
+            // Upload new files
+            const newlyUploadedImages = await uploadAllFiles(filesToUpload);
 
-            // Upload images and collect their data
-            const uploadedImages: Array<{ ids: string; path: string; type: string }> = [];
-            const uploadedIds: string[] = [];
-
-            for (let i = 0; i < allFiles.length; i++) {
-                const { file, type, fieldName, uploadedFile } = allFiles[i];
-
-                try {
-                    const uploadResponse = await uploadRegistrationImage(file, type);
-                    uploadedImages.push({
-                        ids: uploadResponse.id,
-                        path: uploadResponse.path,
-                        type: uploadResponse.type,
-                    });
-                    uploadedIds.push(uploadResponse.id);
-
-                    // Update the form field to mark as uploaded
-                    const currentFieldValue = form.getValues(fieldName as keyof AttachmentsFormValues);
-                    const updatedFiles = (currentFieldValue as UploadedFile[]).map((uf) =>
-                        uf.id === uploadedFile.id
-                            ? {
-                                  ...uf,
-                                  path: uploadResponse.path,
-                                  uploaded: true,
-                                  uploadedId: uploadResponse.id,
-                              }
-                            : uf
-                    );
-                    form.setValue(fieldName as keyof AttachmentsFormValues, updatedFiles as any);
-                } catch (error) {
-                    console.error(`Error uploading ${file.name}:`, error);
-                    // Cleanup previously uploaded images
-                    for (const id of uploadedIds) {
-                        try {
-                            await deleteRegistrationImage(id);
-                        } catch (cleanupError) {
-                            console.error("Error cleaning up uploaded image:", cleanupError);
-                        }
-                    }
-                    throw new Error(`Failed to upload ${file.name}`);
-                }
-            }
-
-            // Dismiss uploading toast and show success
-            toast.dismiss(uploadingToast);
-            toast.success(tToast("upload_success") || "Images uploaded successfully!");
-
-            // Combine newly uploaded images with already uploaded ones
-            const allUploadedImages = [...alreadyUploadedImages, ...uploadedImages];
-
-            // Transform to API payload with image paths
-            const payload = {
-                ...transformToApiPayload(mergedStudentInfo, familyInfo, educationHealth),
-                images: allUploadedImages,
-            };
-
-            console.log("Submitting registration payload:", payload);
-
-            // Submit registration
-            mutation.mutate(payload);
+            // Combine all images and submit
+            const allImages = [...alreadyUploadedImages, ...newlyUploadedImages];
+            submitRegistration(formData, allImages);
         } catch (error) {
             console.error("Error uploading images:", error);
             toast.error(tToast("upload_error") || "Failed to upload images");

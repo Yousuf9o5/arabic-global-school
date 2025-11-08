@@ -23,10 +23,10 @@ const createFileField = (message: string) =>
                 uploadedId: z.string().optional(),
             })
         )
-        .min(1, message);
+        .optional();
 
 /**
- * Returns the attachment schema enforcing that each required document is provided before submission.
+ * Returns the attachment schema with all fields optional.
  */
 export function getAttachmentsSchema(t: (key: string) => string) {
     return z.object({
