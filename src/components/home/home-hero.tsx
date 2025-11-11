@@ -18,7 +18,7 @@ function HomeHero() {
     });
 
     // Use API image if available, otherwise fallback to local image
-    const heroImageSrc = heroImage?.path || "/images/hero-image.jpg";
+    const heroImageSrc = heroImage?.path || "/images/home/01. الصفحة الاولى الصورة الاولى.jpeg";
 
     return (
         <Section className="relative overflow-hidden min-[400px]:px-0">

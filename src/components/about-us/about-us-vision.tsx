@@ -26,10 +26,10 @@ export default function AboutUsVision() {
                     ></p>
                 </div>
                 {/* Large screen image */}
-                <div className="hidden lg:block -mx-10">
+                <div className="hidden lg:block -mx-10 overflow-hidden rounded-[48px]">
                     <Image
-                        src={"/images/about-us/vision/lg-image.png"}
-                        className="w-full rounded-[48px] object-cover object-center"
+                        src={"/images/about-us/real-content/02. الصفحة الثانية (من نحن )  الصورة الثانية.jpeg"}
+                        className="w-full rounded-[48px] object-cover object-center h-full"
                         width={650}
                         height={600}
                         alt={t("title")}
@@ -38,7 +38,7 @@ export default function AboutUsVision() {
                 {/* Medium screen image */}
                 <div className="hidden md:block lg:hidden">
                     <Image
-                        src={"/images/about-us/vision/md-image.png"}
+                        src={"/images/about-us/real-content/02. الصفحة الثانية (من نحن )  الصورة الثانية.jpeg"}
                         className="w-full rounded-[32px] object-cover object-center"
                         width={500}
                         height={400}
@@ -48,7 +48,7 @@ export default function AboutUsVision() {
                 {/* Small screen image */}
                 <div className="block md:hidden -mx-4">
                     <Image
-                        src={"/images/about-us/vision/sm-image.png"}
+                        src={"/images/about-us/real-content/02. الصفحة الثانية (من نحن )  الصورة الثانية.jpeg"}
                         className="w-full rounded-[24px] object-cover object-center"
                         width={350}
                         height={250}

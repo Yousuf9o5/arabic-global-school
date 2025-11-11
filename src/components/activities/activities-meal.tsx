@@ -25,8 +25,8 @@ export default function ActivitiesMeal() {
 
                 <div className="h-[316px] md:h-[568px]  w-full">
                     <VideoPlayer
-                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                        poster="/images/services/meal/c9e9f519d8d6d64a271d921003e159f77426dfbc.png"
+                        src="/images/activities/real-content/12. فيديو في الصفحة الثالثة الانشطة.mp4"
+                        poster="/images/activities/real-content/10. الصفحة الثالثة الانشطة الصور العاشرة.jpeg"
                         className="lg:aspect-video w-full h-full"
                     />
                 </div>

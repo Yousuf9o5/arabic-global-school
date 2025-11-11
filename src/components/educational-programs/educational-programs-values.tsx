@@ -24,7 +24,7 @@ export default function EducationalProgramsValues() {
                 <Image
                     width={432}
                     height={473}
-                    src={"/images/educational-programs/values/image.png"}
+                    src={"/images/curricula/11. الصفحة الرابعة.jpeg"}
                     className="h-full object-contain object-center size-full min-h-[475px]"
                     alt={t("title")}
                 />

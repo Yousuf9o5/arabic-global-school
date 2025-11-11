@@ -21,7 +21,7 @@ export default function ActivitiesSafety() {
                 <Image
                     width={432}
                     height={473}
-                    src={"/images/services/safety/7da602cf79c77b0207feecbcae2d9843f674bcff.jpg"}
+                    src={"/images/activities/real-content/08. الصفحة الثالثة (الانشطه) الصورة الثامنه.jpeg"}
                     className="rounded-[48px] h-full object-cover object-center min-w-full lg:min-w-[432px]"
                     alt={t("title")}
                 />

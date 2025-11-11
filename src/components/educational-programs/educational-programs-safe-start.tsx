@@ -11,10 +11,18 @@ function EducationalProgramsSafeStart() {
 
     const cardKeys = ["kindergarten", "primary", "intermediate", "ICO"];
 
+    // Images from curricula folder
+    const programImages = [
+        "/images/curricula/07. الصفحة الرابعة.jpeg", // kindergarten
+        "/images/curricula/08. الصفحة الرابعة.jpeg", // primary
+        "/images/curricula/09. الصفحة الرابعة.jpeg", // intermediate
+        "/images/curricula/10. الصفحة الرابعة.jpeg", // ICO
+    ];
+
     const programs = Array.from({ length: 4 }, (_, i) => ({
         title: t(`programs.${cardKeys[i]}.title`),
         description: t(`programs.${cardKeys[i]}.desc`),
-        image: "Lorem, ipsum.",
+        image: programImages[i],
     }));
 
     const svgs = [
@@ -47,7 +55,7 @@ function EducationalProgramsSafeStart() {
                                                 optimized
                                                 width={150}
                                                 height={150}
-                                                src="/images/steps/step-image-1.jpg"
+                                                src={stage.image}
                                                 alt={stage.title}
                                                 className="w-full h-auto object-cover transition-transform duration-300"
                                             />

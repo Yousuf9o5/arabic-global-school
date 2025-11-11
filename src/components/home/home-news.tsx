@@ -32,6 +32,10 @@ export default function HomeNews() {
         queryFn: ApiService.getNews,
     });
 
+    if (data.items.length === 0) {
+        return null;
+    }
+
     return (
         <Section size="screen" className="bg-[#F7F7E4] **:hide-scroll">
             <Section.Inner className="space-y-12 px-0 md:px-4">

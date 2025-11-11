@@ -8,10 +8,20 @@ export default function ActivitiesFacilities() {
 
     const cardsKeys = ["classrooms", "playgrounds", "laboratories", "play_areas", "restrooms", "library"];
 
-    const cards = cardsKeys.map((key) => ({
+    // Images from real-content folder mapped to facilities
+    const facilityImages = [
+        "/images/activities/real-content/02. الصفحة الثالثة    الصوره الثانية الفصول الدراسية الانشطه.jpeg", // classrooms
+        "/images/activities/real-content/03. الصفحة الثالثه (الانشطه ) الصورة الثالثة الملاعب.jpeg", // playgrounds
+        "/images/activities/real-content/04.  الانشطه   الصوره الرابعه المختبرات الصفحة الثالثة.jpeg", // laboratories
+        "/images/activities/real-content/05. الصفحة الثالثة (الانشطة) الصورة الخامسة مناطق اللعب.jpeg", // play_areas
+        "/images/activities/real-content/06. الصفحة الثالثة الانشطه الصوره السادسه دورات المياة.jpeg", // restrooms
+        "/images/activities/real-content/07. الصفحة الثالثة (الانشطه ) الصورة السابعه المكتبه.jpeg", // library
+    ];
+
+    const cards = cardsKeys.map((key, index) => ({
         title: t(`items.${key}.title`),
         description: t(`items.${key}.desc`),
-        imageSrc: `/images/services/facilities/${key}.png`,
+        imageSrc: facilityImages[index],
     }));
 
     return (

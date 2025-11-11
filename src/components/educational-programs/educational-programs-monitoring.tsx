@@ -32,7 +32,7 @@ export default function EducationalProgramsMonitoring() {
                                 <Image
                                     width={432}
                                     height={503}
-                                    src="/images/educational-programs/monitoring/6fcd6028aadd2cb882224bb6daff922fcba92487.jpg"
+                                    src="/images/curricula/11. الصفحة الرابعة.jpeg"
                                     alt="Educational Programs Monitoring"
                                     className="object-cover transition-transform duration-300"
                                 />

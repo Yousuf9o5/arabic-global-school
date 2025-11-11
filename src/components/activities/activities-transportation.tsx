@@ -8,9 +8,16 @@ export default function ActivitiesTransportation() {
 
     const keys = ["clean_buses", "punctuality", "supervisor"];
 
-    const cards = keys.map((key) => ({
+    // Images from real-content folder - using school bus image for all transportation cards
+    const transportationImages = [
+        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // clean_buses
+        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // punctuality (reuse)
+        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // supervisor (reuse)
+    ];
+
+    const cards = keys.map((key, index) => ({
         title: t(`points.${key}.title`),
-        image: `/images/services/transportation/${key}.png`,
+        image: transportationImages[index],
     }));
 
     return (

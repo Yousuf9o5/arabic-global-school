@@ -12,13 +12,45 @@ function HomeCurricula() {
     const t = useTranslations("home.curricula");
     const [currentStage, setCurrentStage] = useState(0);
 
+    // Image mappings for each stage
+    const stageImages = [
+        // Kindergarten (images 04-07)
+        [
+            "/images/home/04. الصفحة الاولى الصورة الرابعه نور البيان للروضه.jpeg",
+            "/images/home/05. الصفحة الاولى الصورة الخامسة منتسوري روضة.jpeg",
+            "/images/home/06. الصفحة الاولى الصوره السادسه كامبردج.jpeg",
+            "/images/home/07. الصفحة الاولى الصورة السابعه ICO روضه.jpeg",
+        ],
+        // Primary (images 08-10, reuse 08 for 4th card)
+        [
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg",
+            "/images/home/09. الصفحة الاولى الصورة التاسعه كامبردج ابتدائي.jpeg",
+            "/images/home/10. الصفحة الاولى الصورة العاشرة ابتدائي ICO.jpeg",
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg", // Reuse for 4th card
+        ],
+        // Intermediate (use primary images as fallback)
+        [
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg",
+            "/images/home/09. الصفحة الاولى الصورة التاسعه كامبردج ابتدائي.jpeg",
+            "/images/home/10. الصفحة الاولى الصورة العاشرة ابتدائي ICO.jpeg",
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg",
+        ],
+        // Secondary (use primary images as fallback)
+        [
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg",
+            "/images/home/09. الصفحة الاولى الصورة التاسعه كامبردج ابتدائي.jpeg",
+            "/images/home/10. الصفحة الاولى الصورة العاشرة ابتدائي ICO.jpeg",
+            "/images/home/08. الصفحة الاولى الصورة الثامنة نور البيان ابتدائي.jpeg",
+        ],
+    ];
+
     const stages = [
         {
             title: t("kindergarten"),
             cards: Array.from({ length: 4 }, (_, j) => ({
                 title: t(`kindergartenStages.${j}.title`),
                 description: t(`kindergartenStages.${j}.desc`),
-                image: "Lorem, ipsum.",
+                image: stageImages[0][j],
             })),
         },
         {
@@ -26,7 +58,7 @@ function HomeCurricula() {
             cards: Array.from({ length: 4 }, (_, j) => ({
                 title: t(`kindergartenStages.${j}.title`),
                 description: t(`kindergartenStages.${j}.desc`),
-                image: "Lorem, ipsum.",
+                image: stageImages[1][j],
             })),
         },
         {
@@ -34,7 +66,7 @@ function HomeCurricula() {
             cards: Array.from({ length: 4 }, (_, j) => ({
                 title: t(`kindergartenStages.${j}.title`),
                 description: t(`kindergartenStages.${j}.desc`),
-                image: "Lorem, ipsum.",
+                image: stageImages[2][j],
             })),
         },
         {
@@ -42,7 +74,7 @@ function HomeCurricula() {
             cards: Array.from({ length: 4 }, (_, j) => ({
                 title: t(`kindergartenStages.${j}.title`),
                 description: t(`kindergartenStages.${j}.desc`),
-                image: "Lorem, ipsum.",
+                image: stageImages[3][j],
             })),
         },
     ];
@@ -114,9 +146,9 @@ function HomeCurricula() {
                                                 optimized
                                                 width={150}
                                                 height={150}
-                                                src="/images/steps/step-image-1.jpg"
+                                                src={card.image}
                                                 alt={card.title}
-                                                className="w-full h-auto object-cover transition-transform duration-300"
+                                                className="w-full h-auto object-cover transition-transform duration-300 max-h-[220px]"
                                             />
                                         </div>
                                         <AppImage

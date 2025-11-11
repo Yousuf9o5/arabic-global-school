@@ -10,9 +10,9 @@ export default function AboutUsMission() {
         <Section size={"screen"} className="bg-background-container">
             <Section.Inner className="flex items-stretch flex-col-reverse lg:flex-row *:flex-1 gap-y-8 max-w-[1115px]">
                 {/* Large screen image */}
-                <div className="hidden lg:block ">
+                <div className="hidden lg:block overflow-hidden rounded-[48px]">
                     <Image
-                        src={"/images/about-us/mission/lg-image.png"}
+                        src={"/images/about-us/real-content/03. الصفحة الثانية (من نحن ) الصورة الثالثة.jpeg"}
                         className="w-full rounded-[48px] object-cover object-center h-full overflow-visible"
                         width={650}
                         height={600}
@@ -22,7 +22,7 @@ export default function AboutUsMission() {
                 {/* Medium screen image */}
                 <div className="hidden md:block lg:hidden">
                     <Image
-                        src={"/images/about-us/mission/md-image.png"}
+                        src={"/images/about-us/real-content/03. الصفحة الثانية (من نحن ) الصورة الثالثة.jpeg"}
                         className="w-full rounded-[32px] object-cover object-center"
                         width={500}
                         height={400}
@@ -32,7 +32,7 @@ export default function AboutUsMission() {
                 {/* Small screen image */}
                 <div className="block md:hidden -mx-4">
                     <Image
-                        src={"/images/about-us/mission/sm-image.png"}
+                        src={"/images/about-us/real-content/03. الصفحة الثانية (من نحن ) الصورة الثالثة.jpeg"}
                         className="w-full rounded-[24px] object-cover object-center"
                         width={350}
                         height={250}

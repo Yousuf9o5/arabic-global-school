@@ -45,7 +45,7 @@ function HomeStep() {
                     <Card className="bg-background-container pt-2">
                         <CardContent className="px-2">
                             <div className="p-2 bg-white rounded-3xl">
-                                <AppImage optimized width={450} height={260} className="rounded-2xl w-full" src={"/images/steps/step-image-1.jpg"} />
+                                <AppImage optimized width={450} height={260} className="rounded-2xl w-full max-h-[260px] object-cover object-center" src={"/images/home/02. الصفحة الاولى الصورة الثانية.jpeg"} />
                             </div>
                             <div className="flex flex-col gap-4 w-fit mt-8">
                                 <h3 className="font-bold sm:text-[24px] leading-[100%] tracking-[0]">{t("balance")}</h3>
@@ -56,7 +56,7 @@ function HomeStep() {
                     <Card className="bg-background-container pt-2">
                         <CardContent className="px-2">
                             <div className="p-2 bg-white rounded-3xl">
-                                <AppImage optimized width={450} height={245} className="rounded-2xl w-full" src={"/images/steps/step-image-2.jpg"} />
+                                <AppImage optimized width={450} height={245} className="rounded-2xl w-full max-h-[260px] object-cover object-center" src={"/images/home/03. الصفحة الاولى الصورة الثالثة.jpeg"} />
                             </div>
                             <div className="flex flex-col gap-4 mt-8">
                                 <h3 className="font-bold sm:text-[24px] leading-[100%] tracking-[0]">{t("team")}</h3>

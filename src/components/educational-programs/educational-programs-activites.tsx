@@ -7,14 +7,15 @@ export default function EducationalProgramsActivities() {
 
     const keys = ["trips", "collaborative_activities", "family_participation"];
 
+    // Images from curricula folder
     const images = [
-        "/images/educational-programs/activates/image-1.png",
-        "/images/educational-programs/activates/image-2.png",
-        "/images/educational-programs/activates/image-3.png",
+        "/images/curricula/11. الصفحة الرابعة.jpeg", // trips
+        "/images/curricula/10. الصفحة الرابعة.jpeg", // collaborative_activities (reuse)
+        "/images/curricula/09. الصفحة الرابعة.jpeg", // family_participation (reuse)
     ];
 
-    const items = keys.map((key) => ({
-        image: images.shift()!,
+    const items = keys.map((key, index) => ({
+        image: images[index],
         title: t(`programs.${key}.title`),
         description: t(`programs.${key}.desc`),
     }));

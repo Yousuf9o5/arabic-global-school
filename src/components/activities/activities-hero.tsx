@@ -26,7 +26,7 @@ export default function ActivitiesHero() {
                 </div>
             </div>
             <div className="">
-                <Image src={"/images/services/service-hero.png"} className="w-full" width={650} height={650} alt={""} />
+                <Image src={"/images/activities/real-content/01. الصفحة الثالثة الانشطة الصورة الاولى.jpeg"} className="w-full" width={650} height={650} alt={""} />
             </div>
         </Section>
     );
