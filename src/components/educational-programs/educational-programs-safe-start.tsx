@@ -57,7 +57,7 @@ function EducationalProgramsSafeStart() {
                                                 height={150}
                                                 src={stage.image}
                                                 alt={stage.title}
-                                                className="w-full h-auto object-cover transition-transform duration-300"
+                                                className="w-full object-cover object-center transition-transform duration-300 h-[270px]"
                                             />
                                         </div>
                                         <AppImage

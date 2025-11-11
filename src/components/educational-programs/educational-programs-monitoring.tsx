@@ -28,7 +28,7 @@ export default function EducationalProgramsMonitoring() {
                 <div className="flex items-stretch flex-col-reverse lg:flex-row gap-8">
                     <div className="p-8 grid place-items-center">
                         <div className="bg-white p-4 relative h-fit overflow-hidden rounded-2xl">
-                            <div className="educational-programs-activity-image overflow-hidden max-h-[550px]">
+                            <div className="educational-programs-activity-image overflow-hidden max-h-[550px] rounded-2xl">
                                 <Image
                                     width={432}
                                     height={503}

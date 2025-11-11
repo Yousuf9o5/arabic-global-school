@@ -69,14 +69,14 @@ export default function EducationalProgramsHero() {
                 <div className="flex flex-col flex-1 gap-6">
                     <Image
                         src={"/images/curricula/05. الصفحة الرابعة.jpeg"}
-                        className="w-full rounded-4xl object-cover object-center"
+                        className="w-full rounded-4xl object-cover object-center max-h-[119px]"
                         width={200}
                         height={224}
                         alt={""}
                     />
                     <Image
                         src={"/images/curricula/06. الصفحة الرابعة.jpeg"}
-                        className="w-full rounded-4xl object-cover object-center min-h-[270px]"
+                        className="w-full rounded-4xl object-cover object-center max-h-[270px]"
                         width={200}
                         height={270}
                         alt={""}
