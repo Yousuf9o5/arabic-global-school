@@ -70,18 +70,18 @@
             "primary": "Tahap Dasar",
             "intermediate": "Tahap Menengah",
             "secondary": "Tahap Sekunder",
-            "quran": "Cahaya Al-Qur'an",
+            "quran": "Cahaya Bayan",
             "montessori": "Kurikulum Montessori",
             "cambridge": "Cambridge EYFS",
             "ico": "ICO",
             "kindergartenStages": {
                 "0": {
-                    "title": "Cahaya Al-Qur'an",
+                    "title": "Cahaya Bayan",
                     "desc": "Mengajarkan membaca dan Al-Qur'an dengan cara fonetik dan bertahap."
                 },
                 "1": {
-                    "title": "Kurikulum Montessori",
-                    "desc": "pembelajaran mandiri, kemandirian, dan keterampilan sensorik."
+                    "title": "Kegiatan Seni dan Kreatif",
+                    "desc": "Menggambar, mewarnai, kerajinan tangan, dan proyek seni kolektif."
                 },
                 "2": {
                     "title": "Cambridge EYFS",

@@ -70,18 +70,18 @@
             "primary": "Primary Stage",
             "intermediate": "Intermediate Stage",
             "secondary": "Secondary Stage",
-            "quran": "Light of the Quran",
+            "quran": "Light of the Bayan",
             "montessori": "Montessori Curriculum",
             "cambridge": "Cambridge EYFS",
             "ico": "ICO",
             "kindergartenStages": {
                 "0": {
-                    "title": "Light of the Quran",
+                    "title": "Light of the Bayan",
                     "desc": "Teaching reading and the Quran in a phonetic and gradual manner."
                 },
                 "1": {
-                    "title": "Montessori Curriculum",
-                    "desc": "self-directed learning, independence, and sensory skills."
+                    "title": "Artistic and Creative Activities",
+                    "desc": "Drawing, coloring, handcrafts, and collective artistic projects."
                 },
                 "2": {
                     "title": "Cambridge EYFS",
