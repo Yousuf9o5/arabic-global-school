@@ -53,16 +53,16 @@ function EducationalProgramsSafeStart() {
                                         <div className="curricula-image-container bg-white border-4 border-white  rounded-3xl overflow-hidden w-full relative z-10">
                                             <AppImage
                                                 optimized
-                                                width={150}
-                                                height={150}
+                                                width={450}
+                                                height={450}
                                                 src={stage.image}
                                                 alt={stage.title}
-                                                className="w-full object-cover object-center transition-transform duration-300 h-[270px]"
+                                                className="w-full object-cover object-center transition-transform duration-300 h-[220px]"
                                             />
                                         </div>
                                         <AppImage
-                                            width={150}
-                                            height={150}
+                                            width={450}
+                                            height={450}
                                             src={svgs[stageIdx]}
                                             alt={stage.title}
                                             className="size-56 h-auto object-cover transition-transform duration-300 absolute -right-4 -bottom-12"

@@ -3,6 +3,8 @@ import Image from "next/image";
 import CustomLink from "../ui/Link";
 import Section from "../ui/section";
 import useTextDirection from "@/hooks/use-text-direction";
+import { Link } from "@/i18n/routing";
+import { Button } from "../ui/button";
 
 export default function AboutUsHero() {
     const { locale } = useTextDirection();
@@ -39,9 +41,9 @@ export default function AboutUsHero() {
                     </div>
 
                     <div className="lg:mt-12 flex items-center justify-center lg:justify-start gap-4 py-8">
-                        <CustomLink href="" shadow={"default"} className="w-[175px]">
-                            {t("button")}
-                        </CustomLink>
+                        <Button shadow={"default"} asChild className="w-[175px]">
+                            <Link href="/registration">{t("button")}</Link>
+                        </Button>
                     </div>
                 </div>
                 <div className="">

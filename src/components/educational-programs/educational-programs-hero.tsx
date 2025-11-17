@@ -38,15 +38,15 @@ export default function EducationalProgramsHero() {
                     <Image
                         src={"/images/curricula/01. الصفحة الرابعة.jpeg"}
                         className="w-full rounded-4xl object-cover object-center"
-                        width={200}
-                        height={224}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                     <Image
                         src={"/images/curricula/02. الصفحة الرابعة.jpeg"}
                         className="w-full rounded-4xl object-cover object-center min-h-[270px]"
-                        width={200}
-                        height={270}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                 </div>
@@ -54,15 +54,15 @@ export default function EducationalProgramsHero() {
                     <Image
                         src={"/images/curricula/03. الصفحة الرابعة.jpeg"}
                         className="w-full min-h-[270px] rounded-4xl object-cover object-center"
-                        width={200}
-                        height={270}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                     <Image
                         src={"/images/curricula/04. الصفحة الرابعة.jpeg"}
                         className="w-full rounded-4xl object-cover object-center"
-                        width={200}
-                        height={224}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                 </div>
@@ -70,15 +70,15 @@ export default function EducationalProgramsHero() {
                     <Image
                         src={"/images/curricula/05. الصفحة الرابعة.jpeg"}
                         className="w-full rounded-4xl object-cover object-center max-h-[119px]"
-                        width={200}
-                        height={224}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                     <Image
                         src={"/images/curricula/06. الصفحة الرابعة.jpeg"}
                         className="w-full rounded-4xl object-cover object-center max-h-[270px]"
-                        width={200}
-                        height={270}
+                        width={450}
+                        height={450}
                         alt={""}
                     />
                 </div>
@@ -88,22 +88,22 @@ export default function EducationalProgramsHero() {
                 <Image
                     src={"/images/curricula/01. الصفحة الرابعة.jpeg"}
                     className="w-full rounded-4xl object-cover object-center max-h-[120px]"
-                    width={400}
-                    height={120}
+                    width={450}
+                    height={450}
                     alt={""}
                 />
                 <Image
                     src={"/images/curricula/02. الصفحة الرابعة.jpeg"}
                     className="w-full rounded-4xl object-cover object-center max-h-[120px]"
-                    width={400}
-                    height={120}
+                    width={450}
+                    height={450}
                     alt={""}
                 />
                 <Image
                     src={"/images/curricula/03. الصفحة الرابعة.jpeg"}
                     className="w-full rounded-4xl object-cover object-center max-h-[120px]"
-                    width={400}
-                    height={120}
+                    width={450}
+                    height={450}
                     alt={""}
                 />
             </div>

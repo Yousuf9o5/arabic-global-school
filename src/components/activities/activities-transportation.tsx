@@ -11,8 +11,8 @@ export default function ActivitiesTransportation() {
     // Images from real-content folder - using school bus image for all transportation cards
     const transportationImages = [
         "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // clean_buses
-        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // punctuality (reuse)
-        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // supervisor (reuse)
+        "/images/activities/bus-image-2.jpg", // punctuality (reuse)
+        "/images/activities/bus-image-1.jpg", // supervisor (reuse)
     ];
 
     const cards = keys.map((key, index) => ({
@@ -33,8 +33,8 @@ export default function ActivitiesTransportation() {
                         <div key={card.title + index} className={`max-w-sm mx-auto ${index === cards.length - 1 ? "col-span-1 md:col-span-2 lg:col-span-1" : ""}`}>
                             <article key={card.title + index} className="flex flex-col bg-white rounded-[40px]">
                                 <Image
-                                    width={320}
-                                    height={240}
+                                    width={450}
+                                    height={450}
                                     src={card.image}
                                     alt={card.title}
                                     className="w-full object-cover object h-[321px] rounded-[38px] flex-shrink-0 p-2"

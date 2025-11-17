@@ -14,12 +14,12 @@ function HomeCurricula() {
 
     // Image mappings for each stage
     const stageImages = [
-        // Kindergarten (images 04-07)
+        // Kindergarten (new images based on content)
         [
-            "/images/home/04. الصفحة الاولى الصورة الرابعه نور البيان للروضه.jpeg",
-            "/images/home/05. الصفحة الاولى الصورة الخامسة منتسوري روضة.jpeg",
-            "/images/home/06. الصفحة الاولى الصوره السادسه كامبردج.jpeg",
-            "/images/home/07. الصفحة الاولى الصورة السابعه ICO روضه.jpeg",
+            "/images/home/الصفحة الأولى الصورة الرابعة نور البيان.JPG",
+            "/images/home/الصفحة الأولى الصورة الخامسة الأنشطة الفنية والإبداعية.JPG",
+            "/images/home/الصفحة الأولى الصورة السادسة كامبريدج.JPG",
+            "/images/home/الصفحة الأولى الصورة السابعة ICO.JPG",
         ],
         // Primary (images 08-10, reuse 08 for 4th card)
         [
@@ -144,11 +144,11 @@ function HomeCurricula() {
                                         <div className="curricula-image-container bg-white border-4 border-white  rounded-3xl overflow-hidden w-full relative z-10">
                                             <AppImage
                                                 optimized
-                                                width={150}
-                                                height={150}
+                                                width={450}
+                                                height={450}
                                                 src={card.image}
                                                 alt={card.title}
-                                                className="w-full h-auto object-cover transition-transform duration-300 max-h-[220px]"
+                                                className="w-full object-cover transition-transform duration-300 h-[220px]"
                                             />
                                         </div>
                                         <AppImage

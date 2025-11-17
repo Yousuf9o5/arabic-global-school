@@ -19,8 +19,8 @@ export default function ActivitiesSafety() {
         <Section className="max-w-[1220px] flex-col-reverse lg:flex-row items-stretch gap-8 lg:gap-20">
             <div className="">
                 <Image
-                    width={432}
-                    height={473}
+                    width={640}
+                    height={640}
                     src={"/images/activities/real-content/08. الصفحة الثالثة (الانشطه) الصورة الثامنه.jpeg"}
                     className="rounded-[48px] h-full object-cover object-center min-w-full lg:min-w-[432px]"
                     alt={t("title")}

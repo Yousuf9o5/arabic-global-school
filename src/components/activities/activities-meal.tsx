@@ -23,7 +23,7 @@ export default function ActivitiesMeal() {
                     <p className="section-description text-content-natural-primary/50">{t("subtitle")}</p>
                 </div>
 
-                <div className="h-[316px] md:h-[568px]  w-full">
+                <div className="h-[316px] md:h-[768px]  w-full">
                     <VideoPlayer
                         src="/images/activities/real-content/12. فيديو في الصفحة الثالثة الانشطة.mp4"
                         poster="/images/activities/real-content/10. الصفحة الثالثة الانشطة الصور العاشرة.jpeg"
@@ -34,14 +34,12 @@ export default function ActivitiesMeal() {
                 <div className="">
                     <h1 className="section-header mb-6 py-8">{t("rules.title")}</h1>
 
-                    {
-                        points.map((point, index) => (
-                            <div key={index + point} className="flex items-start gap-4 mb-6 last:mb-0">
-                                <MealPointIcon />
-                                <p className="text-content-natural-primary/50">{point}</p>
-                            </div>
-                        ))
-                    }
+                    {points.map((point, index) => (
+                        <div key={index + point} className="flex items-start gap-4 mb-6 last:mb-0">
+                            <MealPointIcon />
+                            <p className="text-content-natural-primary/50">{point}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </Section>
