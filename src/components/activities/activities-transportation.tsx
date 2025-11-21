@@ -8,11 +8,11 @@ export default function ActivitiesTransportation() {
 
     const keys = ["clean_buses", "punctuality", "supervisor"];
 
-    // Images from real-content folder - using school bus image for all transportation cards
+    // Images from real-content folder - using appropriate transportation images
     const transportationImages = [
-        "/images/activities/real-content/09. الصفحة الثالثة (الانشطه) باص المدرسة الصوره التاسعه.jpeg", // clean_buses
-        "/images/activities/bus-image-2.jpg", // punctuality (reuse)
-        "/images/activities/bus-image-1.jpg", // supervisor (reuse)
+        "/images/activities/real-content/الانشطة الصورة التاسعة  الراحة والأمان لطفلك من الباب إلى الفصل الدراسي.JPG", // clean_buses
+        "/images/activities/real-content/الانشطة الصورة العاشرة الالتزام بالمواعيد المحددة للمغادرة والعودة.JPG", // punctuality
+        "/images/activities/real-content/الانشطة الصورة الحادي عشر  مشرف في كل حافلة لضمان سلامة الطلاب خلال الرحلة..JPG", // supervisor
     ];
 
     const cards = keys.map((key, index) => ({

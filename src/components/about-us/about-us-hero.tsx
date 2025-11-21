@@ -48,10 +48,10 @@ export default function AboutUsHero() {
                 </div>
                 <div className="">
                     <Image
-                        src={"/images/about-us/real-content/01. الصفحة الثانيه (من نحن) الصورة الاولى.jpeg"}
-                        className="w-full rounded-[48px] min-h-[666px] object-cover object-center"
-                        width={1920}
-                        height={1080}
+                        src={"/images/about-us/hero/hero-image.jpg"}
+                        className="w-full rounded-[48px] max-h-[666px] object-cover object-center"
+                        width={650}
+                        height={666}
                         alt={t("title", { stories: stories() })}
                     />
                 </div>
