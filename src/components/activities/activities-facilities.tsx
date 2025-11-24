@@ -13,10 +13,10 @@ export default function ActivitiesFacilities() {
     const facilityImages: Record<(typeof cardsKeys)[number], string> = {
         classrooms: activitiesRealContentImages.classrooms,
         playgrounds: activitiesRealContentImages.playgrounds,
-        laboratories: activitiesRealContentImages.educationalEnvironment,
+        laboratories: activitiesRealContentImages.laboratories,
         play_areas: activitiesRealContentImages.playAreas,
         restrooms: activitiesRealContentImages.restrooms,
-        library: activitiesRealContentImages.educationalEnvironment,
+        library: activitiesRealContentImages.library,
     };
 
     const cards = cardsKeys.map((key) => ({
