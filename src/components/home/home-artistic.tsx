@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import Section from "../ui/section";
-import VideoPlayer from "../ui/video-player";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -36,11 +35,16 @@ export default function HomeArtistic() {
                     </div>
 
                     <div className="h-[316px] md:h-[568px] order-1 lg:order-2">
-                        <VideoPlayer
-                            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                            poster="/images/artistic/video-cover.jpg"
-                            className="lg:aspect-video w-full h-full"
-                        />
+                        <div className="relative w-full h-full rounded-[48px] overflow-hidden">
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/4fOG4AJ4Yuk?si=3pS9AArbGXzoZtrO"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
+                        </div>
                     </div>
                 </div>
             </Section.Inner>
