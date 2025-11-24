@@ -34,10 +34,10 @@ export default function HomeArtistic() {
                         </Button>
                     </div>
 
-                    <div className="h-[316px] md:h-[568px] order-1 lg:order-2">
-                        <div className="relative w-full h-full rounded-[48px] overflow-hidden">
+                    <div className="order-1 lg:order-2 aspect-video">
+                        <div className="relative w-full h-full rounded-[32px] overflow-hidden aspect-video">
                             <iframe
-                                className="absolute inset-0 w-full h-full"
+                                className="absolute inset-0 w-full h-full aspect-video"
                                 src="https://www.youtube.com/embed/4fOG4AJ4Yuk?si=3pS9AArbGXzoZtrO"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
