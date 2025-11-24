@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "../ui/section";
 import { useTranslations } from "next-intl";
 import { ExitIcon, UserIcon, WebCamIcon } from "@/assets/icons";
+import { activitiesRealContentImages } from "./real-content-images";
 
 export default function ActivitiesSafety() {
     const t = useTranslations("services.safety");
@@ -21,7 +22,7 @@ export default function ActivitiesSafety() {
                 <Image
                     width={640}
                     height={640}
-                    src={"/images/activities/real-content/08. الصفحة الثالثة (الانشطه) الصورة الثامنه.jpeg"}
+                    src={activitiesRealContentImages.playAreas}
                     className="rounded-[48px] h-full object-cover object-center min-w-full lg:min-w-[432px]"
                     alt={t("title")}
                 />

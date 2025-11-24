@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import Section from "../ui/section";
 import Image from "next/image";
 import { Pin3DIcon } from "@/assets/icons";
+import { activitiesRealContentImages } from "./real-content-images";
 
 export default function ActivitiesTransportation() {
     const t = useTranslations("services.transportation");
@@ -10,9 +11,9 @@ export default function ActivitiesTransportation() {
 
     // Images from real-content folder - using appropriate transportation images
     const transportationImages = [
-        "/images/activities/real-content/الانشطة الصورة التاسعة  الراحة والأمان لطفلك من الباب إلى الفصل الدراسي.JPG", // clean_buses
-        "/images/activities/real-content/الانشطة الصورة العاشرة الالتزام بالمواعيد المحددة للمغادرة والعودة.JPG", // punctuality
-        "/images/activities/real-content/الانشطة الصورة الحادي عشر  مشرف في كل حافلة لضمان سلامة الطلاب خلال الرحلة..JPG", // supervisor
+        activitiesRealContentImages.busComfort, // clean_buses
+        activitiesRealContentImages.busPunctuality, // punctuality
+        activitiesRealContentImages.busSupervisor, // supervisor
     ];
 
     const cards = keys.map((key, index) => ({

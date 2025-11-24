@@ -2,6 +2,7 @@ import { BoldCalenderIcon, MealPointIcon } from "@/assets/icons";
 import Section from "../ui/section";
 import { useTranslations } from "next-intl";
 import VideoPlayer from "../ui/video-player";
+import { activitiesRealContentImages } from "./real-content-images";
 
 export default function ActivitiesMeal() {
     const t = useTranslations("services.meal");
@@ -26,7 +27,7 @@ export default function ActivitiesMeal() {
                 <div className="h-[316px] md:h-[768px]  w-full">
                     <VideoPlayer
                         src="/images/activities/real-content/12. فيديو في الصفحة الثالثة الانشطة.mp4"
-                        poster="/images/activities/real-content/10. الصفحة الثالثة الانشطة الصور العاشرة.jpeg"
+                        poster={activitiesRealContentImages.busPunctuality}
                         className="lg:aspect-video w-full h-full"
                     />
                 </div>

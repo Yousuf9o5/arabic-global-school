@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import CustomLink from "../ui/Link";
 import Section from "../ui/section";
+import { activitiesRealContentImages } from "./real-content-images";
 
 export default function ActivitiesHero() {
     const t = useTranslations("services.hero");
@@ -25,8 +26,14 @@ export default function ActivitiesHero() {
                     </div>
                 </div>
             </div>
-            <div className="">
-                <Image src={"/images/activities/real-content/01. الصفحة الثالثة الانشطة الصورة الاولى.jpeg"} className="w-full" width={650} height={650} alt={""} />
+            <div className="rounded-3xl overflow-hidden">
+                <Image
+                    src={activitiesRealContentImages.educationalEnvironment}
+                    className="w-full object-cover object-center"
+                    width={650}
+                    height={650}
+                    alt={""}
+                />
             </div>
         </Section>
     );
